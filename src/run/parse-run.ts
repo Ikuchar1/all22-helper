@@ -1,4 +1,4 @@
-import type { Formation, Lineup, Region, Variant } from "../scoring/engine";
+import { ROUNDS, type Formation, type Lineup, type Region, type Variant } from "../scoring/engine";
 
 /** The current 17–0 run, read from the game's saved state (localStorage `pokemon-all22-draft-v1`). */
 export type Run = {
@@ -24,7 +24,8 @@ type SavedRun = {
   lineup: Lineup;
   pending: number | null;
   variant: Variant;
-  roll: { gen: Region; type: string } | null;
+  // A finished signed-in run may leave it out.
+  roll?: { gen: Region; type: string } | null;
   rerolls: { type: number; gen: number };
 };
 
@@ -44,6 +45,7 @@ function isSavedRun(value: unknown): value is SavedRun {
     (pending === null || typeof pending === "number") &&
     (variant === "all" || variant === "retro") &&
     (roll === null ||
+      (roll === undefined && round >= ROUNDS) ||
       (isObject(roll) && typeof roll.gen === "string" && typeof roll.type === "string")) &&
     isObject(rerolls) &&
     typeof rerolls.type === "number" &&
@@ -70,7 +72,7 @@ export function parseRun(json: string | null): Run | null {
   if (!isSavedRun(saved)) return null;
   return {
     round: saved.round,
-    roll: saved.roll && { region: saved.roll.gen, type: saved.roll.type },
+    roll: saved.roll ? { region: saved.roll.gen, type: saved.roll.type } : null,
     lineup: saved.lineup,
     pending: saved.pending,
     formation: { defense: saved.scheme.def, offense: saved.scheme.off },
@@ -79,7 +81,8 @@ export function parseRun(json: string | null): Run | null {
     seed: typeof saved.seed === "number" ? saved.seed : null,
     // Signed-in runs are the server's: the game drops the seed from what it saves.
     signedIn: typeof saved.seed !== "number",
-    // The game clears the roll once the 22nd Pokémon is placed.
-    finished: saved.roll === null,
+    // The game's own rule. Only signed-out runs clear the roll at the end; signed-in runs keep
+    // whatever the server sent.
+    finished: saved.round >= ROUNDS,
   };
 }

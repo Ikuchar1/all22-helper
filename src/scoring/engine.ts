@@ -65,6 +65,9 @@ export function spotsOf(formation: Formation): SpotInfo[] {
 export type Region = string;
 export type PoolEntry = { dexId: number; name: string; legendary: boolean };
 
+/** Rounds in a run: one Pokémon placed per round, so a run is done after this many. */
+export const ROUNDS: number = DRAFT.ROUNDS;
+
 /** A run may draft at most this many Legendaries. */
 export const LEGEND_CAP: number = DRAFT.MAX_LEGENDS;
 /** The regions a variant's rolls draw from. */

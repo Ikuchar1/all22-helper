@@ -48,9 +48,30 @@ describe("parseRun", () => {
     });
   });
 
-  it("a finished run has no roll", () => {
+  it("a finished signed-out run has no roll", () => {
     const finished = { ...SIGNED_OUT, round: 22, roll: null, counted: true };
     expect(parseRun(JSON.stringify(finished))).toMatchObject({ roll: null, finished: true });
+  });
+
+  it("a signed-in run is finished after the last round even when the server kept its roll", () => {
+    const { seed: _seed, ...rest } = SIGNED_OUT;
+    const finished = { ...rest, round: 22, uid: "user-1" };
+    expect(parseRun(JSON.stringify(finished))).toMatchObject({
+      roll: { region: "1", type: "fire" },
+      finished: true,
+    });
+  });
+
+  it("a signed-in run is finished after the last round when the server left the roll out", () => {
+    const { seed: _seed, roll: _roll, ...rest } = SIGNED_OUT;
+    const finished = { ...rest, round: 22, uid: "user-1" };
+    expect(parseRun(JSON.stringify(finished))).toMatchObject({ roll: null, finished: true });
+  });
+
+  it("a run still drafting is not finished", () => {
+    expect(parseRun(JSON.stringify({ ...SIGNED_OUT, round: 21 }))).toMatchObject({
+      finished: false,
+    });
   });
 
   it("a run saved before formations and Retro existed gets the game's defaults", () => {
