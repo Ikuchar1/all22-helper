@@ -3,6 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <title>All22 Helper</title>
+    <style>
+      body {
+        font:
+          13px/1.4 system-ui,
+          sans-serif;
+        margin: 0;
+        padding: 8px;
+      }
+      h1 {
+        font-size: 15px;
+        margin: 0;
+      }
+      .meta,
+      .muted,
+      .empty {
+        color: #666;
+      }
+      .meta {
+        margin: 2px 0 8px;
+      }
+      .table-wrap {
+        overflow-x: auto;
+      }
+      table {
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 2px 4px;
+        text-align: right;
+        border-bottom: 1px solid #eee;
+      }
+      th.name {
+        text-align: left;
+        white-space: nowrap;
+        position: sticky;
+        left: 0;
+        background: #fff;
+      }
+      td.best-spot {
+        background: #e6f0ff;
+      }
+      td.best-candidate {
+        font-weight: bold;
+        color: #0a7a2f;
+      }
+      .hover {
+        margin-top: 8px;
+        border-top: 1px solid #ccc;
+        padding-top: 6px;
+      }
+    </style>
   </head>
   <body>
     <div id="app"></div>
