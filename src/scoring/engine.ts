@@ -69,6 +69,12 @@ export function spotsOf(formation: Formation): SpotInfo[] {
 export type Region = string;
 export type PoolEntry = { dexId: number; name: string; legendary: boolean };
 
+const toPoolEntry = (p: { id: number; name: string; legendary: boolean }): PoolEntry => ({
+  dexId: p.id,
+  name: p.name,
+  legendary: p.legendary,
+});
+
 /** Rounds in a run: one Pokémon placed per round, so a run is done after this many. */
 export const ROUNDS: number = DRAFT.ROUNDS;
 
@@ -85,12 +91,6 @@ export const typesOf = (dexId: number): string[] => [...(POKEDATA[dexId - 1]?.ty
 export const isLegendary = (dexId: number): boolean => LEGENDARIES.has(dexId);
 
 export const nameOf = (dexId: number): string => POKEMON_NAMES[dexId - 1] ?? "";
-
-const toPoolEntry = (p: { id: number; name: string; legendary: boolean }): PoolEntry => ({
-  dexId: p.id,
-  name: p.name,
-  legendary: p.legendary,
-});
 
 /**
  * The Pokémon the game offers for the run's current roll, minus the lineup, and minus Legendaries

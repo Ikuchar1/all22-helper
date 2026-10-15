@@ -1,16 +1,14 @@
-import { readFileSync } from "node:fs";
-import vm from "node:vm";
 import { describe, expect, it } from "vitest";
 import type { Run } from "../run/parse-run";
 import {
   candidatesFor,
   fit,
-  openSpots,
-  regionName,
   isLegendary,
   LEGEND_CAP,
   nameOf,
+  openSpots,
   poolOf,
+  regionName,
   regionsOf,
   spotsOf,
   teamScore,
@@ -18,44 +16,7 @@ import {
   type Formation,
   type FullLineup,
 } from "./engine";
-
-// The oracle: the site's three scripts run as classic scripts in one global scope, the way the
-// page loads them. Independent of our Vite wrapper, so a broken wrapper can't agree with itself.
-type GameScheme = { def: string; off: string };
-type Game = {
-  DRAFT: {
-    positionScore(id: number, slot: string, scheme: GameScheme): number;
-    teamScore(
-      lineup: Record<string, number>,
-      scheme: GameScheme,
-      variant: string,
-    ): { score: number; offense: number; defense: number };
-    SLOT_ROLE: Record<string, string>;
-    roleOf(slot: string, scheme: GameScheme): string;
-    OFFENSE_BY: Record<string, Record<string, number>>;
-    DEFENSE_BY: Record<string, Record<string, number>>;
-    MAX_LEGENDS: number;
-    REGIONS: Record<string, string>;
-    available(
-      gen: string,
-      type: string,
-      taken: Set<number>,
-      noLegends?: boolean,
-    ): { id: number; name: string; legendary: boolean }[];
-    VARIANTS: Record<string, string[]>;
-    POOL: Record<string, { id: number; name: string; legendary: boolean }[]>;
-  };
-  POKEDATA: { types: string[] }[];
-  POKEMON_NAMES: string[];
-  LEGENDARIES: Set<number>;
-};
-const game: Game = (() => {
-  const context = vm.createContext({});
-  for (const file of ["pokemon.js", "pokedata.js", "draft.js"]) {
-    vm.runInContext(readFileSync(`vendor/${file}`, "utf8"), context, { filename: file });
-  }
-  return vm.runInContext("({ DRAFT, POKEDATA, POKEMON_NAMES, LEGENDARIES })", context) as Game;
-})();
+import { game } from "./game-oracle";
 
 const THREE_FOUR_FULLBACK: Formation = { defense: "34", offense: "fb" };
 const FOUR_THREE_SLOT: Formation = { defense: "43", offense: "slot" };
