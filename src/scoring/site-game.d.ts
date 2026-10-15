@@ -11,6 +11,20 @@ declare module "virtual:site-game" {
       variant: string,
     ): { score: number; offense: number; defense: number };
     roleOf(slot: string, scheme: GameScheme): string;
+    rand(seed: number, i: number): number;
+    roll(
+      seed: number,
+      i: number,
+      taken: ReadonlySet<number>,
+      noLegends: boolean,
+      variant: string,
+    ): { gen: string; type: string };
+    available(
+      gen: string,
+      type: string,
+      taken: ReadonlySet<number>,
+      noLegends: boolean,
+    ): { id: number; name: string; legendary: boolean }[];
     OFFENSE_BY: Record<"fb" | "slot", Record<string, number>>;
     DEFENSE_BY: Record<"34" | "43", Record<string, number>>;
     MAX_LEGENDS: number;

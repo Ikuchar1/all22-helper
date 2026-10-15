@@ -82,6 +82,31 @@ export const poolOf = (region: Region): PoolEntry[] =>
 /** A Pokémon's types, as the game's lowercase names ("fire", "water", …). */
 export const typesOf = (dexId: number): string[] => [...(POKEDATA[dexId - 1]?.types ?? [])];
 
+export type Roll = { region: Region; type: string };
+
+/**
+ * The roll the game deals for a seed and round: a region of the variant that still has a Pokémon
+ * left, then a type that region still has. With `noLegends`, Legendaries don't count as left.
+ */
+export function rollFor(
+  seed: number,
+  round: number,
+  taken: ReadonlySet<number>,
+  noLegends: boolean,
+  variant: Variant,
+): Roll {
+  const { gen, type } = DRAFT.roll(seed, round, taken, noLegends, variant);
+  return { region: gen, type };
+}
+
+/** Dex ids of the Pokémon a roll offers: not taken, and no Legendaries with `noLegends`. */
+export const available = (
+  region: Region,
+  type: string,
+  taken: ReadonlySet<number>,
+  noLegends: boolean,
+): number[] => DRAFT.available(region, type, taken, noLegends).map((p) => p.id);
+
 export const isLegendary = (dexId: number): boolean => LEGENDARIES.has(dexId);
 
 export const nameOf = (dexId: number): string => POKEMON_NAMES[dexId - 1] ?? "";
