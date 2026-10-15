@@ -60,4 +60,17 @@ describe("simulated draft", () => {
       expect(new Set(ids).size).toBe(ids.length);
     }
   });
+
+  it.each([
+    ["an empty lineup", run()],
+    // Mewtwo (150), Lugia (249), Rayquaza (384): the legend cap is already used up
+    ["a run with 3 legends", run({ round: 3, lineup: { QB: 150, DE1: 249, LT: 384 } })],
+  ])("never drafts past the legend cap, from %s", (_, start) => {
+    for (let seed = 1; seed <= 30; seed++) {
+      const ids = Object.values(simulatedDraft(start, seeded(seed)));
+      expect(ids.filter((id) => game.LEGENDARIES.has(id)).length).toBeLessThanOrEqual(
+        game.DRAFT.MAX_LEGENDS,
+      );
+    }
+  });
 });

@@ -2,6 +2,8 @@ import type { Run } from "../run/parse-run";
 import {
   available,
   fit,
+  isLegendary,
+  LEGEND_CAP,
   rollFor,
   spotsOf,
   type Formation,
@@ -41,6 +43,7 @@ export function simulatedDraft(run: Run, random: Random): FullLineup {
   const fitOf = fitsFor(run.formation);
   const lineup: Lineup = { ...run.lineup };
   const taken = new Set(Object.values(lineup));
+  let legends = [...taken].filter(isLegendary).length;
   const open = spots.map((_, i) => i).filter((i) => lineup[spots[i]!.spot] === undefined);
 
   const place = (candidates: number[]) => {
@@ -56,11 +59,13 @@ export function simulatedDraft(run: Run, random: Random): FullLineup {
     const [index] = open.splice(best.at, 1);
     lineup[spots[index!]!.spot] = best.dexId;
     taken.add(best.dexId);
+    if (isLegendary(best.dexId)) legends++;
   };
 
   for (let round = run.round; open.length > 0; round++) {
-    const roll = rollFor(seedFrom(random), round, taken, false, run.variant);
-    place(available(roll.region, roll.type, taken, false));
+    const noLegends = legends >= LEGEND_CAP;
+    const roll = rollFor(seedFrom(random), round, taken, noLegends, run.variant);
+    place(available(roll.region, roll.type, taken, noLegends));
   }
   return lineup as FullLineup;
 }
