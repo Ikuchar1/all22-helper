@@ -2,6 +2,7 @@ import type { Run } from "../run/parse-run";
 import {
   candidatesFor,
   fit,
+  nameOf,
   openSpots,
   regionName,
   type Spot,
@@ -28,8 +29,17 @@ export type Row = { dexId: number; name: string; legendary: boolean; cells: Cell
 /** Every candidate for the roll × every open spot. */
 export type Table = { spots: Spot[]; rows: Row[] };
 
+/** A Pokémon's best open spots, best first: the one hovered on the page, else the pending pick. */
+export type HoverLine = {
+  dexId: number;
+  name: string;
+  source: "focus" | "pending";
+  spots: { spot: Spot; fit: number }[];
+};
+
 /** What the side panel shows, worked out from the run and the Pokémon in focus. */
-export type PanelView = { kind: "empty" } | { kind: "run"; header: Header; table: Table };
+export type PanelView =
+  { kind: "empty" } | { kind: "run"; header: Header; table: Table; hoverLine: HoverLine | null };
 
 // The game stores types lowercase ("fire").
 const typeLabel = (type: string) => type.charAt(0).toUpperCase() + type.slice(1);
@@ -56,7 +66,19 @@ function tableFor(run: Run): Table {
   return { spots, rows };
 }
 
-export function panelView(run: Run | null, _focusDexId: number | null): PanelView {
+const HOVER_SPOTS = 3;
+
+function hoverLineFor(run: Run, focusDexId: number | null): HoverLine | null {
+  const dexId = focusDexId ?? run.pending;
+  if (dexId === null) return null;
+  const spots = openSpots(run)
+    .map((spot) => ({ spot, fit: fit(dexId, spot, run.formation) }))
+    .sort((a, b) => b.fit - a.fit)
+    .slice(0, HOVER_SPOTS);
+  return { dexId, name: nameOf(dexId), source: focusDexId === null ? "pending" : "focus", spots };
+}
+
+export function panelView(run: Run | null, focusDexId: number | null): PanelView {
   if (!run || run.finished) return { kind: "empty" };
   return {
     kind: "run",
@@ -67,5 +89,6 @@ export function panelView(run: Run | null, _focusDexId: number | null): PanelVie
       rerollsLeft: run.rerollsLeft,
     },
     table: tableFor(run),
+    hoverLine: hoverLineFor(run, focusDexId),
   };
 }

@@ -82,4 +82,40 @@ describe("panel view", () => {
       true,
     );
   });
+
+  // The game's 3 best fits for a Pokémon among the run's open spots, best first.
+  const gameBestFits = (dexId: number) => {
+    const filled = new Set(Object.keys(SAVED.lineup));
+    return Object.keys(game.DRAFT.SLOT_ROLE)
+      .filter((spot) => !filled.has(spot))
+      .map((spot) => game.DRAFT.positionScore(dexId, spot, { def: "43", off: "slot" }))
+      .sort((a, b) => b - a)
+      .slice(0, 3);
+  };
+  const hoverLineOf = (view: ReturnType<typeof panelView>) =>
+    view.kind === "run" ? view.hoverLine : undefined;
+
+  it("the hover line lists the focused Pokémon's 3 best open spots by fit", () => {
+    // Arcanine (59), hovered in the pick list.
+    const line = hoverLineOf(panelView(saved(), 59));
+    expect(line).toMatchObject({ dexId: 59, name: "Arcanine", source: "focus" });
+    expect(line!.spots.map((s) => s.fit)).toEqual(gameBestFits(59));
+    for (const { spot, fit } of line!.spots) {
+      expect(Object.keys(SAVED.lineup)).not.toContain(spot);
+      expect(fit).toBe(game.DRAFT.positionScore(59, spot, { def: "43", off: "slot" }));
+    }
+  });
+
+  it("with nothing hovered the hover line shows the pending pick, and with neither it's absent", () => {
+    // Ninetales (38), picked but not yet placed.
+    const line = hoverLineOf(panelView(saved({ pending: 38 }), null));
+    expect(line).toMatchObject({ dexId: 38, name: "Ninetales", source: "pending" });
+    expect(line!.spots.map((s) => s.fit)).toEqual(gameBestFits(38));
+
+    expect(hoverLineOf(panelView(saved({ pending: 38 }), 59))).toMatchObject({
+      dexId: 59,
+      source: "focus",
+    });
+    expect(hoverLineOf(panelView(saved(), null))).toBeNull();
+  });
 });
