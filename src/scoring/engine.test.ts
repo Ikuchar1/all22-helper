@@ -5,6 +5,8 @@ import type { Run } from "../run/parse-run";
 import {
   candidatesFor,
   fit,
+  openSpots,
+  regionName,
   isLegendary,
   LEGEND_CAP,
   nameOf,
@@ -33,6 +35,7 @@ type Game = {
     OFFENSE_BY: Record<string, Record<string, number>>;
     DEFENSE_BY: Record<string, Record<string, number>>;
     MAX_LEGENDS: number;
+    REGIONS: Record<string, string>;
     available(
       gen: string,
       type: string,
@@ -231,5 +234,24 @@ describe("candidates", () => {
     );
     expect(candidates.map((c) => c.dexId)).not.toContain(146);
     expect(candidates.length).toBeGreaterThan(0);
+  });
+});
+
+describe("open spots and regions", () => {
+  it("the open spots are the formation's 22 spots minus the filled ones", () => {
+    const spots = openSpots(run({ lineup: { QB: 65, LT: 208, CB1: 6 } }));
+    expect(spots).toHaveLength(19);
+    expect(spots).not.toContain("QB");
+    expect(spots).not.toContain("LT");
+    expect(spots).not.toContain("CB1");
+    expect([...spots, "QB", "LT", "CB1"].sort()).toEqual(Object.keys(game.DRAFT.SLOT_ROLE).sort());
+    expect(openSpots(run({ lineup: {} }))).toHaveLength(22);
+  });
+
+  it("a region id names the game's region", () => {
+    expect(regionName("1")).toBe("Kanto");
+    for (const [id, name] of Object.entries(game.DRAFT.REGIONS)) {
+      expect(regionName(id)).toBe(name);
+    }
   });
 });

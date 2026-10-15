@@ -105,3 +105,12 @@ export function candidatesFor(run: Run): PoolEntry[] {
     toPoolEntry,
   );
 }
+
+/** The formation's spots not yet filled, in the game's order. */
+export const openSpots = (run: Run): Spot[] =>
+  spotsOf(run.formation)
+    .map((s) => s.spot)
+    .filter((spot) => run.lineup[spot] === undefined);
+
+/** A region's name, as the game shows it ("1" → "Kanto"). */
+export const regionName = (region: Region): string => DRAFT.REGIONS[region] ?? region;

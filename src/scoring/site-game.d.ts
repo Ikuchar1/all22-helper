@@ -14,6 +14,7 @@ declare module "virtual:site-game" {
     OFFENSE_BY: Record<"fb" | "slot", Record<string, number>>;
     DEFENSE_BY: Record<"34" | "43", Record<string, number>>;
     MAX_LEGENDS: number;
+    REGIONS: Record<string, string>;
     ROUNDS: number;
     VARIANTS: Record<"all" | "retro", string[]>;
     available(
