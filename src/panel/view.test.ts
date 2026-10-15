@@ -26,6 +26,21 @@ describe("panel view", () => {
     expect(panelView(saved({ round: 22, roll: null }), null)).toEqual({ kind: "empty" });
   });
 
+  it("a new run the player hasn't started yet shows the empty state, not its unrevealed roll", () => {
+    // What the game saves on "New run" (and on changing the variant before starting).
+    const notStarted = { started: false, revealed: false, round: 0, lineup: {} };
+    expect(panelView(saved(notStarted), null)).toEqual({ kind: "empty" });
+    // Older saves have no `started`: the game counts a run as started once it has any progress.
+    const { started: _started, ...olderNotStarted } = notStarted;
+    expect(panelView(saved(olderNotStarted), null)).toEqual({ kind: "empty" });
+    expect(panelView(saved({ ...olderNotStarted, revealed: true }), null)).toMatchObject({
+      kind: "run",
+    });
+    expect(panelView(saved({ started: true, revealed: true, round: 0 }), null)).toMatchObject({
+      kind: "run",
+    });
+  });
+
   it("the header shows the round as the game does, the roll's type and region, variant and rerolls left", () => {
     const view = panelView(saved(), null);
     expect(view.kind === "run" && view.header).toEqual({
@@ -36,7 +51,13 @@ describe("panel view", () => {
     });
 
     const retro = panelView(
-      saved({ round: 0, variant: "retro", roll: { gen: "4", type: "water" }, lineup: {} }),
+      saved({
+        started: true,
+        round: 0,
+        variant: "retro",
+        roll: { gen: "4", type: "water" },
+        lineup: {},
+      }),
       null,
     );
     expect(retro.kind === "run" && retro.header).toMatchObject({

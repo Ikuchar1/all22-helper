@@ -162,6 +162,7 @@ const run = (overrides: Partial<Run> = {}): Run => ({
   rerollsLeft: { type: 1, region: 1 },
   seed: 42,
   signedIn: false,
+  started: true,
   finished: false,
   ...overrides,
 });

@@ -79,7 +79,7 @@ function hoverLineFor(run: Run, focusDexId: number | null): HoverLine | null {
 }
 
 export function panelView(run: Run | null, focusDexId: number | null): PanelView {
-  if (!run || run.finished) return { kind: "empty" };
+  if (!run || !run.started || run.finished) return { kind: "empty" };
   return {
     kind: "run",
     header: {
