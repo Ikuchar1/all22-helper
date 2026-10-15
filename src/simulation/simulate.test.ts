@@ -118,4 +118,9 @@ describe("simulate", () => {
     expect(averageScore).toBeGreaterThan(0);
     expect(averageScore).toBeLessThanOrEqual(1000);
   });
+
+  it("the same seeded random source gives identical results twice", () => {
+    expect(simulate(MID_RUN, 30, seeded(11))).toEqual(simulate(MID_RUN, 30, seeded(11)));
+    expect(simulatedDraft(run(), seeded(12))).toEqual(simulatedDraft(run(), seeded(12)));
+  });
 });
