@@ -1,0 +1,2544 @@
+{
+  "run": "/Users/ikuchar/research/2026-10-15-all22pokemon-scoring",
+  "checked_at": "2026-10-15T09:34:55-05:00",
+  "urls": {
+    "https://all22pokemon.com/pokedata.js": {
+      "status": "ok",
+      "http": 200,
+      "chars": 33151,
+      "fetched": "https://all22pokemon.com/pokedata.js",
+      "note": ""
+    },
+    "https://all22pokemon.com/scouting": {
+      "status": "ok",
+      "http": 200,
+      "chars": 8678,
+      "fetched": "https://all22pokemon.com/scouting",
+      "note": ""
+    },
+    "https://all22pokemon.com/draft.js": {
+      "status": "ok",
+      "http": 200,
+      "chars": 13799,
+      "fetched": "https://all22pokemon.com/draft.js",
+      "note": ""
+    },
+    "https://all22pokemon.com/app.js": {
+      "status": "ok",
+      "http": 200,
+      "chars": 167686,
+      "fetched": "https://all22pokemon.com/app.js",
+      "note": ""
+    },
+    "https://all22pokemon.com/pokemon.js": {
+      "status": "ok",
+      "http": 200,
+      "chars": 25117,
+      "fetched": "https://all22pokemon.com/pokemon.js",
+      "note": ""
+    },
+    "https://all22pokemon.com/saves.js": {
+      "status": "ok",
+      "http": 200,
+      "chars": 35752,
+      "fetched": "https://all22pokemon.com/saves.js",
+      "note": ""
+    },
+    "https://all22pokemon.com": {
+      "status": "ok",
+      "http": 200,
+      "chars": 2773,
+      "fetched": "https://all22pokemon.com",
+      "note": ""
+    },
+    "https://heldgames.com/guides/all22-pokemon-football-game-handhelds": {
+      "status": "ok",
+      "http": 200,
+      "chars": 11607,
+      "fetched": "https://heldgames.com/guides/all22-pokemon-football-game-handhelds",
+      "note": ""
+    },
+    "https://all22pokemonhub.wiki": {
+      "status": "ok",
+      "http": 200,
+      "chars": 6035,
+      "fetched": "https://all22pokemonhub.wiki",
+      "note": ""
+    },
+    "https://all22pokemon.com/about": {
+      "status": "ok",
+      "http": 200,
+      "chars": 2497,
+      "fetched": "https://all22pokemon.com/about",
+      "note": ""
+    },
+    "https://github.com/ecbarish/generations": {
+      "status": "ok",
+      "http": 200,
+      "chars": 115677,
+      "fetched": "https://github.com/ecbarish/generations",
+      "note": ""
+    },
+    "https://www.dexerto.com/pokemon/pokemon-browser-game-lets-fans-draft-fantasy-football-teams-and-play-full-seasons-3417793": {
+      "status": "ok",
+      "http": 200,
+      "chars": 7358,
+      "fetched": "https://www.dexerto.com/pokemon/pokemon-browser-game-lets-fans-draft-fantasy-football-teams-and-play-full-seasons-3417793/",
+      "note": "fetched https://www.dexerto.com/pokemon/pokemon-browser-game-lets-fans-draft-fantasy-football-teams-and-play-full-seasons-3417793/"
+    },
+    "https://all22pokemon.com/tips.js": {
+      "status": "ok",
+      "http": 200,
+      "chars": 3581,
+      "fetched": "https://all22pokemon.com/tips.js",
+      "note": ""
+    },
+    "https://all22pokemon.com/fantasy.js": {
+      "status": "ok",
+      "http": 200,
+      "chars": 94200,
+      "fetched": "https://all22pokemon.com/fantasy.js",
+      "note": ""
+    },
+    "https://discord.gg/B8YvRMtrVt": {
+      "status": "unreachable",
+      "http": 200,
+      "chars": 14,
+      "fetched": "https://discord.com/invite/B8YvRMtrVt",
+      "note": "only 14 chars of text (JS-only page?)"
+    },
+    "https://retrododo.com/pokemon-meets-american-football-in-this-new-free-to-play-browser-game": {
+      "status": "ok",
+      "http": 200,
+      "chars": 4971,
+      "fetched": "https://retrododo.com/pokemon-meets-american-football-in-this-new-free-to-play-browser-game/",
+      "note": "fetched https://retrododo.com/pokemon-meets-american-football-in-this-new-free-to-play-browser-game/"
+    },
+    "https://x.com/OldTownJB/status/2108255031028015484": {
+      "status": "ok",
+      "http": 200,
+      "chars": 1333,
+      "fetched": "https://x.com/OldTownJB/status/2108255031028015484",
+      "note": ""
+    }
+  },
+  "quotes": [
+    {
+      "id": "q1",
+      "file": "wave-1/r1-scoring.md",
+      "finding": 9,
+      "claim": "The data set is embedded in plain JS files, indexed by National Dex number − 1 (#1–1025).",
+      "grade": "High",
+      "url": "https://all22pokemon.com/pokedata.js",
+      "quote": "// Each entry: \"types|HP,Atk,Def,SpA,SpD,Spe|weightKg",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q2",
+      "file": "wave-1/r1-scoring.md",
+      "finding": 10,
+      "claim": "Scouting page labels (qualitative, exactly as presented) match the code weights.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/scouting",
+      "quote": "The exact numbers stay secret, because scouting players by eye is half the fun.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q3",
+      "file": "wave-1/r1-scoring.md",
+      "finding": 10,
+      "claim": "Scouting page labels (qualitative, exactly as presented) match the code weights.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/scouting",
+      "quote": "Weak spots count extra. Your worst fits drag the score down harder than a star lifts it, so don't leave a hole anywhere.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q4",
+      "file": "wave-1/r1-scoring.md",
+      "finding": 10,
+      "claim": "Scouting page labels (qualitative, exactly as presented) match the code weights.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/scouting",
+      "quote": "It counts on a sliding scale: going from 50 to 100 lb is worth as much as going from 400 to 800 lb.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q5",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 1,
+      "claim": "The 17–0 Challenge has two pool variants: all nine generations (\"all\") or Retro, Gen 1–4 (\"retro\").",
+      "grade": "High",
+      "url": "https://all22pokemon.com/draft.js",
+      "quote": "const VARIANTS = { all: GENS, retro: [\"1\", \"2\", \"3\", \"4\"] };",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q6",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 1,
+      "claim": "The 17–0 Challenge has two pool variants: all nine generations (\"all\") or Retro, Gen 1–4 (\"retro\").",
+      "grade": "High",
+      "url": "https://all22pokemon.com/draft.js",
+      "quote": "const REGIONS = {\\n    1: \"Kanto",
+      "label": "reworded",
+      "score": 0.889
+    },
+    {
+      "id": "q7",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 1,
+      "claim": "The 17–0 Challenge has two pool variants: all nine generations (\"all\") or Retro, Gen 1–4 (\"retro\").",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "\"#retro\" into its\\n  // Retro (Gen 1–4) variant and \"#151\" into the 151 Challenge",
+      "label": "reworded",
+      "score": 0.966
+    },
+    {
+      "id": "q8",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 2,
+      "claim": "Formations are defense \"34\"/\"43\" × offense \"fb\"/\"slot\". In the challenge they are chosen before the run and locked once it starts. The challenge has no kicker.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "const DEFAULT_SCHEME = { def: \"34\", off: \"fb\", k: false };",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q9",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 2,
+      "claim": "Formations are defense \"34\"/\"43\" × offense \"fb\"/\"slot\". In the challenge they are chosen before the run and locked once it starts. The challenge has no kicker.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "const isScheme = (sc) => Boolean(sc) && (sc.def === \"34\" || sc.def === \"43\") && (sc.off === \"fb\" || sc.off === \"slot\");",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q10",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 2,
+      "claim": "Formations are defense \"34\"/\"43\" × offense \"fb\"/\"slot\". In the challenge they are chosen before the run and locked once it starts. The challenge has no kicker.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "// A run starts with picking its Pokémon (all nine generations, or Retro: Gen 1–4) and formation,\\n  // locked in once it starts.",
+      "label": "reworded",
+      "score": 0.978
+    },
+    {
+      "id": "q11",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 2,
+      "claim": "Formations are defense \"34\"/\"43\" × offense \"fb\"/\"slot\". In the challenge they are chosen before the run and locked once it starts. The challenge has no kicker.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "return mode === \"draft\" ? { def: draft.scheme.def, off: draft.scheme.off, k: false } : builderScheme;",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q12",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 3,
+      "claim": "There are always 22 spot ids. The base 3-4 + fullback formation has: S1, S2, CB1, CB2, OLB1, OLB2, ILB1, ILB2, DE1, DE2, NT (11 defense) and WR1, WR2, LT, LG, C, RG, RT, TE, QB, FB, HB (11 offense).",
+      "grade": "High",
+      "url": "https://all22pokemon.com/draft.js",
+      "quote": "const SLOT_ROLE = {\\n    S1: \"S\", S2: \"S\", CB1: \"CB\", CB2: \"CB\", OLB1: \"OLB\", OLB2: \"OLB\", ILB1: \"ILB\", ILB2: \"ILB\",\\n    DE1: \"DE\", DE2: \"DE\", NT: \"NT\",\\n    WR1: \"WR\", WR2: \"WR\", LT: \"OL\", LG: \"OL\", C: \"OL\", RG: \"OL\", RT: \"OL\", TE: \"TE\",\\n    QB: \"QB\", FB: \"FB\", HB: \"HB\",\\n  };",
+      "label": "reworded",
+      "score": 0.949
+    },
+    {
+      "id": "q13",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 4,
+      "claim": "The 4-3 and slot formations relabel spots but keep their ids. The scoring role map is `SCHEME_ROLE`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/draft.js",
+      "quote": "const SCHEME_ROLE = { \"43\": { NT: \"DT\", ILB2: \"DT\", ILB1: \"MLB\" }, slot: { FB: \"SLOT\" } };",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q14",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 4,
+      "claim": "The 4-3 and slot formations relabel spots but keep their ids. The scoring role map is `SCHEME_ROLE`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "slot: { FB: { pos: \"WR\", lx: 268, ly: 748, s: 124, look: \"R\", sx: null, sb: null }, HB: { pos: \"RB\", ly: 966 } },",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q15",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 5,
+      "claim": "A run is 22 rounds. Each round rolls a region and a type; you pick one matching Pokémon and place it in any open position.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/draft.js",
+      "quote": "// Draft mode: each round rolls a region and a type, you pick one of the matching Pokémon and place\\n// it in an open position; after 22 rounds the team gets a Team Score (out of 1000) and plays a\\n// 17-game season.",
+      "label": "reworded",
+      "score": 0.977
+    },
+    {
+      "id": "q16",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 5,
+      "claim": "A run is 22 rounds. Each round rolls a region and a type; you pick one matching Pokémon and place it in any open position.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/draft.js",
+      "quote": "const ROUNDS = 22;",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q17",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 5,
+      "claim": "A run is 22 rounds. Each round rolls a region and a type; you pick one matching Pokémon and place it in any open position.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "`Pick one, then place it in any of your ${open.length} open ${open.length === 1 ? \"spot\" : \"spots\"}.${legendNote}`",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q18",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 6,
+      "claim": "Rolls are uniform random picks from a deterministic seeded PRNG: region first (among regions with at least one available type), then type (among types that region still has). So a roll is never empty.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/draft.js",
+      "quote": "// A fresh roll: region first (one of the variant's), then a type that region still has Pokémon for.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q19",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 6,
+      "claim": "Rolls are uniform random picks from a deterministic seeded PRNG: region first (among regions with at least one available type), then type (among types that region still has). So a roll is never empty.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/draft.js",
+      "quote": "const gen = pickFrom(gensOf(variant).filter((g) => typesFor(g, taken, noLegends).length > 0), rand(seed, i * 2));\\n    const type = pickFrom(typesFor(gen, taken, noLegends), rand(seed, i * 2 + 1));",
+      "label": "reworded",
+      "score": 0.983
+    },
+    {
+      "id": "q20",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 6,
+      "claim": "Rolls are uniform random picks from a deterministic seeded PRNG: region first (among regions with at least one available type), then type (among types that region still has). So a roll is never empty.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/draft.js",
+      "quote": "const pickFrom = (list, r) => list[Math.floor(r * list.length)];",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q21",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 7,
+      "claim": "Rerolls: one type reroll and one region reroll per run, not per pick. A reroll keeps the other half of the roll and always changes the rerolled half to a different value that still has Pokémon available.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "// A run: 22 rounds, each with a rolled region + type; one type reroll and one region reroll per run.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q22",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 7,
+      "claim": "Rerolls: one type reroll and one region reroll per run, not per pick. A reroll keeps the other half of the roll and always changes the rerolled half to a different value that still has Pokémon available.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "return { ...run, variant, roll: DRAFT.roll(seed, 0, new Set(), false, variant), rerolls: { type: 1, gen: 1 } };",
+      "label": "trimmed",
+      "score": 1.0
+    },
+    {
+      "id": "q23",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 7,
+      "claim": "Rerolls: one type reroll and one region reroll per run, not per pick. A reroll keeps the other half of the roll and always changes the rerolled half to a different value that still has Pokémon available.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/draft.js",
+      "quote": "const options = typesFor(current.gen, taken, noLegends).filter((t) => t !== current.type);",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q24",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 7,
+      "claim": "Rerolls: one type reroll and one region reroll per run, not per pick. A reroll keeps the other half of the roll and always changes the rerolled half to a different value that still has Pokémon available.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/draft.js",
+      "quote": "const options = gensFor(current.type, taken, noLegends, variant).filter((g) => g !== current.gen);",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q25",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 8,
+      "claim": "You can pick any Pokémon that matches both the region and the type, except taken ones and (after the cap) Legendaries. A Pokémon matches if the rolled type is either of its types.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/draft.js",
+      "quote": "return POOL[gen].filter((p) => !taken.has(p.id) && !(noLegends && p.legendary) && POKEDATA[p.id - 1].types.includes(type));",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q26",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 9,
+      "claim": "Each run allows at most 3 Legendary/Mythical Pokémon. Once the cap is reached, rolls avoid region/type combos where only Legendaries are left.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/draft.js",
+      "quote": "const MAX_LEGENDS = 3;",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q27",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 9,
+      "claim": "Each run allows at most 3 Legendary/Mythical Pokémon. Once the cap is reached, rolls avoid region/type combos where only Legendaries are left.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/draft.js",
+      "quote": "// noLegends: the run has used up its Legendaries, so only regular Pokémon count (rolls never land\\n  // on a region and type that only has Legendaries left).",
+      "label": "reworded",
+      "score": 0.981
+    },
+    {
+      "id": "q28",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 10,
+      "claim": "No duplicates: drafted Pokémon are removed from all later rolls, and the save validator rejects repeated ids.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "if (!BASE_IDS.has(slot) || !Number.isInteger(id) || id < 1 || id > POKEMON_NAMES.length || !gens.includes(genOf(id)) || seen.has(id)) return false;",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q29",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 11,
+      "claim": "Placement is chosen by the player and is final. After placing, the round advances and the next roll is computed as `DRAFT.roll(seed, round, taken, legendsFull, variant)`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "draft.lineup[slotId] = draft.pending;\\n      draft.round += 1;",
+      "label": "reworded",
+      "score": 0.941
+    },
+    {
+      "id": "q30",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 11,
+      "claim": "Placement is chosen by the player and is final. After placing, the round advances and the next roll is computed as `DRAFT.roll(seed, round, taken, legendsFull, variant)`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": ": DRAFT.roll(draft.seed, draft.round, takenIds(), legendsFull(), draft.variant);",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q31",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 11,
+      "claim": "Placement is chosen by the player and is final. After placing, the round advances and the next roll is computed as `DRAFT.roll(seed, round, taken, legendsFull, variant)`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "toast(`${nameOf(id)} is locked in at ${SLOT_BY_ID.get(slotId).pos}`);",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q32",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 12,
+      "claim": "Signed-in runs are server-dealt leaderboard runs. The client deletes the seed and sends `pick`/`reroll` moves to `/api/app?a=...`, and the server rejects moves that come too fast.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "Started signed in (any account), a run is a leaderboard run: it gets an id and the server deals it from\\n  // then on (its seed stays secret, and the server keeps the rolls, the step it's on, the final\\n  // result and its ranks)",
+      "label": "reworded",
+      "score": 0.978
+    },
+    {
+      "id": "q33",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 12,
+      "claim": "Signed-in runs are server-dealt leaderboard runs. The client deletes the seed and sends `pick`/`reroll` moves to `/api/app?a=...`, and the server rejects moves that come too fast.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "const s = await serverMove(\"pick\", { slot: slotId, pick: draft.pending });",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q34",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 12,
+      "claim": "Signed-in runs are server-dealt leaderboard runs. The client deletes the seed and sends `pick`/`reroll` moves to `/api/app?a=...`, and the server rejects moves that come too fast.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "const MIN_MOVE_MS = 1000;",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q35",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 12,
+      "claim": "Signed-in runs are server-dealt leaderboard runs. The client deletes the seed and sends `pick`/`reroll` moves to `/api/app?a=...`, and the server rejects moves that come too fast.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "const res = await fetch(`/api/app?a=${action}`, body",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q36",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 13,
+      "claim": "localStorage key names. The prefix is `EDITION.key = \"pokemon-all22\"`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/pokemon.js",
+      "quote": "key: \"pokemon-all22\", // saved-data prefix",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q37",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 13,
+      "claim": "localStorage key names. The prefix is `EDITION.key = \"pokemon-all22\"`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "const DRAFT_KEY = `${EDITION.key}-draft-v1`;",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q38",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 13,
+      "claim": "localStorage key names. The prefix is `EDITION.key = \"pokemon-all22\"`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "const DRAFT_STATS_KEY = `${EDITION.key}-draft-stats-v1`;",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q39",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 13,
+      "claim": "localStorage key names. The prefix is `EDITION.key = \"pokemon-all22\"`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "151: { name: \"151 Challenge\", runKey: `${EDITION.key}-151-v1`, statsKey: `${EDITION.key}-151-stats-v1` },",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q40",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 14,
+      "claim": "Run JSON shape (from `newDraft` + `saveRun`, which calls `JSON.stringify(runs[g])`).",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "const run = { v: 1, seed, round: 0, revealed: false, started: false, scheme: { def: scheme.def, off: scheme.off }, lineup: {}, pending: null };",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q41",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 14,
+      "claim": "Run JSON shape (from `newDraft` + `saveRun`, which calls `JSON.stringify(runs[g])`).",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "try { localStorage.setItem(CHALLENGES[g].runKey, JSON.stringify(runs[g])); } catch (_) { /* ignore */ }",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q42",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 14,
+      "claim": "Run JSON shape (from `newDraft` + `saveRun`, which calls `JSON.stringify(runs[g])`).",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "Object.assign(run, { id: s.id, step: s.step, round: s.round, roll: s.roll, rerolls: { ...s.rerolls }, result: s.result || null, post: s.post || null, shiny: Array.isArray(s.shiny) ? s.shiny : [] });\\n    delete run.seed;",
+      "label": "reworded",
+      "score": 0.976
+    },
+    {
+      "id": "q43",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 14,
+      "claim": "Run JSON shape (from `newDraft` + `saveRun`, which calls `JSON.stringify(runs[g])`).",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "worked out from the lineup\\n  // and seed (and never stored) for one played on this device.",
+      "label": "reworded",
+      "score": 0.97
+    },
+    {
+      "id": "q44",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 15,
+      "claim": "Stats JSON shape: `{ runs, perfect, bestScore, bestWins }`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "return { runs: n(s.runs, 1e9), perfect: n(s.perfect, 1e9), bestScore: n(s.bestScore, 1000), bestWins: n(s.bestWins, DRAFT.GAMES) };",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q45",
+      "file": "wave-1/r2-mechanics-state.md",
+      "finding": 15,
+      "claim": "Stats JSON shape: `{ runs, perfect, bestScore, bestWins }`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/saves.js",
+      "quote": "/^pokemon-all22-(draft|151)-stats-v1$/, // the challenges' lifetime stats",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q46",
+      "file": "wave-1/r3-community.md",
+      "finding": 1,
+      "claim": "The site's own text says grades come from base stats, size and type, that QB, pass rushers and corners weigh most, and that the four weakest spots drag the team down.",
+      "grade": "High",
+      "url": "https://all22pokemon.com",
+      "quote": "Each Pokémon is graded on how well it fits its position, from its base stats, size and type.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q47",
+      "file": "wave-1/r3-community.md",
+      "finding": 1,
+      "claim": "The site's own text says grades come from base stats, size and type, that QB, pass rushers and corners weigh most, and that the four weakest spots drag the team down.",
+      "grade": "High",
+      "url": "https://all22pokemon.com",
+      "quote": "QB, pass rushers and corners count the most, and your four weakest spots drag the whole team down.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q48",
+      "file": "wave-1/r3-community.md",
+      "finding": 1,
+      "claim": "The site's own text says grades come from base stats, size and type, that QB, pass rushers and corners weigh most, and that the four weakest spots drag the team down.",
+      "grade": "High",
+      "url": "https://all22pokemon.com",
+      "quote": "Opponents range from 350 to 910.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q49",
+      "file": "wave-1/r3-community.md",
+      "finding": 1,
+      "claim": "The site's own text says grades come from base stats, size and type, that QB, pass rushers and corners weigh most, and that the four weakest spots drag the team down.",
+      "grade": "High",
+      "url": "https://heldgames.com/guides/all22-pokemon-football-game-handhelds",
+      "quote": "Each Pokémon is scored on base stats, size and type.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q50",
+      "file": "wave-1/r3-community.md",
+      "finding": 1,
+      "claim": "The site's own text says grades come from base stats, size and type, that QB, pass rushers and corners weigh most, and that the four weakest spots drag the team down.",
+      "grade": "High",
+      "url": "https://heldgames.com/guides/all22-pokemon-football-game-handhelds",
+      "quote": "Quarterback, pass rushers and cornerbacks count for the most",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q51",
+      "file": "wave-1/r3-community.md",
+      "finding": 2,
+      "claim": "The fan wiki says size is position-dependent: weight matters for linemen and fullbacks, height for receivers, tight ends and corners.",
+      "grade": "Medium",
+      "url": "https://all22pokemonhub.wiki",
+      "quote": "Weight is important for linemen and fullbacks, while height is used for receivers, tight ends and corners.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q52",
+      "file": "wave-1/r3-community.md",
+      "finding": 2,
+      "claim": "The fan wiki says size is position-dependent: weight matters for linemen and fullbacks, height for receivers, tight ends and corners.",
+      "grade": "Medium",
+      "url": "https://all22pokemonhub.wiki",
+      "quote": "This is an independent fan guide. Play the actual game at all22pokemon.com.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q53",
+      "file": "wave-1/r3-community.md",
+      "finding": 3,
+      "claim": "Rerolls: five for the whole draft, in several kinds.",
+      "grade": "Medium",
+      "url": "https://heldgames.com/guides/all22-pokemon-football-game-handhelds",
+      "quote": "You get up to five rerolls for the whole draft, which is the main strategic resource.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q54",
+      "file": "wave-1/r3-community.md",
+      "finding": 4,
+      "claim": "The creator is @ColeThereum on X, the idea is credited to @OldTownJB, and the contact channels are X and Discord. No repo is linked.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/about",
+      "quote": "Built by @ColeThereum.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q55",
+      "file": "wave-1/r3-community.md",
+      "finding": 4,
+      "claim": "The creator is @ColeThereum on X, the idea is credited to @OldTownJB, and the contact channels are X and Discord. No repo is linked.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/about",
+      "quote": "The All-22 idea comes from @OldTownJB.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q56",
+      "file": "wave-1/r3-community.md",
+      "finding": 5,
+      "claim": "No public source repository was found.",
+      "grade": "Medium",
+      "url": "https://github.com/ecbarish/generations",
+      "quote": "ALL-22: I describe its techniques only. No code or assets were copied, because it has no licence and uses Pokémon IP.",
+      "label": "not_found",
+      "score": 0.207
+    },
+    {
+      "id": "q57",
+      "file": "wave-1/r3-community.md",
+      "finding": 6,
+      "claim": "The site launched about 2026-10-09 from an X post. The creator's own best early results were modest (10-7, later 13-4).",
+      "grade": "Medium",
+      "url": "https://www.dexerto.com/pokemon/pokemon-browser-game-lets-fans-draft-fantasy-football-teams-and-play-full-seasons-3417793",
+      "quote": "I made a game where you draft your All 22 Pokemon team from randomly rolled Regions and Pokemon Types",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q58",
+      "file": "wave-1/r3-community.md",
+      "finding": 6,
+      "claim": "The site launched about 2026-10-09 from an X post. The creator's own best early results were modest (10-7, later 13-4).",
+      "grade": "Medium",
+      "url": "https://www.dexerto.com/pokemon/pokemon-browser-game-lets-fans-draft-fantasy-football-teams-and-play-full-seasons-3417793",
+      "quote": "So far my best record is 10-7 lol",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q59",
+      "file": "wave-1/r3-community.md",
+      "finding": 6,
+      "claim": "The site launched about 2026-10-09 from an X post. The creator's own best early results were modest (10-7, later 13-4).",
+      "grade": "Medium",
+      "url": "https://heldgames.com/guides/all22-pokemon-football-game-handhelds",
+      "quote": "the creator's own best run was 10-7, later improving to 13-4.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q60",
+      "file": "wave-1/r3-community.md",
+      "finding": 7,
+      "claim": "The third-party research doc's notes on the on-field sim suggest that games are simulated with randomness on top of the rating.",
+      "grade": "Low",
+      "url": "https://github.com/ecbarish/generations",
+      "quote": "full 11-a-side with real block engagement, shed timers (1.6-3.4 s × U(0.45-1.55)), leverage, pancakes, tackle rolls from about 0.56 with modifiers",
+      "label": "not_found",
+      "score": 0.204
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "section": "Answer",
+      "text": "All of the scoring runs in the browser, in plain, unminified `https://all22pokemon.com/draft.js` (last modified 2026-10-14) [1].",
+      "cites": [
+        1
+      ],
+      "urls": [
+        "https://all22pokemon.com/draft.js"
+      ],
+      "quote_ids": [
+        "q5",
+        "q6",
+        "q12",
+        "q13",
+        "q15",
+        "q16",
+        "q18",
+        "q19",
+        "q20",
+        "q23",
+        "q24",
+        "q25",
+        "q26",
+        "q27"
+      ]
+    },
+    {
+      "id": "c2",
+      "section": "Answer",
+      "text": "It is `100 × Σ(role weight × normalized stat)`, plus the largest type bonus among the Pokémon's types (2–6 points), clamped to 0–100 [1].",
+      "cites": [
+        1
+      ],
+      "urls": [
+        "https://all22pokemon.com/draft.js"
+      ],
+      "quote_ids": [
+        "q5",
+        "q6",
+        "q12",
+        "q13",
+        "q15",
+        "q16",
+        "q18",
+        "q19",
+        "q20",
+        "q23",
+        "q24",
+        "q25",
+        "q26",
+        "q27"
+      ]
+    },
+    {
+      "id": "c3",
+      "section": "Answer",
+      "text": "HP runs 20–150, Atk/Def/SpA/SpD run 20–140, and Spe runs 20–130 [1].",
+      "cites": [
+        1
+      ],
+      "urls": [
+        "https://all22pokemon.com/draft.js"
+      ],
+      "quote_ids": [
+        "q5",
+        "q6",
+        "q12",
+        "q13",
+        "q15",
+        "q16",
+        "q18",
+        "q19",
+        "q20",
+        "q23",
+        "q24",
+        "q25",
+        "q26",
+        "q27"
+      ]
+    },
+    {
+      "id": "c4",
+      "section": "Answer",
+      "text": "BST (base stat total) is not used [1].",
+      "cites": [
+        1
+      ],
+      "urls": [
+        "https://all22pokemon.com/draft.js"
+      ],
+      "quote_ids": [
+        "q5",
+        "q6",
+        "q12",
+        "q13",
+        "q15",
+        "q16",
+        "q18",
+        "q19",
+        "q20",
+        "q23",
+        "q24",
+        "q25",
+        "q26",
+        "q27"
+      ]
+    },
+    {
+      "id": "c5",
+      "section": "Answer",
+      "text": "**How the team is scored.** `raw = 0.82 × (offense weighted avg + defense weighted avg)/2 + 0.18 × mean(4 lowest fits of all 22 starters)` [1].",
+      "cites": [
+        1
+      ],
+      "urls": [
+        "https://all22pokemon.com/draft.js"
+      ],
+      "quote_ids": [
+        "q5",
+        "q6",
+        "q12",
+        "q13",
+        "q15",
+        "q16",
+        "q18",
+        "q19",
+        "q20",
+        "q23",
+        "q24",
+        "q25",
+        "q26",
+        "q27"
+      ]
+    },
+    {
+      "id": "c6",
+      "section": "Answer",
+      "text": "Retro (Gen 1–4): 19.5→0, 61.73→820, 70.33→950, 71.83→1000 [1]",
+      "cites": [
+        1
+      ],
+      "urls": [
+        "https://all22pokemon.com/draft.js"
+      ],
+      "quote_ids": [
+        "q5",
+        "q6",
+        "q12",
+        "q13",
+        "q15",
+        "q16",
+        "q18",
+        "q19",
+        "q20",
+        "q23",
+        "q24",
+        "q25",
+        "q26",
+        "q27"
+      ]
+    },
+    {
+      "id": "c7",
+      "section": "Answer",
+      "text": "There is no team-synergy type bonus [1].",
+      "cites": [
+        1
+      ],
+      "urls": [
+        "https://all22pokemon.com/draft.js"
+      ],
+      "quote_ids": [
+        "q5",
+        "q6",
+        "q12",
+        "q13",
+        "q15",
+        "q16",
+        "q18",
+        "q19",
+        "q20",
+        "q23",
+        "q24",
+        "q25",
+        "q26",
+        "q27"
+      ]
+    },
+    {
+      "id": "c8",
+      "section": "Answer",
+      "text": "Each round rolls a region uniformly at random, then a type that region still has [1][2].",
+      "cites": [
+        1,
+        2
+      ],
+      "urls": [
+        "https://all22pokemon.com/draft.js",
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q5",
+        "q6",
+        "q12",
+        "q13",
+        "q15",
+        "q16",
+        "q18",
+        "q19",
+        "q20",
+        "q23",
+        "q24",
+        "q25",
+        "q26",
+        "q27",
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q14",
+        "q17",
+        "q21",
+        "q22",
+        "q28",
+        "q29",
+        "q30",
+        "q31",
+        "q32",
+        "q33",
+        "q34",
+        "q35",
+        "q37",
+        "q38",
+        "q39",
+        "q40",
+        "q41",
+        "q42",
+        "q43",
+        "q44"
+      ]
+    },
+    {
+      "id": "c9",
+      "section": "Answer",
+      "text": "The placement is final [1][2].",
+      "cites": [
+        1,
+        2
+      ],
+      "urls": [
+        "https://all22pokemon.com/draft.js",
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q5",
+        "q6",
+        "q12",
+        "q13",
+        "q15",
+        "q16",
+        "q18",
+        "q19",
+        "q20",
+        "q23",
+        "q24",
+        "q25",
+        "q26",
+        "q27",
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q14",
+        "q17",
+        "q21",
+        "q22",
+        "q28",
+        "q29",
+        "q30",
+        "q31",
+        "q32",
+        "q33",
+        "q34",
+        "q35",
+        "q37",
+        "q38",
+        "q39",
+        "q40",
+        "q41",
+        "q42",
+        "q43",
+        "q44"
+      ]
+    },
+    {
+      "id": "c10",
+      "section": "Answer",
+      "text": "Each run has exactly **one type reroll and one region reroll** in total, and a run allows at most 3 Legendaries [1][2].",
+      "cites": [
+        1,
+        2
+      ],
+      "urls": [
+        "https://all22pokemon.com/draft.js",
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q5",
+        "q6",
+        "q12",
+        "q13",
+        "q15",
+        "q16",
+        "q18",
+        "q19",
+        "q20",
+        "q23",
+        "q24",
+        "q25",
+        "q26",
+        "q27",
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q14",
+        "q17",
+        "q21",
+        "q22",
+        "q28",
+        "q29",
+        "q30",
+        "q31",
+        "q32",
+        "q33",
+        "q34",
+        "q35",
+        "q37",
+        "q38",
+        "q39",
+        "q40",
+        "q41",
+        "q42",
+        "q43",
+        "q44"
+      ]
+    },
+    {
+      "id": "c11",
+      "section": "Answer",
+      "text": "**Saved state.** The current run is stored in localStorage under `pokemon-all22-draft-v1`, and lifetime stats under `pokemon-all22-draft-stats-v1` [2].",
+      "cites": [
+        2
+      ],
+      "urls": [
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q14",
+        "q17",
+        "q21",
+        "q22",
+        "q28",
+        "q29",
+        "q30",
+        "q31",
+        "q32",
+        "q33",
+        "q34",
+        "q35",
+        "q37",
+        "q38",
+        "q39",
+        "q40",
+        "q41",
+        "q42",
+        "q43",
+        "q44"
+      ]
+    },
+    {
+      "id": "c12",
+      "section": "Per-position stat weights and type bonuses (from `ROLES` in draft.js)",
+      "text": "Each row's stat weights sum to 1.0 [1].",
+      "cites": [
+        1
+      ],
+      "urls": [
+        "https://all22pokemon.com/draft.js"
+      ],
+      "quote_ids": [
+        "q5",
+        "q6",
+        "q12",
+        "q13",
+        "q15",
+        "q16",
+        "q18",
+        "q19",
+        "q20",
+        "q23",
+        "q24",
+        "q25",
+        "q26",
+        "q27"
+      ]
+    },
+    {
+      "id": "c13",
+      "section": "Per-position stat weights and type bonuses (from `ROLES` in draft.js)",
+      "text": "**What the scouting page shows.** The page at /scouting gives only labels (\"Key / Helps / A small part / Doesn't count there\") and says \"The exact numbers stay secret, because scouting players by eye is half the fun.\" [5] Every \"key\" label on the page matches the largest code weights for that role, so the page and the code agree [1][5].",
+      "cites": [
+        5,
+        1
+      ],
+      "urls": [
+        "https://all22pokemon.com/scouting",
+        "https://all22pokemon.com/draft.js"
+      ],
+      "quote_ids": [
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6",
+        "q12",
+        "q13",
+        "q15",
+        "q16",
+        "q18",
+        "q19",
+        "q20",
+        "q23",
+        "q24",
+        "q25",
+        "q26",
+        "q27"
+      ]
+    },
+    {
+      "id": "c14",
+      "section": "Per-position stat weights and type bonuses (from `ROLES` in draft.js)",
+      "text": "It's a nudge on top of the stats.\" It describes weight as \"a sliding scale: going from 50 to 100 lb is worth as much as going from 400 to 800 lb\", which fits the log-kg feature [5].",
+      "cites": [
+        5
+      ],
+      "urls": [
+        "https://all22pokemon.com/scouting"
+      ],
+      "quote_ids": [
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    {
+      "id": "c15",
+      "section": "Per-position stat weights and type bonuses (from `ROLES` in draft.js)",
+      "text": "The bonus is added after the stat sum and before the 0–100 clamp [1].",
+      "cites": [
+        1
+      ],
+      "urls": [
+        "https://all22pokemon.com/draft.js"
+      ],
+      "quote_ids": [
+        "q5",
+        "q6",
+        "q12",
+        "q13",
+        "q15",
+        "q16",
+        "q18",
+        "q19",
+        "q20",
+        "q23",
+        "q24",
+        "q25",
+        "q26",
+        "q27"
+      ]
+    },
+    {
+      "id": "c16",
+      "section": "Score formula (verbatim core of draft.js [1])",
+      "text": "The displayed offense and defense sub-scores use each side's 2 weakest spots instead, but the Team Score comes only from `raw` [1].",
+      "cites": [
+        1
+      ],
+      "urls": [
+        "https://all22pokemon.com/draft.js"
+      ],
+      "quote_ids": [
+        "q5",
+        "q6",
+        "q12",
+        "q13",
+        "q15",
+        "q16",
+        "q18",
+        "q19",
+        "q20",
+        "q23",
+        "q24",
+        "q25",
+        "q26",
+        "q27"
+      ]
+    },
+    {
+      "id": "c17",
+      "section": "Score formula (verbatim core of draft.js [1])",
+      "text": "Fits are rounded only for display (`app.js`) [1].",
+      "cites": [
+        1
+      ],
+      "urls": [
+        "https://all22pokemon.com/draft.js"
+      ],
+      "quote_ids": [
+        "q5",
+        "q6",
+        "q12",
+        "q13",
+        "q15",
+        "q16",
+        "q18",
+        "q19",
+        "q20",
+        "q23",
+        "q24",
+        "q25",
+        "q26",
+        "q27"
+      ]
+    },
+    {
+      "id": "c18",
+      "section": "Score formula (verbatim core of draft.js [1])",
+      "text": "The variant passed in is `draft.variant` (`all` or `retro`) [1].",
+      "cites": [
+        1
+      ],
+      "urls": [
+        "https://all22pokemon.com/draft.js"
+      ],
+      "quote_ids": [
+        "q5",
+        "q6",
+        "q12",
+        "q13",
+        "q15",
+        "q16",
+        "q18",
+        "q19",
+        "q20",
+        "q23",
+        "q24",
+        "q25",
+        "q26",
+        "q27"
+      ]
+    },
+    {
+      "id": "c19",
+      "section": "Score formula (verbatim core of draft.js [1])",
+      "text": "A code comment says the curves were \"Calibrated on the real results of ~57,000 seasons (October 2026) ... about 0.1% of teams reach 950 and about 0.01% reach 1000\" [1].",
+      "cites": [
+        1
+      ],
+      "urls": [
+        "https://all22pokemon.com/draft.js"
+      ],
+      "quote_ids": [
+        "q5",
+        "q6",
+        "q12",
+        "q13",
+        "q15",
+        "q16",
+        "q18",
+        "q19",
+        "q20",
+        "q23",
+        "q24",
+        "q25",
+        "q26",
+        "q27"
+      ]
+    },
+    {
+      "id": "c20",
+      "section": "Score formula (verbatim core of draft.js [1])",
+      "text": "**Slot importance weights** (each side sums to 1) [1]:",
+      "cites": [
+        1
+      ],
+      "urls": [
+        "https://all22pokemon.com/draft.js"
+      ],
+      "quote_ids": [
+        "q5",
+        "q6",
+        "q12",
+        "q13",
+        "q15",
+        "q16",
+        "q18",
+        "q19",
+        "q20",
+        "q23",
+        "q24",
+        "q25",
+        "q26",
+        "q27"
+      ]
+    },
+    {
+      "id": "c21",
+      "section": "Score formula (verbatim core of draft.js [1])",
+      "text": "Above 950, one raw point is worth about 20 score points in \"all\" and about 33 in retro [1].",
+      "cites": [
+        1
+      ],
+      "urls": [
+        "https://all22pokemon.com/draft.js"
+      ],
+      "quote_ids": [
+        "q5",
+        "q6",
+        "q12",
+        "q13",
+        "q15",
+        "q16",
+        "q18",
+        "q19",
+        "q20",
+        "q23",
+        "q24",
+        "q25",
+        "q26",
+        "q27"
+      ]
+    },
+    {
+      "id": "c22",
+      "section": "Formations and positions",
+      "text": "Only the scoring role changes, through `SCHEME_ROLE = { \"43\": { NT: \"DT\", ILB2: \"DT\", ILB1: \"MLB\" }, slot: { FB: \"SLOT\" } }` [1][2].",
+      "cites": [
+        1,
+        2
+      ],
+      "urls": [
+        "https://all22pokemon.com/draft.js",
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q5",
+        "q6",
+        "q12",
+        "q13",
+        "q15",
+        "q16",
+        "q18",
+        "q19",
+        "q20",
+        "q23",
+        "q24",
+        "q25",
+        "q26",
+        "q27",
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q14",
+        "q17",
+        "q21",
+        "q22",
+        "q28",
+        "q29",
+        "q30",
+        "q31",
+        "q32",
+        "q33",
+        "q34",
+        "q35",
+        "q37",
+        "q38",
+        "q39",
+        "q40",
+        "q41",
+        "q42",
+        "q43",
+        "q44"
+      ]
+    },
+    {
+      "id": "c23",
+      "section": "Formations and positions",
+      "text": "Formations are chosen before the run and locked once it starts, and the challenge has no kicker [2][5].",
+      "cites": [
+        2,
+        5
+      ],
+      "urls": [
+        "https://all22pokemon.com/app.js",
+        "https://all22pokemon.com/scouting"
+      ],
+      "quote_ids": [
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q14",
+        "q17",
+        "q21",
+        "q22",
+        "q28",
+        "q29",
+        "q30",
+        "q31",
+        "q32",
+        "q33",
+        "q34",
+        "q35",
+        "q37",
+        "q38",
+        "q39",
+        "q40",
+        "q41",
+        "q42",
+        "q43",
+        "q44",
+        "q2",
+        "q3",
+        "q4"
+      ]
+    },
+    {
+      "id": "c24",
+      "section": "Formations and positions",
+      "text": "The `/draft` page is a different game: a multiplayer Fantasy Draft [2].",
+      "cites": [
+        2
+      ],
+      "urls": [
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q14",
+        "q17",
+        "q21",
+        "q22",
+        "q28",
+        "q29",
+        "q30",
+        "q31",
+        "q32",
+        "q33",
+        "q34",
+        "q35",
+        "q37",
+        "q38",
+        "q39",
+        "q40",
+        "q41",
+        "q42",
+        "q43",
+        "q44"
+      ]
+    },
+    {
+      "id": "c25",
+      "section": "Formations and positions",
+      "text": "The pool variants are `all: GENS` and `retro: [\"1\",\"2\",\"3\",\"4\"]` [1][2].",
+      "cites": [
+        1,
+        2
+      ],
+      "urls": [
+        "https://all22pokemon.com/draft.js",
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q5",
+        "q6",
+        "q12",
+        "q13",
+        "q15",
+        "q16",
+        "q18",
+        "q19",
+        "q20",
+        "q23",
+        "q24",
+        "q25",
+        "q26",
+        "q27",
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q14",
+        "q17",
+        "q21",
+        "q22",
+        "q28",
+        "q29",
+        "q30",
+        "q31",
+        "q32",
+        "q33",
+        "q34",
+        "q35",
+        "q37",
+        "q38",
+        "q39",
+        "q40",
+        "q41",
+        "q42",
+        "q43",
+        "q44"
+      ]
+    },
+    {
+      "id": "c26",
+      "section": "Formations and positions",
+      "text": "A separate \"151 Challenge\" rolls a single Kanto Pokémon each round, has 5 rerolls and uses its own curve [1][2].",
+      "cites": [
+        1,
+        2
+      ],
+      "urls": [
+        "https://all22pokemon.com/draft.js",
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q5",
+        "q6",
+        "q12",
+        "q13",
+        "q15",
+        "q16",
+        "q18",
+        "q19",
+        "q20",
+        "q23",
+        "q24",
+        "q25",
+        "q26",
+        "q27",
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q14",
+        "q17",
+        "q21",
+        "q22",
+        "q28",
+        "q29",
+        "q30",
+        "q31",
+        "q32",
+        "q33",
+        "q34",
+        "q35",
+        "q37",
+        "q38",
+        "q39",
+        "q40",
+        "q41",
+        "q42",
+        "q43",
+        "q44"
+      ]
+    },
+    {
+      "id": "c27",
+      "section": "Draft and reroll rules",
+      "text": "**Rounds:** `ROUNDS = 22` [2].",
+      "cites": [
+        2
+      ],
+      "urls": [
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q14",
+        "q17",
+        "q21",
+        "q22",
+        "q28",
+        "q29",
+        "q30",
+        "q31",
+        "q32",
+        "q33",
+        "q34",
+        "q35",
+        "q37",
+        "q38",
+        "q39",
+        "q40",
+        "q41",
+        "q42",
+        "q43",
+        "q44"
+      ]
+    },
+    {
+      "id": "c28",
+      "section": "Draft and reroll rules",
+      "text": "A roll is therefore never empty [2].",
+      "cites": [
+        2
+      ],
+      "urls": [
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q14",
+        "q17",
+        "q21",
+        "q22",
+        "q28",
+        "q29",
+        "q30",
+        "q31",
+        "q32",
+        "q33",
+        "q34",
+        "q35",
+        "q37",
+        "q38",
+        "q39",
+        "q40",
+        "q41",
+        "q42",
+        "q43",
+        "q44"
+      ]
+    },
+    {
+      "id": "c29",
+      "section": "Draft and reroll rules",
+      "text": "(Inference, from the researcher's reading of the code) Rolls are not weighted by how many Pokémon a region or type has [2].",
+      "cites": [
+        2
+      ],
+      "urls": [
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q14",
+        "q17",
+        "q21",
+        "q22",
+        "q28",
+        "q29",
+        "q30",
+        "q31",
+        "q32",
+        "q33",
+        "q34",
+        "q35",
+        "q37",
+        "q38",
+        "q39",
+        "q40",
+        "q41",
+        "q42",
+        "q43",
+        "q44"
+      ]
+    },
+    {
+      "id": "c30",
+      "section": "Draft and reroll rules",
+      "text": "**Eligible picks:** any Pokémon in `POOL[gen]` that isn't taken, isn't a Legendary once the cap is used, and has the rolled type as either of its types [2].",
+      "cites": [
+        2
+      ],
+      "urls": [
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q14",
+        "q17",
+        "q21",
+        "q22",
+        "q28",
+        "q29",
+        "q30",
+        "q31",
+        "q32",
+        "q33",
+        "q34",
+        "q35",
+        "q37",
+        "q38",
+        "q39",
+        "q40",
+        "q41",
+        "q42",
+        "q43",
+        "q44"
+      ]
+    },
+    {
+      "id": "c31",
+      "section": "Draft and reroll rules",
+      "text": "Duplicates are impossible [2].",
+      "cites": [
+        2
+      ],
+      "urls": [
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q14",
+        "q17",
+        "q21",
+        "q22",
+        "q28",
+        "q29",
+        "q30",
+        "q31",
+        "q32",
+        "q33",
+        "q34",
+        "q35",
+        "q37",
+        "q38",
+        "q39",
+        "q40",
+        "q41",
+        "q42",
+        "q43",
+        "q44"
+      ]
+    },
+    {
+      "id": "c32",
+      "section": "Draft and reroll rules",
+      "text": "Once the cap is reached, rolls never land on a region and type that only has Legendaries left [2].",
+      "cites": [
+        2
+      ],
+      "urls": [
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q14",
+        "q17",
+        "q21",
+        "q22",
+        "q28",
+        "q29",
+        "q30",
+        "q31",
+        "q32",
+        "q33",
+        "q34",
+        "q35",
+        "q37",
+        "q38",
+        "q39",
+        "q40",
+        "q41",
+        "q42",
+        "q43",
+        "q44"
+      ]
+    },
+    {
+      "id": "c33",
+      "section": "Draft and reroll rules",
+      "text": "That is one of each per run, and they cost nothing beyond using them up [2].",
+      "cites": [
+        2
+      ],
+      "urls": [
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q14",
+        "q17",
+        "q21",
+        "q22",
+        "q28",
+        "q29",
+        "q30",
+        "q31",
+        "q32",
+        "q33",
+        "q34",
+        "q35",
+        "q37",
+        "q38",
+        "q39",
+        "q40",
+        "q41",
+        "q42",
+        "q43",
+        "q44"
+      ]
+    },
+    {
+      "id": "c34",
+      "section": "Draft and reroll rules",
+      "text": "**Signed-out runs:** the rolls are deterministic from the stored `seed`, including rerolls (`seed ^ 0x2e7011` / `seed ^ 0x6e9e11`) [2].",
+      "cites": [
+        2
+      ],
+      "urls": [
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q14",
+        "q17",
+        "q21",
+        "q22",
+        "q28",
+        "q29",
+        "q30",
+        "q31",
+        "q32",
+        "q33",
+        "q34",
+        "q35",
+        "q37",
+        "q38",
+        "q39",
+        "q40",
+        "q41",
+        "q42",
+        "q43",
+        "q44"
+      ]
+    },
+    {
+      "id": "c35",
+      "section": "Draft and reroll rules",
+      "text": "The server deals them through `/api/app?a=...`, the seed is kept secret, and moves must be at least 1000 ms apart [2].",
+      "cites": [
+        2
+      ],
+      "urls": [
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q14",
+        "q17",
+        "q21",
+        "q22",
+        "q28",
+        "q29",
+        "q30",
+        "q31",
+        "q32",
+        "q33",
+        "q34",
+        "q35",
+        "q37",
+        "q38",
+        "q39",
+        "q40",
+        "q41",
+        "q42",
+        "q43",
+        "q44"
+      ]
+    },
+    {
+      "id": "c36",
+      "section": "localStorage",
+      "text": "The prefix is `\"pokemon-all22\"` [2][4].",
+      "cites": [
+        2,
+        4
+      ],
+      "urls": [
+        "https://all22pokemon.com/app.js",
+        "https://all22pokemon.com/pokemon.js"
+      ],
+      "quote_ids": [
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q14",
+        "q17",
+        "q21",
+        "q22",
+        "q28",
+        "q29",
+        "q30",
+        "q31",
+        "q32",
+        "q33",
+        "q34",
+        "q35",
+        "q37",
+        "q38",
+        "q39",
+        "q40",
+        "q41",
+        "q42",
+        "q43",
+        "q44",
+        "q36"
+      ]
+    },
+    {
+      "id": "c37",
+      "section": "localStorage",
+      "text": "| `pokemon-all22-draft-stats-v1` | `{runs, perfect, bestScore, bestWins}` (synced to the account [8]) |",
+      "cites": [
+        8
+      ],
+      "urls": [
+        "https://all22pokemon.com/saves.js"
+      ],
+      "quote_ids": [
+        "q45"
+      ]
+    },
+    {
+      "id": "c38",
+      "section": "localStorage",
+      "text": "No IndexedDB use was found [2].",
+      "cites": [
+        2
+      ],
+      "urls": [
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q14",
+        "q17",
+        "q21",
+        "q22",
+        "q28",
+        "q29",
+        "q30",
+        "q31",
+        "q32",
+        "q33",
+        "q34",
+        "q35",
+        "q37",
+        "q38",
+        "q39",
+        "q40",
+        "q41",
+        "q42",
+        "q43",
+        "q44"
+      ]
+    },
+    {
+      "id": "c39",
+      "section": "localStorage",
+      "text": "The example values are reconstructed [2]:",
+      "cites": [
+        2
+      ],
+      "urls": [
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q14",
+        "q17",
+        "q21",
+        "q22",
+        "q28",
+        "q29",
+        "q30",
+        "q31",
+        "q32",
+        "q33",
+        "q34",
+        "q35",
+        "q37",
+        "q38",
+        "q39",
+        "q40",
+        "q41",
+        "q42",
+        "q43",
+        "q44"
+      ]
+    },
+    {
+      "id": "c40",
+      "section": "localStorage",
+      "text": "Signed-in runs drop `seed` and add `id`, `step`, `uid`, `result`, `post` and `shiny` [2].",
+      "cites": [
+        2
+      ],
+      "urls": [
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q14",
+        "q17",
+        "q21",
+        "q22",
+        "q28",
+        "q29",
+        "q30",
+        "q31",
+        "q32",
+        "q33",
+        "q34",
+        "q35",
+        "q37",
+        "q38",
+        "q39",
+        "q40",
+        "q41",
+        "q42",
+        "q43",
+        "q44"
+      ]
+    },
+    {
+      "id": "c41",
+      "section": "Pokémon data",
+      "text": "There is no JSON file [3][4].",
+      "cites": [
+        3,
+        4
+      ],
+      "urls": [
+        "https://all22pokemon.com/pokedata.js",
+        "https://all22pokemon.com/pokemon.js"
+      ],
+      "quote_ids": [
+        "q1",
+        "q36"
+      ]
+    },
+    {
+      "id": "c42",
+      "section": "Pokémon data",
+      "text": "**`pokedata.js` [3]:** one string per Pokémon, `\"types|HP,Atk,Def,SpA,SpD,Spe|weightKg\"`.",
+      "cites": [
+        3
+      ],
+      "urls": [
+        "https://all22pokemon.com/pokedata.js"
+      ],
+      "quote_ids": [
+        "q1"
+      ]
+    },
+    {
+      "id": "c43",
+      "section": "Pokémon data",
+      "text": "**`pokemon.js` [4]:** `POKEMON_NAMES`, `HEIGHT_DM` (decimeters), the `LEGENDARIES` set, and `GEN_ENDS = [151,251,386,493,649,721,809,905,1025]`.",
+      "cites": [
+        4,
+        151,
+        251,
+        386,
+        493,
+        649,
+        721,
+        809,
+        905,
+        1025
+      ],
+      "urls": [
+        "https://all22pokemon.com/pokemon.js"
+      ],
+      "quote_ids": [
+        "q36"
+      ]
+    },
+    {
+      "id": "c44",
+      "section": "Pokémon data",
+      "text": "The functions are pure. `DRAFT.positionScore(id, slot, scheme)` and `DRAFT.teamScore(lineup, scheme, variant)` depend only on these globals, so a bot can load the three files and call them directly [1].",
+      "cites": [
+        1
+      ],
+      "urls": [
+        "https://all22pokemon.com/draft.js"
+      ],
+      "quote_ids": [
+        "q5",
+        "q6",
+        "q12",
+        "q13",
+        "q15",
+        "q16",
+        "q18",
+        "q19",
+        "q20",
+        "q23",
+        "q24",
+        "q25",
+        "q26",
+        "q27"
+      ]
+    },
+    {
+      "id": "c45",
+      "section": "Conflicts",
+      "text": "**How many rerolls.** Heldgames says \"You get up to five rerolls for the whole draft\" [9].",
+      "cites": [
+        9
+      ],
+      "urls": [
+        "https://heldgames.com/guides/all22-pokemon-football-game-handhelds"
+      ],
+      "quote_ids": [
+        "q49",
+        "q50",
+        "q53",
+        "q59"
+      ]
+    },
+    {
+      "id": "c46",
+      "section": "Conflicts",
+      "text": "The site's code gives the 17–0 run `rerolls: { type: 1, gen: 1 }` [2], and the 5 belongs to the separate 151 Challenge (`MON_REROLLS = 5`) [1].",
+      "cites": [
+        2,
+        1
+      ],
+      "urls": [
+        "https://all22pokemon.com/app.js",
+        "https://all22pokemon.com/draft.js"
+      ],
+      "quote_ids": [
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q14",
+        "q17",
+        "q21",
+        "q22",
+        "q28",
+        "q29",
+        "q30",
+        "q31",
+        "q32",
+        "q33",
+        "q34",
+        "q35",
+        "q37",
+        "q38",
+        "q39",
+        "q40",
+        "q41",
+        "q42",
+        "q43",
+        "q44",
+        "q5",
+        "q6",
+        "q12",
+        "q13",
+        "q15",
+        "q16",
+        "q18",
+        "q19",
+        "q20",
+        "q23",
+        "q24",
+        "q25",
+        "q26",
+        "q27"
+      ]
+    },
+    {
+      "id": "c47",
+      "section": "Conflicts",
+      "text": "**How the weak-spot penalty is described.** The homepage says \"your four weakest spots drag the whole team down\" [6].",
+      "cites": [
+        6
+      ],
+      "urls": [
+        "https://all22pokemon.com"
+      ],
+      "quote_ids": [
+        "q46",
+        "q47",
+        "q48"
+      ]
+    },
+    {
+      "id": "c48",
+      "section": "Conflicts",
+      "text": "The code implements this as an 18% blend toward the mean of the 4 lowest fits, not as a subtraction [1].",
+      "cites": [
+        1
+      ],
+      "urls": [
+        "https://all22pokemon.com/draft.js"
+      ],
+      "quote_ids": [
+        "q5",
+        "q6",
+        "q12",
+        "q13",
+        "q15",
+        "q16",
+        "q18",
+        "q19",
+        "q20",
+        "q23",
+        "q24",
+        "q25",
+        "q26",
+        "q27"
+      ]
+    },
+    {
+      "id": "c49",
+      "section": "Gaps and unverified",
+      "text": "It probably shares draft.js (\"Pure game logic (no DOM), so it can also be simulated outside the browser\") [1][2].",
+      "cites": [
+        1,
+        2
+      ],
+      "urls": [
+        "https://all22pokemon.com/draft.js",
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q5",
+        "q6",
+        "q12",
+        "q13",
+        "q15",
+        "q16",
+        "q18",
+        "q19",
+        "q20",
+        "q23",
+        "q24",
+        "q25",
+        "q26",
+        "q27",
+        "q7",
+        "q8",
+        "q9",
+        "q10",
+        "q11",
+        "q14",
+        "q17",
+        "q21",
+        "q22",
+        "q28",
+        "q29",
+        "q30",
+        "q31",
+        "q32",
+        "q33",
+        "q34",
+        "q35",
+        "q37",
+        "q38",
+        "q39",
+        "q40",
+        "q41",
+        "q42",
+        "q43",
+        "q44"
+      ]
+    },
+    {
+      "id": "c50",
+      "section": "Gaps and unverified",
+      "text": "Re-fetch it before relying on these numbers [1].",
+      "cites": [
+        1
+      ],
+      "urls": [
+        "https://all22pokemon.com/draft.js"
+      ],
+      "quote_ids": [
+        "q5",
+        "q6",
+        "q12",
+        "q13",
+        "q15",
+        "q16",
+        "q18",
+        "q19",
+        "q20",
+        "q23",
+        "q24",
+        "q25",
+        "q26",
+        "q27"
+      ]
+    },
+    {
+      "id": "c51",
+      "section": "Gaps and unverified",
+      "text": "**No community strategy material.** There's no public repo [7].",
+      "cites": [
+        7
+      ],
+      "urls": [
+        "https://all22pokemon.com/about"
+      ],
+      "quote_ids": [
+        "q54",
+        "q55"
+      ]
+    },
+    {
+      "id": "c52",
+      "section": "Gaps and unverified",
+      "text": "The site launched around 2026-10-09 [10].",
+      "cites": [
+        10
+      ],
+      "urls": [
+        "https://www.dexerto.com/pokemon/pokemon-browser-game-lets-fans-draft-fantasy-football-teams-and-play-full-seasons-3417793"
+      ],
+      "quote_ids": [
+        "q57",
+        "q58"
+      ]
+    },
+    {
+      "id": "c53",
+      "section": "Gaps and unverified",
+      "text": "The creator (@ColeThereum) and the Discord (discord.gg/B8YvRMtrVt) need a logged-in human to read [7].",
+      "cites": [
+        7
+      ],
+      "urls": [
+        "https://all22pokemon.com/about"
+      ],
+      "quote_ids": [
+        "q54",
+        "q55"
+      ]
+    },
+    {
+      "id": "c54",
+      "section": "Gaps and unverified",
+      "text": "One fan wiki agrees that weight matters for linemen and fullbacks and height for WR/TE/CB [11].",
+      "cites": [
+        11
+      ],
+      "urls": [
+        "https://all22pokemonhub.wiki"
+      ],
+      "quote_ids": [
+        "q51",
+        "q52"
+      ]
+    }
+  ],
+  "summary": {
+    "quotes": 60,
+    "exact": 46,
+    "trimmed": 1,
+    "reworded": 11,
+    "not_found": 2,
+    "unreachable": 0,
+    "urls": 17,
+    "urls_unreachable": 1,
+    "claims": 54,
+    "claims_without_quotes": 0
+  }
+}

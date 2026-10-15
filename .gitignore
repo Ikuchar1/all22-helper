@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.DS_Store
+
+# The site creator's own code: kept locally for reference, not republished
+docs/research/*/wave-1/r1-bundle/
+docs/research/*/wave-1/r2-site/

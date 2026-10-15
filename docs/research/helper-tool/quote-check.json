@@ -1,0 +1,3272 @@
+{
+  "run": "/Users/ikuchar/research/2026-10-15-all22pokemon-helper-tool",
+  "checked_at": "2026-10-15T10:05:08-05:00",
+  "urls": {
+    "https://developer.chrome.com/docs/extensions/reference/api/sidePanel": {
+      "status": "ok",
+      "http": 200,
+      "chars": 17579,
+      "fetched": "https://developer.chrome.com/docs/extensions/reference/api/sidePanel",
+      "note": ""
+    },
+    "https://raw.githubusercontent.com/GoogleChrome/chrome-extensions-samples/main/functional-samples/cookbook.sidepanel-site-specific/service-worker.js": {
+      "status": "ok",
+      "http": 200,
+      "chars": 1293,
+      "fetched": "https://raw.githubusercontent.com/GoogleChrome/chrome-extensions-samples/main/functional-samples/cookbook.sidepanel-site-specific/service-worker.js",
+      "note": ""
+    },
+    "https://all22pokemon.com": {
+      "status": "ok",
+      "http": 200,
+      "chars": 2773,
+      "fetched": "https://all22pokemon.com",
+      "note": ""
+    },
+    "https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts": {
+      "status": "ok",
+      "http": 200,
+      "chars": 24790,
+      "fetched": "https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts",
+      "note": ""
+    },
+    "https://developer.chrome.com/docs/extensions/reference/manifest/content-scripts": {
+      "status": "ok",
+      "http": 200,
+      "chars": 10473,
+      "fetched": "https://developer.chrome.com/docs/extensions/reference/manifest/content-scripts",
+      "note": ""
+    },
+    "https://raw.githubusercontent.com/mdn/browser-compat-data/main/webextensions/manifest/content_scripts.json": {
+      "status": "ok",
+      "http": 200,
+      "chars": 8616,
+      "fetched": "https://raw.githubusercontent.com/mdn/browser-compat-data/main/webextensions/manifest/content_scripts.json",
+      "note": ""
+    },
+    "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts": {
+      "status": "ok",
+      "http": 200,
+      "chars": 14046,
+      "fetched": "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts",
+      "note": ""
+    },
+    "https://developer.chrome.com/docs/extensions/reference/api/scripting": {
+      "status": "ok",
+      "http": 200,
+      "chars": 19560,
+      "fetched": "https://developer.chrome.com/docs/extensions/reference/api/scripting",
+      "note": ""
+    },
+    "https://developer.chrome.com/docs/extensions/reference/api/storage": {
+      "status": "ok",
+      "http": 200,
+      "chars": 17742,
+      "fetched": "https://developer.chrome.com/docs/extensions/reference/api/storage",
+      "note": ""
+    },
+    "https://developer.mozilla.org/en-US/docs/Web/API/Window/storage_event": {
+      "status": "ok",
+      "http": 200,
+      "chars": 8788,
+      "fetched": "https://developer.mozilla.org/en-US/docs/Web/API/Window/storage_event",
+      "note": ""
+    },
+    "https://developer.chrome.com/docs/extensions/reference/api/runtime": {
+      "status": "ok",
+      "http": 200,
+      "chars": 35043,
+      "fetched": "https://developer.chrome.com/docs/extensions/reference/api/runtime",
+      "note": ""
+    },
+    "https://developer.chrome.com/docs/extensions/develop/concepts/messaging": {
+      "status": "ok",
+      "http": 200,
+      "chars": 22463,
+      "fetched": "https://developer.chrome.com/docs/extensions/develop/concepts/messaging",
+      "note": ""
+    },
+    "https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world": {
+      "status": "ok",
+      "http": 200,
+      "chars": 8637,
+      "fetched": "https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world",
+      "note": ""
+    },
+    "https://all22pokemon.com/draft.js": {
+      "status": "ok",
+      "http": 200,
+      "chars": 13799,
+      "fetched": "https://all22pokemon.com/draft.js",
+      "note": ""
+    },
+    "https://all22pokemon.com/app.js": {
+      "status": "ok",
+      "http": 200,
+      "chars": 167686,
+      "fetched": "https://all22pokemon.com/app.js",
+      "note": ""
+    },
+    "https://developer.chrome.com/docs/extensions/reference/api/userScripts": {
+      "status": "ok",
+      "http": 200,
+      "chars": 18753,
+      "fetched": "https://developer.chrome.com/docs/extensions/reference/api/userScripts",
+      "note": ""
+    },
+    "https://violentmonkey.github.io/get-it": {
+      "status": "ok",
+      "http": 200,
+      "chars": 2145,
+      "fetched": "https://violentmonkey.github.io/get-it/",
+      "note": "fetched https://violentmonkey.github.io/get-it/"
+    },
+    "https://www.tampermonkey.net/documentation.php?q=unsafeWindow": {
+      "status": "ok",
+      "http": 200,
+      "chars": 662,
+      "fetched": "https://www.tampermonkey.net/documentation.php?q=unsafeWindow",
+      "note": ""
+    },
+    "https://www.tampermonkey.net/documentation.php?q=sandbox": {
+      "status": "ok",
+      "http": 200,
+      "chars": 1678,
+      "fetched": "https://www.tampermonkey.net/documentation.php?q=sandbox",
+      "note": ""
+    },
+    "https://www.tampermonkey.net/documentation.php?q=run_at": {
+      "status": "ok",
+      "http": 200,
+      "chars": 1521,
+      "fetched": "https://www.tampermonkey.net/documentation.php?q=run_at",
+      "note": ""
+    },
+    "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src": {
+      "status": "ok",
+      "http": 200,
+      "chars": 15046,
+      "fetched": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src",
+      "note": ""
+    },
+    "https://www.w3.org/TR/CSP3": {
+      "status": "unreachable",
+      "http": 403,
+      "chars": 0,
+      "fetched": "https://www.w3.org/TR/CSP3",
+      "note": "HTTP 403"
+    },
+    "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP": {
+      "status": "ok",
+      "http": 200,
+      "chars": 40192,
+      "fetched": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP",
+      "note": ""
+    },
+    "https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy": {
+      "status": "ok",
+      "http": 200,
+      "chars": 13182,
+      "fetched": "https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Same-origin_policy",
+      "note": "fetched https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Same-origin_policy"
+    },
+    "https://developer.chrome.com/blog/remote-debugging-port": {
+      "status": "ok",
+      "http": 200,
+      "chars": 4773,
+      "fetched": "https://developer.chrome.com/blog/remote-debugging-port",
+      "note": ""
+    },
+    "https://all22pokemon.com/*": {
+      "status": "unreachable",
+      "http": 404,
+      "chars": 0,
+      "fetched": "https://all22pokemon.com/*",
+      "note": "HTTP 404"
+    },
+    "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.sidepanel-site-specific": {
+      "status": "ok",
+      "http": 200,
+      "chars": 3605,
+      "fetched": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.sidepanel-site-specific",
+      "note": ""
+    },
+    "https://developer.chrome.com/docs/extensions/whats-new": {
+      "status": "ok",
+      "http": 200,
+      "chars": 56488,
+      "fetched": "https://developer.chrome.com/docs/extensions/whats-new",
+      "note": ""
+    },
+    "https://developer.apple.com/forums/thread/728849": {
+      "status": "unreachable",
+      "http": 200,
+      "chars": 218,
+      "fetched": "https://developer.apple.com/forums/verify-human/verify.html?next=/forums/thread/728849",
+      "note": "only 218 chars of text (JS-only page?)"
+    },
+    "https://fonts.googleapis.com": {
+      "status": "unreachable",
+      "http": 404,
+      "chars": 0,
+      "fetched": "https://fonts.googleapis.com",
+      "note": "HTTP 404"
+    },
+    "https://fonts.gstatic.com": {
+      "status": "unreachable",
+      "http": 404,
+      "chars": 0,
+      "fetched": "https://fonts.gstatic.com",
+      "note": "HTTP 404"
+    },
+    "https://pbs.twimg.com": {
+      "status": "unreachable",
+      "http": 400,
+      "chars": 0,
+      "fetched": "https://pbs.twimg.com",
+      "note": "HTTP 400"
+    },
+    "https://www.tampermonkey.net/faq.php?q=Q209": {
+      "status": "ok",
+      "http": 200,
+      "chars": 1636,
+      "fetched": "https://www.tampermonkey.net/faq.php?q=Q209",
+      "note": ""
+    },
+    "https://www.tampermonkey.net/faq.php": {
+      "status": "ok",
+      "http": 200,
+      "chars": 2647,
+      "fetched": "https://www.tampermonkey.net/faq.php",
+      "note": ""
+    },
+    "https://www.tampermonkey.net/documentation.php": {
+      "status": "ok",
+      "http": 200,
+      "chars": 2125,
+      "fetched": "https://www.tampermonkey.net/documentation.php",
+      "note": ""
+    },
+    "https://codereview.chromium.org/7748022": {
+      "status": "ok",
+      "http": 200,
+      "chars": 17049,
+      "fetched": "https://codereview.chromium.org/7748022",
+      "note": ""
+    },
+    "https://all22pokemon.com/pokedata.js": {
+      "status": "ok",
+      "http": 200,
+      "chars": 33151,
+      "fetched": "https://all22pokemon.com/pokedata.js",
+      "note": ""
+    },
+    "https://all22pokemon.com/pokemon.js": {
+      "status": "ok",
+      "http": 200,
+      "chars": 25117,
+      "fetched": "https://all22pokemon.com/pokemon.js",
+      "note": ""
+    }
+  },
+  "quotes": [
+    {
+      "id": "q1",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 1,
+      "claim": "Manifest declaration of the side panel: `sidePanel` permission plus `side_panel.default_path`. The API is Chrome 114+ and MV3+.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/docs/extensions/reference/api/sidePanel",
+      "quote": "Chrome 114+ MV3+",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q2",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 1,
+      "claim": "Manifest declaration of the side panel: `sidePanel` permission plus `side_panel.default_path`. The API is Chrome 114+ and MV3+.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/docs/extensions/reference/api/sidePanel",
+      "quote": "\"permissions\": [ \"sidePanel\" ]",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q3",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 2,
+      "claim": "To make the toolbar icon open the panel, call `setPanelBehavior({ openPanelOnActionClick: true })`.",
+      "grade": "High",
+      "url": "https://raw.githubusercontent.com/GoogleChrome/chrome-extensions-samples/main/functional-samples/cookbook.sidepanel-site-specific/service-worker.js",
+      "quote": "chrome.sidePanel\\n  .setPanelBehavior({ openPanelOnActionClick: true })\\n  .catch((error) => console.error(error));",
+      "label": "reworded",
+      "score": 0.909
+    },
+    {
+      "id": "q4",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 3,
+      "claim": "The official site-specific sample enables the panel per tab on `tabs.onUpdated` and disables it everywhere else.",
+      "grade": "High",
+      "url": "https://raw.githubusercontent.com/GoogleChrome/chrome-extensions-samples/main/functional-samples/cookbook.sidepanel-site-specific/service-worker.js",
+      "quote": "chrome.tabs.onUpdated.addListener(async (tabId, info, tab) => {\\n  if (!tab.url) return;\\n  const url = new URL(tab.url);\\n  // Enables the side panel on google.com\\n  if (url.origin === GOOGLE_ORIGIN) {\\n    await chrome.sidePanel.setOptions({\\n      tabId,\\n      path: 'sidepanel.html',\\n      enabled: true\\n    });\\n  } else {\\n    // Disables the side panel on all other sites\\n    await chrome.sidePanel.setOptions({\\n      tabId,\\n      enabled: false\\n    });\\n  }\\n});",
+      "label": "reworded",
+      "score": 0.868
+    },
+    {
+      "id": "q5",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 3,
+      "claim": "The official site-specific sample enables the panel per tab on `tabs.onUpdated` and disables it everywhere else.",
+      "grade": "High",
+      "url": "https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/cookbook.sidepanel-site-specific",
+      "quote": "This example demonstrates how to display the side panel only on google.com using the Side Panel API.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q6",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 4,
+      "claim": "`sidePanel.open()` needs a user gesture and Chrome 116+.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/docs/extensions/reference/api/sidePanel",
+      "quote": "This may only be called in response to a user action.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q7",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 5,
+      "claim": "The side panel is an extension page, so it can use every chrome.* API, including `runtime.onMessage`, `tabs.sendMessage` and `storage`.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/docs/extensions/reference/api/sidePanel",
+      "quote": "As an extension page, side panels have access to all Chrome APIs.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q8",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 6,
+      "claim": "By default, content scripts run in an isolated world. They share the page's DOM but cannot see its JS variables.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts",
+      "quote": "Content scripts live in an isolated world.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q9",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 7,
+      "claim": "Setting manifest `content_scripts[].world: \"MAIN\"` makes the script share the page's JS environment. This is supported in Chrome 111+.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/docs/extensions/reference/manifest/content-scripts",
+      "quote": "The JavaScript world for a script to execute within. Defaults to \"ISOLATED",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q10",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 7,
+      "claim": "Setting manifest `content_scripts[].world: \"MAIN\"` makes the script share the page's JS environment. This is supported in Chrome 111+.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/docs/extensions/reference/manifest/content-scripts",
+      "quote": "Choosing the \"MAIN",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q11",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 7,
+      "claim": "Setting manifest `content_scripts[].world: \"MAIN\"` makes the script share the page's JS environment. This is supported in Chrome 111+.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/docs/extensions/reference/manifest/content-scripts",
+      "quote": "There are risks involved when using the \"MAIN",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q12",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 7,
+      "claim": "Setting manifest `content_scripts[].world: \"MAIN\"` makes the script share the page's JS environment. This is supported in Chrome 111+.",
+      "grade": "High",
+      "url": "https://raw.githubusercontent.com/mdn/browser-compat-data/main/webextensions/manifest/content_scripts.json",
+      "quote": "Google has been adding support for running content scripts in `world: \"MAIN\"` via either `registerContentScripts` or since Chrome 111 directly on `content_scripts` in the manifest.",
+      "label": "not_found",
+      "score": 0.244
+    },
+    {
+      "id": "q13",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 8,
+      "claim": "MAIN-world scripts have no content-script extension APIs (no `chrome.runtime`). They must relay to an isolated script.",
+      "grade": "High",
+      "url": "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts",
+      "quote": "The web page's execution environment. This environment is shared with the web page without isolation. Scripts in this environment don't have any access to the APIs that are only available to content scripts.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q14",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 8,
+      "claim": "MAIN-world scripts have no content-script extension APIs (no `chrome.runtime`). They must relay to an isolated script.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts",
+      "quote": "Content scripts are unable to access other APIs directly.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q15",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 9,
+      "claim": "The official page-to-content-script bridge is `window.postMessage` plus a `message` listener in the content script.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts",
+      "quote": "it must do so through the shared DOM.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q16",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 9,
+      "claim": "The official page-to-content-script bridge is `window.postMessage` plus a `message` listener in the content script.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts",
+      "quote": "window.postMessage({type : \"FROM_PAGE\", text : \"Hello from the webpage!\"}, \"*\");",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q17",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 9,
+      "claim": "The official page-to-content-script bridge is `window.postMessage` plus a `message` listener in the content script.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts",
+      "quote": "window.addEventListener(\"message\", (event) => {",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q18",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 10,
+      "claim": "`scripting.executeScript` accepts `world: 'MAIN'` (Chrome 95+). It requires the `\"scripting\"` permission plus host_permissions or activeTab.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/docs/extensions/reference/api/scripting",
+      "quote": "MAIN\": \"Specifies the main world of the DOM, which is the execution environment shared with the host page's JavaScript.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q19",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 10,
+      "claim": "`scripting.executeScript` accepts `world: 'MAIN'` (Chrome 95+). It requires the `\"scripting\"` permission plus host_permissions or activeTab.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/docs/extensions/reference/api/scripting",
+      "quote": "Chrome 88+ MV3+",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q20",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 10,
+      "claim": "`scripting.executeScript` accepts `world: 'MAIN'` (Chrome 95+). It requires the `\"scripting\"` permission plus host_permissions or activeTab.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/docs/extensions/whats-new",
+      "quote": "The chrome.scripting API's executeScript() method can now inject scripts directly into a page's main world.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q21",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 11,
+      "claim": "`run_at: \"document_start\"` injects before the page's own scripts. The default is `document_idle`.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts",
+      "quote": "document_start",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q22",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 11,
+      "claim": "`run_at: \"document_start\"` injects before the page's own scripts. The default is `document_idle`.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts",
+      "quote": "Use \"document_idle",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q23",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 12,
+      "claim": "Content scripts share web storage (localStorage) with the host page.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/docs/extensions/reference/api/storage",
+      "quote": "Content scripts share storage with the host page.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q24",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 13,
+      "claim": "The `storage` event does not fire in the window that made the change.",
+      "grade": "High",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/storage_event",
+      "quote": "The storage event of the Window interface fires when another document that shares the same storage area (either localStorage or sessionStorage) as the current window updates that storage area.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q25",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 13,
+      "claim": "The `storage` event does not fire in the window that made the change.",
+      "grade": "High",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/storage_event",
+      "quote": "The event is not fired on the window that made the change.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q26",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 14,
+      "claim": "`runtime.sendMessage` from a content script reaches every extension frame except the sender's, which includes the side panel. It cannot reach content scripts.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/docs/extensions/reference/api/runtime",
+      "quote": "If sending to your extension, the runtime.onMessage event will be fired in every frame of your extension (except for the sender's frame).",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q27",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 14,
+      "claim": "`runtime.sendMessage` from a content script reaches every extension frame except the sender's, which includes the side panel. It cannot reach content scripts.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/docs/extensions/reference/api/runtime",
+      "quote": "Note that extensions cannot send messages to content scripts using this method.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q28",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 15,
+      "claim": "One-shot messaging works through `runtime.sendMessage` / `tabs.sendMessage(tab.id, ...)` and `onMessage`. Long-lived messaging works through `runtime.connect` ports.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/docs/extensions/develop/concepts/messaging",
+      "quote": "const response = await browser.runtime.sendMessage({greeting: \"hello\"});",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q29",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 15,
+      "claim": "One-shot messaging works through `runtime.sendMessage` / `tabs.sendMessage(tab.id, ...)` and `onMessage`. Long-lived messaging works through `runtime.connect` ports.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/docs/extensions/develop/concepts/messaging",
+      "quote": "browser.tabs.sendMessage(tab.id, {greeting: \"hello\"}, function(response) {",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q30",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 15,
+      "claim": "One-shot messaging works through `runtime.sendMessage` / `tabs.sendMessage(tab.id, ...)` and `onMessage`. Long-lived messaging works through `runtime.connect` ports.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/docs/extensions/develop/concepts/messaging",
+      "quote": "To respond asynchronously using `sendResponse()`, return a literal `true`",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q31",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 15,
+      "claim": "One-shot messaging works through `runtime.sendMessage` / `tabs.sendMessage(tab.id, ...)` and `onMessage`. Long-lived messaging works through `runtime.connect` ports.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/docs/extensions/develop/concepts/messaging",
+      "quote": "From Chrome 148, you can return a promise from a message listener to respond asynchronously.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q32",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 15,
+      "claim": "One-shot messaging works through `runtime.sendMessage` / `tabs.sendMessage(tab.id, ...)` and `onMessage`. Long-lived messaging works through `runtime.connect` ports.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/docs/extensions/develop/concepts/messaging",
+      "quote": "const port = browser.runtime.connect({name: \"knockknock\"});",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q33",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 15,
+      "claim": "One-shot messaging works through `runtime.sendMessage` / `tabs.sendMessage(tab.id, ...)` and `onMessage`. Long-lived messaging works through `runtime.connect` ports.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/docs/extensions/develop/concepts/messaging",
+      "quote": "port.postMessage({joke: \"Knock knock\"});",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q34",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 16,
+      "claim": "`chrome.storage.session` can serve as a shared state store instead of messages, but content scripts need `setAccessLevel` to use it.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/docs/extensions/reference/api/storage",
+      "quote": "Session storage holds data in memory while an extension is loaded.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q35",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 16,
+      "claim": "`chrome.storage.session` can serve as a shared state store instead of messages, but content scripts need `setAccessLevel` to use it.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/docs/extensions/reference/api/storage",
+      "quote": "The storage is cleared if the extension is disabled, reloaded, updated, and when the browser restarts.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q36",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 16,
+      "claim": "`chrome.storage.session` can serve as a shared state store instead of messages, but content scripts need `setAccessLevel` to use it.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/docs/extensions/reference/api/storage",
+      "quote": "The storage limit is 10 MB (1 MB in Chrome 111 and earlier).",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q37",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 16,
+      "claim": "`chrome.storage.session` can serve as a shared state store instead of messages, but content scripts need `setAccessLevel` to use it.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/docs/extensions/reference/api/storage",
+      "quote": "To track changes made to storage, add a listener to its `onChanged` event.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q38",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 17,
+      "claim": "Load unpacked and reload behavior.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world",
+      "quote": "Go to the Extensions page by entering `chrome://extensions` in a new tab.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q39",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 17,
+      "claim": "Load unpacked and reload behavior.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world",
+      "quote": "Enable Developer Mode by clicking the toggle switch next to **Developer mode**.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q40",
+      "file": "wave-1/r1-chrome-mv3.md",
+      "finding": 17,
+      "claim": "Load unpacked and reload behavior.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world",
+      "quote": "Click the **Load unpacked** button and select the extension directory.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q41",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 1,
+      "claim": "Script load order is classic `<script src>` tags at the end of body: saves.js, profile.js, pokemon.js, pokedata.js, draft.js, tips.js, app.js, plus a deferred Vercel insights script in head. None are `type=\"module\"`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com",
+      "quote": "<script src=\"saves.js\"></script>",
+      "label": "not_found",
+      "score": 0.0
+    },
+    {
+      "id": "q42",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 1,
+      "claim": "Script load order is classic `<script src>` tags at the end of body: saves.js, profile.js, pokemon.js, pokedata.js, draft.js, tips.js, app.js, plus a deferred Vercel insights script in head. None are `type=\"module\"`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com",
+      "quote": "<script src=\"profile.js\"></script>",
+      "label": "not_found",
+      "score": 0.0
+    },
+    {
+      "id": "q43",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 1,
+      "claim": "Script load order is classic `<script src>` tags at the end of body: saves.js, profile.js, pokemon.js, pokedata.js, draft.js, tips.js, app.js, plus a deferred Vercel insights script in head. None are `type=\"module\"`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com",
+      "quote": "<script src=\"pokemon.js\"></script>",
+      "label": "not_found",
+      "score": 0.0
+    },
+    {
+      "id": "q44",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 1,
+      "claim": "Script load order is classic `<script src>` tags at the end of body: saves.js, profile.js, pokemon.js, pokedata.js, draft.js, tips.js, app.js, plus a deferred Vercel insights script in head. None are `type=\"module\"`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com",
+      "quote": "<script src=\"pokedata.js\"></script>",
+      "label": "not_found",
+      "score": 0.0
+    },
+    {
+      "id": "q45",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 1,
+      "claim": "Script load order is classic `<script src>` tags at the end of body: saves.js, profile.js, pokemon.js, pokedata.js, draft.js, tips.js, app.js, plus a deferred Vercel insights script in head. None are `type=\"module\"`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com",
+      "quote": "<script src=\"draft.js\"></script>",
+      "label": "not_found",
+      "score": 0.333
+    },
+    {
+      "id": "q46",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 1,
+      "claim": "Script load order is classic `<script src>` tags at the end of body: saves.js, profile.js, pokemon.js, pokedata.js, draft.js, tips.js, app.js, plus a deferred Vercel insights script in head. None are `type=\"module\"`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com",
+      "quote": "<script src=\"tips.js\"></script>",
+      "label": "not_found",
+      "score": 0.0
+    },
+    {
+      "id": "q47",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 1,
+      "claim": "Script load order is classic `<script src>` tags at the end of body: saves.js, profile.js, pokemon.js, pokedata.js, draft.js, tips.js, app.js, plus a deferred Vercel insights script in head. None are `type=\"module\"`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com",
+      "quote": "<script src=\"app.js\"></script>",
+      "label": "not_found",
+      "score": 0.0
+    },
+    {
+      "id": "q48",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 1,
+      "claim": "Script load order is classic `<script src>` tags at the end of body: saves.js, profile.js, pokemon.js, pokedata.js, draft.js, tips.js, app.js, plus a deferred Vercel insights script in head. None are `type=\"module\"`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com",
+      "quote": "<script defer src=\"/_vercel/insights/script.js\"></script>",
+      "label": "not_found",
+      "score": 0.0
+    },
+    {
+      "id": "q49",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 2,
+      "claim": "The data and logic globals are top-level `const` in classic scripts, not `var` and not `window.X =`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/draft.js",
+      "quote": "const DRAFT = (() => {",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q50",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 2,
+      "claim": "The data and logic globals are top-level `const` in classic scripts, not `var` and not `window.X =`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/draft.js",
+      "quote": "const POKEDATA = POKEDATA_RAW.map((row) => {",
+      "label": "not_found",
+      "score": 0.444
+    },
+    {
+      "id": "q51",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 2,
+      "claim": "The data and logic globals are top-level `const` in classic scripts, not `var` and not `window.X =`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "const POKEMON_NAMES = [",
+      "label": "reworded",
+      "score": 0.8
+    },
+    {
+      "id": "q52",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 2,
+      "claim": "The data and logic globals are top-level `const` in classic scripts, not `var` and not `window.X =`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/draft.js",
+      "quote": "const HEIGHT_DM = [7,10,20,...",
+      "label": "not_found",
+      "score": 0.545
+    },
+    {
+      "id": "q53",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 2,
+      "claim": "The data and logic globals are top-level `const` in classic scripts, not `var` and not `window.X =`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/draft.js",
+      "quote": "const EDITION = {",
+      "label": "not_found",
+      "score": 0.667
+    },
+    {
+      "id": "q54",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 3,
+      "claim": "App state is not reachable: app.js is one strict-mode IIFE, and `draft`, `lineup`, `SLOTS`, `mode` and `game` are `let` inside it. Its only `window` writes are the Vercel analytics shim.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "(() => {",
+      "label": "not_found",
+      "score": 0.0
+    },
+    {
+      "id": "q55",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 3,
+      "claim": "App state is not reachable: app.js is one strict-mode IIFE, and `draft`, `lineup`, `SLOTS`, `mode` and `game` are `let` inside it. Its only `window` writes are the Vercel analytics shim.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "\"use strict\";",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q56",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 3,
+      "claim": "App state is not reachable: app.js is one strict-mode IIFE, and `draft`, `lineup`, `SLOTS`, `mode` and `game` are `let` inside it. Its only `window` writes are the Vercel analytics shim.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "let SLOTS = []; ... let lineup = fromHash ? fromHash.lineup : loadSavedLineup(gen, legends); ... let draft = CHALLENGE_OK ? runs[game] : null;",
+      "label": "trimmed",
+      "score": 1.0
+    },
+    {
+      "id": "q57",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 3,
+      "claim": "App state is not reachable: app.js is one strict-mode IIFE, and `draft`, `lineup`, `SLOTS`, `mode` and `game` are `let` inside it. Its only `window` writes are the Vercel analytics shim.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "window.va = window.va || ((...args) => (window.vaq = window.vaq || []).push(args));",
+      "label": "trimmed",
+      "score": 1.0
+    },
+    {
+      "id": "q58",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 4,
+      "claim": "Lineup spots: `#hotspots` holds one `<button class=\"hotspot\">` per spot, with the spot id in `data-slot`. The site itself already delegates on `#hotspots` using `closest(\".hotspot\")`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "hotspotsEl.replaceChildren(); ... const el = document.createElement(\"button\");",
+      "label": "trimmed",
+      "score": 1.0
+    },
+    {
+      "id": "q59",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 4,
+      "claim": "Lineup spots: `#hotspots` holds one `<button class=\"hotspot\">` per spot, with the spot id in `data-slot`. The site itself already delegates on `#hotspots` using `closest(\".hotspot\")`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "el.className = \"hotspot\";",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q60",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 4,
+      "claim": "Lineup spots: `#hotspots` holds one `<button class=\"hotspot\">` per spot, with the spot id in `data-slot`. The site itself already delegates on `#hotspots` using `closest(\".hotspot\")`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "el.dataset.slot = slot.id;",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q61",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 4,
+      "claim": "Lineup spots: `#hotspots` holds one `<button class=\"hotspot\">` per spot, with the spot id in `data-slot`. The site itself already delegates on `#hotspots` using `closest(\".hotspot\")`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "const hotspotAt = (target) => (target instanceof Element ? target.closest(\".hotspot\") : null);",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q62",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 4,
+      "claim": "Lineup spots: `#hotspots` holds one `<button class=\"hotspot\">` per spot, with the spot id in `data-slot`. The site itself already delegates on `#hotspots` using `closest(\".hotspot\")`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "{ id: \"S1\", pos: \"S\", side: \"D\", lx: 528, ly: 112, s: 96, look: \"R\" },",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q63",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 4,
+      "claim": "Lineup spots: `#hotspots` holds one `<button class=\"hotspot\">` per spot, with the spot id in `data-slot`. The site itself already delegates on `#hotspots` using `closest(\".hotspot\")`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "<canvas id=\"field\" width=\"1536\" height=\"1064\" aria-label=\"Lineup field\"></canvas>",
+      "label": "not_found",
+      "score": 0.435
+    },
+    {
+      "id": "q64",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 4,
+      "claim": "Lineup spots: `#hotspots` holds one `<button class=\"hotspot\">` per spot, with the spot id in `data-slot`. The site itself already delegates on `#hotspots` using `closest(\".hotspot\")`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "<div id=\"hotspots\"></div>",
+      "label": "not_found",
+      "score": 0.4
+    },
+    {
+      "id": "q65",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 5,
+      "claim": "Spot clicks in challenge mode go to a per-button listener, `draftSlotClick(slot.id)`. With a pending pick, that click places it immediately (no confirm step).",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "el.addEventListener(\"click\", () => {",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q66",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 5,
+      "claim": "Spot clicks in challenge mode go to a per-button listener, `draftSlotClick(slot.id)`. With a pending pick, that click places it immediately (no confirm step).",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "if (mode === \"draft\") { draftSlotClick(slot.id); return; }",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q67",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 5,
+      "claim": "Spot clicks in challenge mode go to a per-button listener, `draftSlotClick(slot.id)`. With a pending pick, that click places it immediately (no confirm step).",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "if (draft.pending) place(slotId);",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q68",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 6,
+      "claim": "Pick list (17–0): `<dialog id=\"draft-pick\">` contains `<div id=\"cand-grid\">`. Each choice is a `<button class=\"cand\">` built per roll, with no dex id on the button itself.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "<dialog id=\"draft-pick\" class=\"sheet pick-sheet\" aria-labelledby=\"dlg-heading\">",
+      "label": "not_found",
+      "score": 0.3
+    },
+    {
+      "id": "q69",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 6,
+      "claim": "Pick list (17–0): `<dialog id=\"draft-pick\">` contains `<div id=\"cand-grid\">`. Each choice is a `<button class=\"cand\">` built per roll, with no dex id on the button itself.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "<div id=\"cand-grid\" class=\"cand-grid\"></div>",
+      "label": "not_found",
+      "score": 0.4
+    },
+    {
+      "id": "q70",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 6,
+      "claim": "Pick list (17–0): `<dialog id=\"draft-pick\">` contains `<div id=\"cand-grid\">`. Each choice is a `<button class=\"cand\">` built per roll, with no dex id on the button itself.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "el.className = \"cand\"; ... <canvas class=\"thumb\" width=\"128\" height=\"128\" aria-hidden=\"true\"></canvas> ... <span class=\"num\">#${String(p.id).padStart(3, \"0\")}</span> ... drawThumb(el.querySelector(\"canvas\"), p.id); ... el.addEventListener(\"click\", () => choosePick(p.id));",
+      "label": "trimmed",
+      "score": 1.0
+    },
+    {
+      "id": "q71",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 6,
+      "claim": "Pick list (17–0): `<dialog id=\"draft-pick\">` contains `<div id=\"cand-grid\">`. Each choice is a `<button class=\"cand\">` built per roll, with no dex id on the button itself.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "cv.dataset.id = id;",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q72",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 6,
+      "claim": "Pick list (17–0): `<dialog id=\"draft-pick\">` contains `<div id=\"cand-grid\">`. Each choice is a `<button class=\"cand\">` built per roll, with no dex id on the button itself.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "el.disabled = locked;",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q73",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 7,
+      "claim": "The pick list is rebuilt with `replaceChildren` every time it opens. Delegate from `#cand-grid` (stable, in the static HTML) or from `document`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "candGrid.replaceChildren(frag);",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q74",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 8,
+      "claim": "After a choice, `draft.pending` is set and saved, the dialog closes, and the \"placing\" panel shows the pick in `#dp-pick-img` (canvas, `data-id` = dex) and `#dp-pick-name`. `<body data-dp>` reports the phase.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "function choosePick(id) {",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q75",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 8,
+      "claim": "After a choice, `draft.pending` is set and saved, the dialog closes, and the \"placing\" panel shows the pick in `#dp-pick-img` (canvas, `data-id` = dex) and `#dp-pick-name`. `<body data-dp>` reports the phase.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "draft.pending = id;",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q76",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 8,
+      "claim": "After a choice, `draft.pending` is set and saved, the dialog closes, and the \"placing\" panel shows the pick in `#dp-pick-img` (canvas, `data-id` = dex) and `#dp-pick-name`. `<body data-dp>` reports the phase.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "saveDraft();",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q77",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 8,
+      "claim": "After a choice, `draft.pending` is set and saved, the dialog closes, and the \"placing\" panel shows the pick in `#dp-pick-img` (canvas, `data-id` = dex) and `#dp-pick-name`. `<body data-dp>` reports the phase.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "pickDlg.close();",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q78",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 8,
+      "claim": "After a choice, `draft.pending` is set and saved, the dialog closes, and the \"placing\" panel shows the pick in `#dp-pick-img` (canvas, `data-id` = dex) and `#dp-pick-name`. `<body data-dp>` reports the phase.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "drawThumb($(\"dp-pick-img\"), draft.pending);",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q79",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 8,
+      "claim": "After a choice, `draft.pending` is set and saved, the dialog closes, and the \"placing\" panel shows the pick in `#dp-pick-img` (canvas, `data-id` = dex) and `#dp-pick-name`. `<body data-dp>` reports the phase.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "document.body.dataset.dp = done ? \"done\" : !draft.started ? \"setup\" : draft.pending ? \"placing\" : \"turn\";",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q80",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 8,
+      "claim": "After a choice, `draft.pending` is set and saved, the dialog closes, and the \"placing\" panel shows the pick in `#dp-pick-img` (canvas, `data-id` = dex) and `#dp-pick-name`. `<body data-dp>` reports the phase.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "<canvas id=\"dp-pick-img\" class=\"thumb\" width=\"128\" height=\"128\" aria-hidden=\"true\"></canvas>",
+      "label": "reworded",
+      "score": 0.846
+    },
+    {
+      "id": "q81",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 9,
+      "claim": "151 Challenge has no pick list: the roll *is* the pick (`draft.pending = draft.roll.id`). Its run saves under a different key, `pokemon-all22-151-v1`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "// The rolled Pokémon is the pick: straight on to placing it.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q82",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 9,
+      "claim": "151 Challenge has no pick list: the roll *is* the pick (`draft.pending = draft.roll.id`). Its run saves under a different key, `pokemon-all22-151-v1`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "draft.pending = draft.roll.id;",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q83",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 9,
+      "claim": "151 Challenge has no pick list: the roll *is* the pick (`draft.pending = draft.roll.id`). Its run saves under a different key, `pokemon-all22-151-v1`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "if (game === \"151\") return; // the roll is the pick",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q84",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 10,
+      "claim": "`pokemon-all22-draft-v1` is written only through the wrapper `saveDraft()` → `saveRun(game)` → `localStorage.setItem(CHALLENGES[g].runKey, JSON.stringify(runs[g]))`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "key: \"pokemon-all22\", // saved-data prefix",
+      "label": "not_found",
+      "score": 0.5
+    },
+    {
+      "id": "q85",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 10,
+      "claim": "`pokemon-all22-draft-v1` is written only through the wrapper `saveDraft()` → `saveRun(game)` → `localStorage.setItem(CHALLENGES[g].runKey, JSON.stringify(runs[g]))`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "\"17-0\": { name: \"17–0 Challenge\", runKey: DRAFT_KEY, statsKey: DRAFT_STATS_KEY },",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q86",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 10,
+      "claim": "`pokemon-all22-draft-v1` is written only through the wrapper `saveDraft()` → `saveRun(game)` → `localStorage.setItem(CHALLENGES[g].runKey, JSON.stringify(runs[g]))`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "function saveRun(g) {",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q87",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 10,
+      "claim": "`pokemon-all22-draft-v1` is written only through the wrapper `saveDraft()` → `saveRun(game)` → `localStorage.setItem(CHALLENGES[g].runKey, JSON.stringify(runs[g]))`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "try { localStorage.setItem(CHALLENGES[g].runKey, JSON.stringify(runs[g])); } catch (_) { /* ignore */ }",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q88",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 10,
+      "claim": "`pokemon-all22-draft-v1` is written only through the wrapper `saveDraft()` → `saveRun(game)` → `localStorage.setItem(CHALLENGES[g].runKey, JSON.stringify(runs[g]))`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "function saveDraft() {",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q89",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 10,
+      "claim": "`pokemon-all22-draft-v1` is written only through the wrapper `saveDraft()` → `saveRun(game)` → `localStorage.setItem(CHALLENGES[g].runKey, JSON.stringify(runs[g]))`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "runs[game] = draft;",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q90",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 10,
+      "claim": "`pokemon-all22-draft-v1` is written only through the wrapper `saveDraft()` → `saveRun(game)` → `localStorage.setItem(CHALLENGES[g].runKey, JSON.stringify(runs[g]))`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "saveRun(game);",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q91",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 11,
+      "claim": "The page sends a strict CSP as an HTTP header. There is no CSP `<meta>` tag.",
+      "grade": "High",
+      "url": "https://all22pokemon.com",
+      "quote": "content-security-policy: default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://pbs.twimg.com; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "label": "not_found",
+      "score": 0.059
+    },
+    {
+      "id": "q92",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 11,
+      "claim": "The page sends a strict CSP as an HTTP header. There is no CSP `<meta>` tag.",
+      "grade": "High",
+      "url": "https://all22pokemon.com",
+      "quote": "x-frame-options: DENY",
+      "label": "not_found",
+      "score": 0.4
+    },
+    {
+      "id": "q93",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 12,
+      "claim": "Builder-mode picker (not the challenge) does carry `data-id` and an `<img>` on each tile.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "el.className = \"mon\";",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q94",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 12,
+      "claim": "Builder-mode picker (not the challenge) does carry `data-id` and an `<img>` on each tile.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "el.dataset.id = p.id; ... <img loading=\"lazy\" alt=\"\" src=\"${tileIcon(p.id)}\" width=\"72\" height=\"72\">",
+      "label": "trimmed",
+      "score": 1.0
+    },
+    {
+      "id": "q95",
+      "file": "wave-1/r2-site-dom.md",
+      "finding": 12,
+      "claim": "Builder-mode picker (not the challenge) does carry `data-id` and an `<img>` on each tile.",
+      "grade": "High",
+      "url": "https://all22pokemon.com/app.js",
+      "quote": "<div id=\"picker-grid\" class=\"grid\"></div>",
+      "label": "not_found",
+      "score": 0.444
+    },
+    {
+      "id": "q96",
+      "file": "wave-1/r3-alternatives.md",
+      "finding": 1,
+      "claim": "The `chrome.userScripts` API exists from Chrome 120 (MV3). From Chrome 138 users enable it with a per-extension \"Allow User Scripts\" toggle; before 138 they needed Developer mode.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/docs/extensions/reference/api/userScripts",
+      "quote": "The **Allow User Scripts** toggle is on each extension's details page.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q97",
+      "file": "wave-1/r3-alternatives.md",
+      "finding": 2,
+      "claim": "User scripts registered through the API default to the `USER_SCRIPT` world, which is exempt from the page's CSP. Scripts can also run in the main world.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/docs/extensions/reference/api/userScripts",
+      "quote": "the execution environment that is specific to user scripts and is exempt from the page's CSP.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q98",
+      "file": "wave-1/r3-alternatives.md",
+      "finding": 2,
+      "claim": "User scripts registered through the API default to the `USER_SCRIPT` world, which is exempt from the page's CSP. Scripts can also run in the main world.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/docs/extensions/reference/api/userScripts",
+      "quote": "Both user and content scripts can run in an isolated world or in the main world.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q99",
+      "file": "wave-1/r3-alternatives.md",
+      "finding": 2,
+      "claim": "User scripts registered through the API default to the `USER_SCRIPT` world, which is exempt from the page's CSP. Scripts can also run in the main world.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/docs/extensions/reference/api/userScripts",
+      "quote": "Scripts running in the main world are accessible to host pages and other extensions.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q100",
+      "file": "wave-1/r3-alternatives.md",
+      "finding": 3,
+      "claim": "Violentmonkey is still on the Chrome Web Store as an MV3 build. A separate MV2 build exists only for legacy browsers.",
+      "grade": "Medium",
+      "url": "https://violentmonkey.github.io/get-it",
+      "quote": "Manifest V3 · for Chrome and Chromium-based browsers",
+      "label": "reworded",
+      "score": 0.933
+    },
+    {
+      "id": "q101",
+      "file": "wave-1/r3-alternatives.md",
+      "finding": 3,
+      "claim": "Violentmonkey is still on the Chrome Web Store as an MV3 build. A separate MV2 build exists only for legacy browsers.",
+      "grade": "Medium",
+      "url": "https://violentmonkey.github.io/get-it",
+      "quote": "Manifest V2 · for legacy or Chromium-based browsers that require MV2",
+      "label": "reworded",
+      "score": 0.917
+    },
+    {
+      "id": "q102",
+      "file": "wave-1/r3-alternatives.md",
+      "finding": 4,
+      "claim": "Tampermonkey userscripts can reach the page's real `window` through `unsafeWindow` or `@sandbox raw`/`JavaScript`, and can run as early as `document-start`.",
+      "grade": "Medium",
+      "url": "https://www.tampermonkey.net/documentation.php?q=unsafeWindow",
+      "quote": "provides access to the `window` object of the page that Tampermonkey is running on",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q103",
+      "file": "wave-1/r3-alternatives.md",
+      "finding": 4,
+      "claim": "Tampermonkey userscripts can reach the page's real `window` through `unsafeWindow` or `@sandbox raw`/`JavaScript`, and can run as early as `document-start`.",
+      "grade": "Medium",
+      "url": "https://www.tampermonkey.net/documentation.php?q=sandbox",
+      "quote": "a script for compatibility reasons always needs to run in page context",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q104",
+      "file": "wave-1/r3-alternatives.md",
+      "finding": 4,
+      "claim": "Tampermonkey userscripts can reach the page's real `window` through `unsafeWindow` or `@sandbox raw`/`JavaScript`, and can run as early as `document-start`.",
+      "grade": "Medium",
+      "url": "https://www.tampermonkey.net/documentation.php?q=sandbox",
+      "quote": "Use this access mode if the script only needs DOM and no direct `unsafeWindow` access.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q105",
+      "file": "wave-1/r3-alternatives.md",
+      "finding": 4,
+      "claim": "Tampermonkey userscripts can reach the page's real `window` through `unsafeWindow` or `@sandbox raw`/`JavaScript`, and can run as early as `document-start`.",
+      "grade": "Medium",
+      "url": "https://www.tampermonkey.net/documentation.php?q=run_at",
+      "quote": "The script will be injected as fast as possible.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q106",
+      "file": "wave-1/r3-alternatives.md",
+      "finding": 5,
+      "claim": "all22pokemon.com sends a strict CSP: `script-src 'self'`, `style-src 'self' https://fonts.googleapis.com`, no `'unsafe-inline'`, plus `frame-ancestors 'none'` and `X-Frame-Options: DENY`.",
+      "grade": "High",
+      "url": "https://all22pokemon.com",
+      "quote": "content-security-policy: default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://pbs.twimg.com; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+      "label": "not_found",
+      "score": 0.059
+    },
+    {
+      "id": "q107",
+      "file": "wave-1/r3-alternatives.md",
+      "finding": 6,
+      "claim": "Under a `style-src` without `'unsafe-inline'`, injected `<style>` elements and `style=\"...\"` attributes are blocked, but setting `element.style.prop` directly is not.",
+      "grade": "High",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src",
+      "quote": "Inline style attributes are also blocked:",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q108",
+      "file": "wave-1/r3-alternatives.md",
+      "finding": 6,
+      "claim": "Under a `style-src` without `'unsafe-inline'`, injected `<style>` elements and `style=\"...\"` attributes are blocked, but setting `element.style.prop` directly is not.",
+      "grade": "High",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src",
+      "quote": "However, styles properties that are set directly on the element's `style` property will not be blocked, allowing users to safely manipulate styles via JavaScript:",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q109",
+      "file": "wave-1/r3-alternatives.md",
+      "finding": 6,
+      "claim": "Under a `style-src` without `'unsafe-inline'`, injected `<style>` elements and `style=\"...\"` attributes are blocked, but setting `element.style.prop` directly is not.",
+      "grade": "High",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src",
+      "quote": "However no browser currently blocks these methods, so there is no need to apply `unsafe-eval`.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q110",
+      "file": "wave-1/r3-alternatives.md",
+      "finding": 7,
+      "claim": "Bookmarklets: CSP3 says page policy \"SHOULD NOT\" interfere with bookmarklets. MDN lists `javascript:` URLs as inline script that `script-src` blocks without `'unsafe-inline'`.",
+      "grade": "Medium",
+      "url": "https://www.w3.org/TR/CSP3",
+      "quote": "SHOULD NOT interfere with the operation of user-agent features like addons, extensions, or bookmarklets.",
+      "label": "unreachable",
+      "score": null
+    },
+    {
+      "id": "q111",
+      "file": "wave-1/r3-alternatives.md",
+      "finding": 7,
+      "claim": "Bookmarklets: CSP3 says page policy \"SHOULD NOT\" interfere with bookmarklets. MDN lists `javascript:` URLs as inline script that `script-src` blocks without `'unsafe-inline'`.",
+      "grade": "Medium",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP",
+      "quote": "JavaScript in a `javascript:` URL:",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q112",
+      "file": "wave-1/r3-alternatives.md",
+      "finding": 8,
+      "claim": "Same-origin policy: a separate local page or app cannot read all22pokemon.com's localStorage.",
+      "grade": "High",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy",
+      "quote": "Each origin gets its own separate storage, and JavaScript in one origin cannot read from or write to the storage belonging to another origin.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q113",
+      "file": "wave-1/r3-alternatives.md",
+      "finding": 9,
+      "claim": "Since Chrome 136, `--remote-debugging-port` is ignored on the default profile. It now requires `--user-data-dir` pointing to a non-default directory.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/blog/remote-debugging-port",
+      "quote": "from Chrome 136 we're making changes to the behavior of `--remote-debugging-port` and `--remote-debugging-pipe`.",
+      "label": "exact",
+      "score": 1.0
+    },
+    {
+      "id": "q114",
+      "file": "wave-1/r3-alternatives.md",
+      "finding": 9,
+      "claim": "Since Chrome 136, `--remote-debugging-port` is ignored on the default profile. It now requires `--user-data-dir` pointing to a non-default directory.",
+      "grade": "High",
+      "url": "https://developer.chrome.com/blog/remote-debugging-port",
+      "quote": "These switches must now be accompanied by the `--user-data-dir` switch to point to a non-standard directory.",
+      "label": "exact",
+      "score": 1.0
+    }
+  ],
+  "claims": [
+    {
+      "id": "c1",
+      "section": "Answer",
+      "text": "It is the only option that gives you a real Chrome side panel, which is an extension page with access to every Chrome API [1].",
+      "cites": [
+        1
+      ],
+      "urls": [
+        "https://developer.chrome.com/docs/extensions/reference/api/sidePanel"
+      ],
+      "quote_ids": [
+        "q1",
+        "q2",
+        "q6",
+        "q7"
+      ]
+    },
+    {
+      "id": "c2",
+      "section": "Answer",
+      "text": "The site declares `DRAFT`, `POKEDATA`, `POKEMON_NAMES` and `HEIGHT_DM` as top-level `const` in classic scripts [15][16][17], so `window.DRAFT` is undefined.",
+      "cites": [
+        15,
+        16,
+        17
+      ],
+      "urls": [
+        "https://all22pokemon.com/draft.js",
+        "https://all22pokemon.com/pokedata.js",
+        "https://all22pokemon.com/pokemon.js"
+      ],
+      "quote_ids": [
+        "q49",
+        "q50",
+        "q52",
+        "q53"
+      ]
+    },
+    {
+      "id": "c3",
+      "section": "Answer",
+      "text": "Reaching them would need a main-world script plus a `postMessage` relay [3][11] (analysis: bundling is simpler and keeps working if the page changes).",
+      "cites": [
+        3,
+        11
+      ],
+      "urls": [
+        "https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts",
+        "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts"
+      ],
+      "quote_ids": [
+        "q8",
+        "q14",
+        "q15",
+        "q16",
+        "q17",
+        "q21",
+        "q22",
+        "q13"
+      ]
+    },
+    {
+      "id": "c4",
+      "section": "Answer",
+      "text": "A plain isolated content script can read the run straight from localStorage, because content scripts share storage with the page [8].",
+      "cites": [
+        8
+      ],
+      "urls": [
+        "https://developer.chrome.com/docs/extensions/reference/api/storage"
+      ],
+      "quote_ids": [
+        "q23",
+        "q34",
+        "q35",
+        "q36",
+        "q37"
+      ]
+    },
+    {
+      "id": "c5",
+      "section": "Answer",
+      "text": "It reads the clicked Pokémon from the pick list's `canvas.thumb[data-id]` [14].",
+      "cites": [
+        14
+      ],
+      "urls": [
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q51",
+        "q54",
+        "q55",
+        "q56",
+        "q57",
+        "q58",
+        "q59",
+        "q60",
+        "q61",
+        "q62",
+        "q63",
+        "q64",
+        "q65",
+        "q66",
+        "q67",
+        "q68",
+        "q69",
+        "q70",
+        "q71",
+        "q72",
+        "q73",
+        "q74",
+        "q75",
+        "q76",
+        "q77",
+        "q78",
+        "q79",
+        "q80",
+        "q81",
+        "q82",
+        "q83",
+        "q84",
+        "q85",
+        "q86",
+        "q87",
+        "q88",
+        "q89",
+        "q90",
+        "q93",
+        "q94",
+        "q95"
+      ]
+    },
+    {
+      "id": "c6",
+      "section": "Answer",
+      "text": "It forwards both with `chrome.runtime.sendMessage`, which reaches the side panel [7].",
+      "cites": [
+        7
+      ],
+      "urls": [
+        "https://developer.chrome.com/docs/extensions/reference/api/runtime"
+      ],
+      "quote_ids": [
+        "q26",
+        "q27"
+      ]
+    },
+    {
+      "id": "c7",
+      "section": "Answer",
+      "text": "One change to the brief's design: clicking a lineup spot while a pick is pending places the Pokémon immediately [14].",
+      "cites": [
+        14
+      ],
+      "urls": [
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q51",
+        "q54",
+        "q55",
+        "q56",
+        "q57",
+        "q58",
+        "q59",
+        "q60",
+        "q61",
+        "q62",
+        "q63",
+        "q64",
+        "q65",
+        "q66",
+        "q67",
+        "q68",
+        "q69",
+        "q70",
+        "q71",
+        "q72",
+        "q73",
+        "q74",
+        "q75",
+        "q76",
+        "q77",
+        "q78",
+        "q79",
+        "q80",
+        "q81",
+        "q82",
+        "q83",
+        "q84",
+        "q85",
+        "q86",
+        "q87",
+        "q88",
+        "q89",
+        "q90",
+        "q93",
+        "q94",
+        "q95"
+      ]
+    },
+    {
+      "id": "c8",
+      "section": "Comparison",
+      "text": "| **MV3 extension + `chrome.sidePanel`** | Developer mode, then Load unpacked, once [9] | Yes, Chrome 114+, can be limited to one site [1][2] | localStorage directly [8]; globals only with `world: \"MAIN\"` [4] | Delegated DOM listeners | **Recommended** |",
+      "cites": [
+        9,
+        1,
+        2,
+        8,
+        4
+      ],
+      "urls": [
+        "https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world",
+        "https://developer.chrome.com/docs/extensions/reference/api/sidePanel",
+        "https://raw.githubusercontent.com/GoogleChrome/chrome-extensions-samples/main/functional-samples/cookbook.sidepanel-site-specific/service-worker.js",
+        "https://developer.chrome.com/docs/extensions/reference/api/storage",
+        "https://developer.chrome.com/docs/extensions/reference/manifest/content-scripts"
+      ],
+      "quote_ids": [
+        "q38",
+        "q39",
+        "q40",
+        "q1",
+        "q2",
+        "q6",
+        "q7",
+        "q3",
+        "q4",
+        "q23",
+        "q34",
+        "q35",
+        "q36",
+        "q37",
+        "q9",
+        "q10",
+        "q11"
+      ]
+    },
+    {
+      "id": "c9",
+      "section": "Comparison",
+      "text": "| Userscript (Tampermonkey/Violentmonkey) | Install a manager, then turn on its per-extension \"Allow User Scripts\" toggle (Chrome 138+) [18]; Violentmonkey ships an MV3 build [19] | No.",
+      "cites": [
+        18,
+        19
+      ],
+      "urls": [
+        "https://developer.chrome.com/docs/extensions/reference/api/userScripts",
+        "https://violentmonkey.github.io/get-it"
+      ],
+      "quote_ids": [
+        "q96",
+        "q97",
+        "q98",
+        "q99",
+        "q100",
+        "q101"
+      ]
+    },
+    {
+      "id": "c10",
+      "section": "Comparison",
+      "text": "You inject a floating `div` into the page, and the site's `style-src` blocks injected `<style>` tags and `style=` attributes [25] | Globals via `unsafeWindow` [20] | Yes | Solid fallback |",
+      "cites": [
+        25,
+        20
+      ],
+      "urls": [
+        "https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src",
+        "https://www.tampermonkey.net/documentation.php?q=unsafeWindow"
+      ],
+      "quote_ids": [
+        "q107",
+        "q108",
+        "q109",
+        "q102"
+      ]
+    },
+    {
+      "id": "c11",
+      "section": "Comparison",
+      "text": "| Separate local app | High | Its own window | Can't read another origin's storage [23]; the DevTools bridge needs a separate Chrome profile since Chrome 136 [24]; the site can't be iframed [13] | Only through the DevTools Protocol | Not worth it |",
+      "cites": [
+        23,
+        24,
+        13
+      ],
+      "urls": [
+        "https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy",
+        "https://developer.chrome.com/blog/remote-debugging-port",
+        "https://all22pokemon.com"
+      ],
+      "quote_ids": [
+        "q112",
+        "q113",
+        "q114",
+        "q41",
+        "q42",
+        "q43",
+        "q44",
+        "q45",
+        "q46",
+        "q47",
+        "q48",
+        "q91",
+        "q92",
+        "q106"
+      ]
+    },
+    {
+      "id": "c12",
+      "section": "Architecture",
+      "text": "**Service worker** (`service-worker.js`): calls `chrome.sidePanel.setPanelBehavior({ openPanelOnActionClick: true })` so the toolbar icon opens the panel [2].",
+      "cites": [
+        2
+      ],
+      "urls": [
+        "https://raw.githubusercontent.com/GoogleChrome/chrome-extensions-samples/main/functional-samples/cookbook.sidepanel-site-specific/service-worker.js"
+      ],
+      "quote_ids": [
+        "q3",
+        "q4"
+      ]
+    },
+    {
+      "id": "c13",
+      "section": "Architecture",
+      "text": "That is the official site-specific sample [2].",
+      "cites": [
+        2
+      ],
+      "urls": [
+        "https://raw.githubusercontent.com/GoogleChrome/chrome-extensions-samples/main/functional-samples/cookbook.sidepanel-site-specific/service-worker.js"
+      ],
+      "quote_ids": [
+        "q3",
+        "q4"
+      ]
+    },
+    {
+      "id": "c14",
+      "section": "Architecture",
+      "text": "reads `JSON.parse(localStorage.getItem('pokemon-all22-draft-v1'))` [8]",
+      "cites": [
+        8
+      ],
+      "urls": [
+        "https://developer.chrome.com/docs/extensions/reference/api/storage"
+      ],
+      "quote_ids": [
+        "q23",
+        "q34",
+        "q35",
+        "q36",
+        "q37"
+      ]
+    },
+    {
+      "id": "c15",
+      "section": "Architecture",
+      "text": "posts `{state, focusId}` with `chrome.runtime.sendMessage` [7]",
+      "cites": [
+        7
+      ],
+      "urls": [
+        "https://developer.chrome.com/docs/extensions/reference/api/runtime"
+      ],
+      "quote_ids": [
+        "q26",
+        "q27"
+      ]
+    },
+    {
+      "id": "c16",
+      "section": "Architecture",
+      "text": "loads its bundled `pokemon.js`, `pokedata.js` and `draft.js` with classic `<script>` tags in that order, the same order as the site [13]",
+      "cites": [
+        13
+      ],
+      "urls": [
+        "https://all22pokemon.com"
+      ],
+      "quote_ids": [
+        "q41",
+        "q42",
+        "q43",
+        "q44",
+        "q45",
+        "q46",
+        "q47",
+        "q48",
+        "q91",
+        "q92",
+        "q106"
+      ]
+    },
+    {
+      "id": "c17",
+      "section": "Architecture",
+      "text": "listens on `chrome.runtime.onMessage` [6]",
+      "cites": [
+        6
+      ],
+      "urls": [
+        "https://developer.chrome.com/docs/extensions/develop/concepts/messaging"
+      ],
+      "quote_ids": [
+        "q28",
+        "q29",
+        "q30",
+        "q31",
+        "q32",
+        "q33"
+      ]
+    },
+    {
+      "id": "c18",
+      "section": "Architecture",
+      "text": "when it opens, asks the content script for the current state with `chrome.tabs.sendMessage(tabId, …)`, because `runtime.sendMessage` can't reach content scripts [7]",
+      "cites": [
+        7
+      ],
+      "urls": [
+        "https://developer.chrome.com/docs/extensions/reference/api/runtime"
+      ],
+      "quote_ids": [
+        "q26",
+        "q27"
+      ]
+    },
+    {
+      "id": "c19",
+      "section": "Architecture",
+      "text": "A delegated listener runs `e.target.closest('.cand')`, then `.querySelector('canvas.thumb').dataset.id`, and gets the dex id [14].",
+      "cites": [
+        14
+      ],
+      "urls": [
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q51",
+        "q54",
+        "q55",
+        "q56",
+        "q57",
+        "q58",
+        "q59",
+        "q60",
+        "q61",
+        "q62",
+        "q63",
+        "q64",
+        "q65",
+        "q66",
+        "q67",
+        "q68",
+        "q69",
+        "q70",
+        "q71",
+        "q72",
+        "q73",
+        "q74",
+        "q75",
+        "q76",
+        "q77",
+        "q78",
+        "q79",
+        "q80",
+        "q81",
+        "q82",
+        "q83",
+        "q84",
+        "q85",
+        "q86",
+        "q87",
+        "q88",
+        "q89",
+        "q90",
+        "q93",
+        "q94",
+        "q95"
+      ]
+    },
+    {
+      "id": "c20",
+      "section": "Architecture",
+      "text": "**Detecting changes.** The `storage` event never fires in the tab that made the change [10].",
+      "cites": [
+        10
+      ],
+      "urls": [
+        "https://developer.mozilla.org/en-US/docs/Web/API/Window/storage_event"
+      ],
+      "quote_ids": [
+        "q24",
+        "q25"
+      ]
+    },
+    {
+      "id": "c21",
+      "section": "Architecture",
+      "text": "The app sets it to `setup`, `turn`, `placing` or `done` on every phase change [14].",
+      "cites": [
+        14
+      ],
+      "urls": [
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q51",
+        "q54",
+        "q55",
+        "q56",
+        "q57",
+        "q58",
+        "q59",
+        "q60",
+        "q61",
+        "q62",
+        "q63",
+        "q64",
+        "q65",
+        "q66",
+        "q67",
+        "q68",
+        "q69",
+        "q70",
+        "q71",
+        "q72",
+        "q73",
+        "q74",
+        "q75",
+        "q76",
+        "q77",
+        "q78",
+        "q79",
+        "q80",
+        "q81",
+        "q82",
+        "q83",
+        "q84",
+        "q85",
+        "q86",
+        "q87",
+        "q88",
+        "q89",
+        "q90",
+        "q93",
+        "q94",
+        "q95"
+      ]
+    },
+    {
+      "id": "c22",
+      "section": "Architecture",
+      "text": "Heavier option: a `world: \"MAIN\"` script at `document_start` that wraps `Storage.prototype.setItem` and relays each write with `window.postMessage` [3][11].",
+      "cites": [
+        3,
+        11
+      ],
+      "urls": [
+        "https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts",
+        "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts"
+      ],
+      "quote_ids": [
+        "q8",
+        "q14",
+        "q15",
+        "q16",
+        "q17",
+        "q21",
+        "q22",
+        "q13"
+      ]
+    },
+    {
+      "id": "c23",
+      "section": "Architecture",
+      "text": "They share the DOM but can't see the page's JS variables [3].",
+      "cites": [
+        3
+      ],
+      "urls": [
+        "https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts"
+      ],
+      "quote_ids": [
+        "q8",
+        "q14",
+        "q15",
+        "q16",
+        "q17",
+        "q21",
+        "q22"
+      ]
+    },
+    {
+      "id": "c24",
+      "section": "Architecture",
+      "text": "`\"world\": \"MAIN\"` in the manifest (Chrome 111+ [12]) or `chrome.scripting.executeScript({world: 'MAIN'})` (Chrome 95+ [5]) runs code in the page's own environment, where the bare name `DRAFT` would resolve.",
+      "cites": [
+        12,
+        5
+      ],
+      "urls": [
+        "https://raw.githubusercontent.com/mdn/browser-compat-data/main/webextensions/manifest/content_scripts.json",
+        "https://developer.chrome.com/docs/extensions/reference/api/scripting"
+      ],
+      "quote_ids": [
+        "q12",
+        "q18",
+        "q19"
+      ]
+    },
+    {
+      "id": "c25",
+      "section": "Architecture",
+      "text": "The Chrome docs warn that the page can interfere with such scripts [4].",
+      "cites": [
+        4
+      ],
+      "urls": [
+        "https://developer.chrome.com/docs/extensions/reference/manifest/content-scripts"
+      ],
+      "quote_ids": [
+        "q9",
+        "q10",
+        "q11"
+      ]
+    },
+    {
+      "id": "c26",
+      "section": "Architecture",
+      "text": "MAIN-world scripts can't use `chrome.runtime` and have to relay through the shared DOM or `postMessage` [11][3].",
+      "cites": [
+        11,
+        3
+      ],
+      "urls": [
+        "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts",
+        "https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts"
+      ],
+      "quote_ids": [
+        "q13",
+        "q8",
+        "q14",
+        "q15",
+        "q16",
+        "q17",
+        "q21",
+        "q22"
+      ]
+    },
+    {
+      "id": "c27",
+      "section": "Architecture",
+      "text": "The site's private state (`draft`, `lineup`, `SLOTS`) sits inside app.js's IIFE (immediately-invoked function), so no world can reach it [14].",
+      "cites": [
+        14
+      ],
+      "urls": [
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q51",
+        "q54",
+        "q55",
+        "q56",
+        "q57",
+        "q58",
+        "q59",
+        "q60",
+        "q61",
+        "q62",
+        "q63",
+        "q64",
+        "q65",
+        "q66",
+        "q67",
+        "q68",
+        "q69",
+        "q70",
+        "q71",
+        "q72",
+        "q73",
+        "q74",
+        "q75",
+        "q76",
+        "q77",
+        "q78",
+        "q79",
+        "q80",
+        "q81",
+        "q82",
+        "q83",
+        "q84",
+        "q85",
+        "q86",
+        "q87",
+        "q88",
+        "q89",
+        "q90",
+        "q93",
+        "q94",
+        "q95"
+      ]
+    },
+    {
+      "id": "c28",
+      "section": "APIs and manifest",
+      "text": "A minimal manifest, assembled from the docs (Medium confidence) [1][2][4]:",
+      "cites": [
+        1,
+        2,
+        4
+      ],
+      "urls": [
+        "https://developer.chrome.com/docs/extensions/reference/api/sidePanel",
+        "https://raw.githubusercontent.com/GoogleChrome/chrome-extensions-samples/main/functional-samples/cookbook.sidepanel-site-specific/service-worker.js",
+        "https://developer.chrome.com/docs/extensions/reference/manifest/content-scripts"
+      ],
+      "quote_ids": [
+        "q1",
+        "q2",
+        "q6",
+        "q7",
+        "q3",
+        "q4",
+        "q9",
+        "q10",
+        "q11"
+      ]
+    },
+    {
+      "id": "c29",
+      "section": "APIs and manifest",
+      "text": "**`side_panel.default_path`:** the site-specific sample leaves it out and sets `path` per tab, so the panel exists only on the target site [2].",
+      "cites": [
+        2
+      ],
+      "urls": [
+        "https://raw.githubusercontent.com/GoogleChrome/chrome-extensions-samples/main/functional-samples/cookbook.sidepanel-site-specific/service-worker.js"
+      ],
+      "quote_ids": [
+        "q3",
+        "q4"
+      ]
+    },
+    {
+      "id": "c30",
+      "section": "APIs and manifest",
+      "text": "**Optional permissions:** add `\"scripting\"` only if you use `executeScript` [5], and `\"storage\"` only if you use `chrome.storage.session` as a shared store.",
+      "cites": [
+        5
+      ],
+      "urls": [
+        "https://developer.chrome.com/docs/extensions/reference/api/scripting"
+      ],
+      "quote_ids": [
+        "q18",
+        "q19"
+      ]
+    },
+    {
+      "id": "c31",
+      "section": "APIs and manifest",
+      "text": "Content scripts need `setAccessLevel` to use that store [8].",
+      "cites": [
+        8
+      ],
+      "urls": [
+        "https://developer.chrome.com/docs/extensions/reference/api/storage"
+      ],
+      "quote_ids": [
+        "q23",
+        "q34",
+        "q35",
+        "q36",
+        "q37"
+      ]
+    },
+    {
+      "id": "c32",
+      "section": "APIs and manifest",
+      "text": "**Keyboard shortcut:** the sample binds `_execute_action` to Command+B on macOS to toggle the panel [2].",
+      "cites": [
+        2
+      ],
+      "urls": [
+        "https://raw.githubusercontent.com/GoogleChrome/chrome-extensions-samples/main/functional-samples/cookbook.sidepanel-site-specific/service-worker.js"
+      ],
+      "quote_ids": [
+        "q3",
+        "q4"
+      ]
+    },
+    {
+      "id": "c33",
+      "section": "APIs and manifest",
+      "text": "**Opening the panel:** `sidePanel.open()` needs Chrome 116+ and must run in response to a user action [1].",
+      "cites": [
+        1
+      ],
+      "urls": [
+        "https://developer.chrome.com/docs/extensions/reference/api/sidePanel"
+      ],
+      "quote_ids": [
+        "q1",
+        "q2",
+        "q6",
+        "q7"
+      ]
+    },
+    {
+      "id": "c34",
+      "section": "APIs and manifest",
+      "text": "**Loading it:** go to chrome://extensions, turn on Developer mode, then Load unpacked [9].",
+      "cites": [
+        9
+      ],
+      "urls": [
+        "https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world"
+      ],
+      "quote_ids": [
+        "q38",
+        "q39",
+        "q40"
+      ]
+    },
+    {
+      "id": "c35",
+      "section": "APIs and manifest",
+      "text": "Extension HTML pages need no extension reload [9].",
+      "cites": [
+        9
+      ],
+      "urls": [
+        "https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world"
+      ],
+      "quote_ids": [
+        "q38",
+        "q39",
+        "q40"
+      ]
+    },
+    {
+      "id": "c36",
+      "section": "What in the DOM identifies a Pokémon",
+      "text": "`dialog#draft-pick` contains `#cand-grid`, which holds one `button.cand` per choice [13][14].",
+      "cites": [
+        13,
+        14
+      ],
+      "urls": [
+        "https://all22pokemon.com",
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q41",
+        "q42",
+        "q43",
+        "q44",
+        "q45",
+        "q46",
+        "q47",
+        "q48",
+        "q91",
+        "q92",
+        "q106",
+        "q51",
+        "q54",
+        "q55",
+        "q56",
+        "q57",
+        "q58",
+        "q59",
+        "q60",
+        "q61",
+        "q62",
+        "q63",
+        "q64",
+        "q65",
+        "q66",
+        "q67",
+        "q68",
+        "q69",
+        "q70",
+        "q71",
+        "q72",
+        "q73",
+        "q74",
+        "q75",
+        "q76",
+        "q77",
+        "q78",
+        "q79",
+        "q80",
+        "q81",
+        "q82",
+        "q83",
+        "q84",
+        "q85",
+        "q86",
+        "q87",
+        "q88",
+        "q89",
+        "q90",
+        "q93",
+        "q94",
+        "q95"
+      ]
+    },
+    {
+      "id": "c37",
+      "section": "What in the DOM identifies a Pokémon",
+      "text": "The dex id is on the child `canvas.thumb[data-id]`, and `.num` text such as `#025` is a fallback [14].",
+      "cites": [
+        14
+      ],
+      "urls": [
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q51",
+        "q54",
+        "q55",
+        "q56",
+        "q57",
+        "q58",
+        "q59",
+        "q60",
+        "q61",
+        "q62",
+        "q63",
+        "q64",
+        "q65",
+        "q66",
+        "q67",
+        "q68",
+        "q69",
+        "q70",
+        "q71",
+        "q72",
+        "q73",
+        "q74",
+        "q75",
+        "q76",
+        "q77",
+        "q78",
+        "q79",
+        "q80",
+        "q81",
+        "q82",
+        "q83",
+        "q84",
+        "q85",
+        "q86",
+        "q87",
+        "q88",
+        "q89",
+        "q90",
+        "q93",
+        "q94",
+        "q95"
+      ]
+    },
+    {
+      "id": "c38",
+      "section": "What in the DOM identifies a Pokémon",
+      "text": "Sprites are canvases, so there's no `<img src>` to read [14].",
+      "cites": [
+        14
+      ],
+      "urls": [
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q51",
+        "q54",
+        "q55",
+        "q56",
+        "q57",
+        "q58",
+        "q59",
+        "q60",
+        "q61",
+        "q62",
+        "q63",
+        "q64",
+        "q65",
+        "q66",
+        "q67",
+        "q68",
+        "q69",
+        "q70",
+        "q71",
+        "q72",
+        "q73",
+        "q74",
+        "q75",
+        "q76",
+        "q77",
+        "q78",
+        "q79",
+        "q80",
+        "q81",
+        "q82",
+        "q83",
+        "q84",
+        "q85",
+        "q86",
+        "q87",
+        "q88",
+        "q89",
+        "q90",
+        "q93",
+        "q94",
+        "q95"
+      ]
+    },
+    {
+      "id": "c39",
+      "section": "What in the DOM identifies a Pokémon",
+      "text": "Locked Legendaries are `button.cand.locked[disabled]`, and disabled buttons don't fire click events [14].",
+      "cites": [
+        14
+      ],
+      "urls": [
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q51",
+        "q54",
+        "q55",
+        "q56",
+        "q57",
+        "q58",
+        "q59",
+        "q60",
+        "q61",
+        "q62",
+        "q63",
+        "q64",
+        "q65",
+        "q66",
+        "q67",
+        "q68",
+        "q69",
+        "q70",
+        "q71",
+        "q72",
+        "q73",
+        "q74",
+        "q75",
+        "q76",
+        "q77",
+        "q78",
+        "q79",
+        "q80",
+        "q81",
+        "q82",
+        "q83",
+        "q84",
+        "q85",
+        "q86",
+        "q87",
+        "q88",
+        "q89",
+        "q90",
+        "q93",
+        "q94",
+        "q95"
+      ]
+    },
+    {
+      "id": "c40",
+      "section": "What in the DOM identifies a Pokémon",
+      "text": "`#hotspots` holds one `button.hotspot[data-slot=\"S1|CB1|ILB2|…\"]` per spot, laid over `canvas#field` [13][14].",
+      "cites": [
+        13,
+        14
+      ],
+      "urls": [
+        "https://all22pokemon.com",
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q41",
+        "q42",
+        "q43",
+        "q44",
+        "q45",
+        "q46",
+        "q47",
+        "q48",
+        "q91",
+        "q92",
+        "q106",
+        "q51",
+        "q54",
+        "q55",
+        "q56",
+        "q57",
+        "q58",
+        "q59",
+        "q60",
+        "q61",
+        "q62",
+        "q63",
+        "q64",
+        "q65",
+        "q66",
+        "q67",
+        "q68",
+        "q69",
+        "q70",
+        "q71",
+        "q72",
+        "q73",
+        "q74",
+        "q75",
+        "q76",
+        "q77",
+        "q78",
+        "q79",
+        "q80",
+        "q81",
+        "q82",
+        "q83",
+        "q84",
+        "q85",
+        "q86",
+        "q87",
+        "q88",
+        "q89",
+        "q90",
+        "q93",
+        "q94",
+        "q95"
+      ]
+    },
+    {
+      "id": "c41",
+      "section": "What in the DOM identifies a Pokémon",
+      "text": "Who fills a spot appears only in the button's `aria-label`, so take occupancy from localStorage `lineup` instead [14].",
+      "cites": [
+        14
+      ],
+      "urls": [
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q51",
+        "q54",
+        "q55",
+        "q56",
+        "q57",
+        "q58",
+        "q59",
+        "q60",
+        "q61",
+        "q62",
+        "q63",
+        "q64",
+        "q65",
+        "q66",
+        "q67",
+        "q68",
+        "q69",
+        "q70",
+        "q71",
+        "q72",
+        "q73",
+        "q74",
+        "q75",
+        "q76",
+        "q77",
+        "q78",
+        "q79",
+        "q80",
+        "q81",
+        "q82",
+        "q83",
+        "q84",
+        "q85",
+        "q86",
+        "q87",
+        "q88",
+        "q89",
+        "q90",
+        "q93",
+        "q94",
+        "q95"
+      ]
+    },
+    {
+      "id": "c42",
+      "section": "What in the DOM identifies a Pokémon",
+      "text": "**Pending pick:** `#dp-pick-img[data-id]` while `body[data-dp=\"placing\"]` [14].",
+      "cites": [
+        14
+      ],
+      "urls": [
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q51",
+        "q54",
+        "q55",
+        "q56",
+        "q57",
+        "q58",
+        "q59",
+        "q60",
+        "q61",
+        "q62",
+        "q63",
+        "q64",
+        "q65",
+        "q66",
+        "q67",
+        "q68",
+        "q69",
+        "q70",
+        "q71",
+        "q72",
+        "q73",
+        "q74",
+        "q75",
+        "q76",
+        "q77",
+        "q78",
+        "q79",
+        "q80",
+        "q81",
+        "q82",
+        "q83",
+        "q84",
+        "q85",
+        "q86",
+        "q87",
+        "q88",
+        "q89",
+        "q90",
+        "q93",
+        "q94",
+        "q95"
+      ]
+    },
+    {
+      "id": "c43",
+      "section": "What in the DOM identifies a Pokémon",
+      "text": "**Re-rendering:** both containers are rebuilt with `replaceChildren` [14], so delegate from `#cand-grid` / `#hotspots` or `document` and use `closest()`.",
+      "cites": [
+        14
+      ],
+      "urls": [
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q51",
+        "q54",
+        "q55",
+        "q56",
+        "q57",
+        "q58",
+        "q59",
+        "q60",
+        "q61",
+        "q62",
+        "q63",
+        "q64",
+        "q65",
+        "q66",
+        "q67",
+        "q68",
+        "q69",
+        "q70",
+        "q71",
+        "q72",
+        "q73",
+        "q74",
+        "q75",
+        "q76",
+        "q77",
+        "q78",
+        "q79",
+        "q80",
+        "q81",
+        "q82",
+        "q83",
+        "q84",
+        "q85",
+        "q86",
+        "q87",
+        "q88",
+        "q89",
+        "q90",
+        "q93",
+        "q94",
+        "q95"
+      ]
+    },
+    {
+      "id": "c44",
+      "section": "What in the DOM identifies a Pokémon",
+      "text": "The site does the same itself [14].",
+      "cites": [
+        14
+      ],
+      "urls": [
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q51",
+        "q54",
+        "q55",
+        "q56",
+        "q57",
+        "q58",
+        "q59",
+        "q60",
+        "q61",
+        "q62",
+        "q63",
+        "q64",
+        "q65",
+        "q66",
+        "q67",
+        "q68",
+        "q69",
+        "q70",
+        "q71",
+        "q72",
+        "q73",
+        "q74",
+        "q75",
+        "q76",
+        "q77",
+        "q78",
+        "q79",
+        "q80",
+        "q81",
+        "q82",
+        "q83",
+        "q84",
+        "q85",
+        "q86",
+        "q87",
+        "q88",
+        "q89",
+        "q90",
+        "q93",
+        "q94",
+        "q95"
+      ]
+    },
+    {
+      "id": "c45",
+      "section": "What in the DOM identifies a Pokémon",
+      "text": "**151 Challenge:** has no pick list and saves under `pokemon-all22-151-v1` [14].",
+      "cites": [
+        14
+      ],
+      "urls": [
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q51",
+        "q54",
+        "q55",
+        "q56",
+        "q57",
+        "q58",
+        "q59",
+        "q60",
+        "q61",
+        "q62",
+        "q63",
+        "q64",
+        "q65",
+        "q66",
+        "q67",
+        "q68",
+        "q69",
+        "q70",
+        "q71",
+        "q72",
+        "q73",
+        "q74",
+        "q75",
+        "q76",
+        "q77",
+        "q78",
+        "q79",
+        "q80",
+        "q81",
+        "q82",
+        "q83",
+        "q84",
+        "q85",
+        "q86",
+        "q87",
+        "q88",
+        "q89",
+        "q90",
+        "q93",
+        "q94",
+        "q95"
+      ]
+    },
+    {
+      "id": "c46",
+      "section": "Risks",
+      "text": "The live files matched the earlier local copies as of 2026-10-14 [13].",
+      "cites": [
+        13
+      ],
+      "urls": [
+        "https://all22pokemon.com"
+      ],
+      "quote_ids": [
+        "q41",
+        "q42",
+        "q43",
+        "q44",
+        "q45",
+        "q46",
+        "q47",
+        "q48",
+        "q91",
+        "q92",
+        "q106"
+      ]
+    },
+    {
+      "id": "c47",
+      "section": "Risks",
+      "text": "**Selectors change.** `.cand`, `canvas.thumb[data-id]` and `.hotspot[data-slot]` all come from app.js and can be renamed without warning [14].",
+      "cites": [
+        14
+      ],
+      "urls": [
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q51",
+        "q54",
+        "q55",
+        "q56",
+        "q57",
+        "q58",
+        "q59",
+        "q60",
+        "q61",
+        "q62",
+        "q63",
+        "q64",
+        "q65",
+        "q66",
+        "q67",
+        "q68",
+        "q69",
+        "q70",
+        "q71",
+        "q72",
+        "q73",
+        "q74",
+        "q75",
+        "q76",
+        "q77",
+        "q78",
+        "q79",
+        "q80",
+        "q81",
+        "q82",
+        "q83",
+        "q84",
+        "q85",
+        "q86",
+        "q87",
+        "q88",
+        "q89",
+        "q90",
+        "q93",
+        "q94",
+        "q95"
+      ]
+    },
+    {
+      "id": "c48",
+      "section": "Risks",
+      "text": "**Writes go through one function.** The run key is written only by `saveDraft()` → `saveRun()` [14].",
+      "cites": [
+        14
+      ],
+      "urls": [
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q51",
+        "q54",
+        "q55",
+        "q56",
+        "q57",
+        "q58",
+        "q59",
+        "q60",
+        "q61",
+        "q62",
+        "q63",
+        "q64",
+        "q65",
+        "q66",
+        "q67",
+        "q68",
+        "q69",
+        "q70",
+        "q71",
+        "q72",
+        "q73",
+        "q74",
+        "q75",
+        "q76",
+        "q77",
+        "q78",
+        "q79",
+        "q80",
+        "q81",
+        "q82",
+        "q83",
+        "q84",
+        "q85",
+        "q86",
+        "q87",
+        "q88",
+        "q89",
+        "q90",
+        "q93",
+        "q94",
+        "q95"
+      ]
+    },
+    {
+      "id": "c49",
+      "section": "Risks",
+      "text": "Signed-in runs also end in `saveDraft()`, but whether every server field gets copied was not checked (Medium) [14].",
+      "cites": [
+        14
+      ],
+      "urls": [
+        "https://all22pokemon.com/app.js"
+      ],
+      "quote_ids": [
+        "q51",
+        "q54",
+        "q55",
+        "q56",
+        "q57",
+        "q58",
+        "q59",
+        "q60",
+        "q61",
+        "q62",
+        "q63",
+        "q64",
+        "q65",
+        "q66",
+        "q67",
+        "q68",
+        "q69",
+        "q70",
+        "q71",
+        "q72",
+        "q73",
+        "q74",
+        "q75",
+        "q76",
+        "q77",
+        "q78",
+        "q79",
+        "q80",
+        "q81",
+        "q82",
+        "q83",
+        "q84",
+        "q85",
+        "q86",
+        "q87",
+        "q88",
+        "q89",
+        "q90",
+        "q93",
+        "q94",
+        "q95"
+      ]
+    },
+    {
+      "id": "c50",
+      "section": "Risks",
+      "text": "**MAIN-world scripts are exposed.** The page can access and tamper with them [4].",
+      "cites": [
+        4
+      ],
+      "urls": [
+        "https://developer.chrome.com/docs/extensions/reference/manifest/content-scripts"
+      ],
+      "quote_ids": [
+        "q9",
+        "q10",
+        "q11"
+      ]
+    },
+    {
+      "id": "c51",
+      "section": "Risks",
+      "text": "Reload the game tab too [9].",
+      "cites": [
+        9
+      ],
+      "urls": [
+        "https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world"
+      ],
+      "quote_ids": [
+        "q38",
+        "q39",
+        "q40"
+      ]
+    },
+    {
+      "id": "c52",
+      "section": "Conflicts",
+      "text": "**Bookmarklets under a strict CSP.** The site sends `script-src 'self'` with no `'unsafe-inline'` [13].",
+      "cites": [
+        13
+      ],
+      "urls": [
+        "https://all22pokemon.com"
+      ],
+      "quote_ids": [
+        "q41",
+        "q42",
+        "q43",
+        "q44",
+        "q45",
+        "q46",
+        "q47",
+        "q48",
+        "q91",
+        "q92",
+        "q106"
+      ]
+    },
+    {
+      "id": "c53",
+      "section": "Conflicts",
+      "text": "The CSP3 spec says page policy \"SHOULD NOT interfere with … bookmarklets\" [22].",
+      "cites": [
+        22
+      ],
+      "urls": [
+        "https://www.w3.org/TR/CSP3"
+      ],
+      "quote_ids": [
+        "q110"
+      ]
+    },
+    {
+      "id": "c54",
+      "section": "Conflicts",
+      "text": "MDN lists `javascript:` URLs as inline script that this policy blocks [21].",
+      "cites": [
+        21
+      ],
+      "urls": [
+        "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP"
+      ],
+      "quote_ids": [
+        "q111"
+      ]
+    },
+    {
+      "id": "c55",
+      "section": "Conflicts",
+      "text": "**Source for \"Chrome 111+\" on manifest `world`.** MDN's compatibility data says 111 [12].",
+      "cites": [
+        12
+      ],
+      "urls": [
+        "https://raw.githubusercontent.com/mdn/browser-compat-data/main/webextensions/manifest/content_scripts.json"
+      ],
+      "quote_ids": [
+        "q12"
+      ]
+    },
+    {
+      "id": "c56",
+      "section": "Conflicts",
+      "text": "Google's own pages give no version [4].",
+      "cites": [
+        4
+      ],
+      "urls": [
+        "https://developer.chrome.com/docs/extensions/reference/manifest/content-scripts"
+      ],
+      "quote_ids": [
+        "q9",
+        "q10",
+        "q11"
+      ]
+    },
+    {
+      "id": "c57",
+      "section": "Gaps and unverified",
+      "text": "That comes from standard JS semantics [15].",
+      "cites": [
+        15
+      ],
+      "urls": [
+        "https://all22pokemon.com/draft.js"
+      ],
+      "quote_ids": [
+        "q49",
+        "q50",
+        "q52",
+        "q53"
+      ]
+    }
+  ],
+  "summary": {
+    "quotes": 114,
+    "exact": 80,
+    "trimmed": 5,
+    "reworded": 6,
+    "not_found": 22,
+    "unreachable": 1,
+    "urls": 38,
+    "urls_unreachable": 6,
+    "claims": 57,
+    "claims_without_quotes": 0
+  }
+}
