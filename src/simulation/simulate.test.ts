@@ -16,6 +16,7 @@ type Game = {
       noLegends: boolean,
       variant: string,
     ): { gen: string; type: string };
+    available(gen: string, type: string, taken: Set<number>, noLegends: boolean): { id: number }[];
     SLOT_ROLE: Record<string, string>;
     MAX_LEGENDS: number;
     VARIANTS: Record<string, string[]>;
@@ -145,11 +146,56 @@ describe("simulated draft", () => {
     },
   );
 
-  it("a retro run only drafts Gen 1–4 Pokémon", () => {
+  it("a retro run only drafts from the retro variant's regions", () => {
     // Sinnoh ends at Arceus (493).
     for (let seed = 1; seed <= 30; seed++) {
       const ids = Object.values(simulatedDraft(run({ variant: "retro" }), seeded(seed)));
       expect(Math.max(...ids)).toBeLessThanOrEqual(493);
+    }
+  });
+
+  // Every spot but QB filled, so a simulated draft runs exactly one round: the round whose roll the
+  // game deals from the run's round and the first seed drawn from the random source.
+  const ONE_LEFT = {
+    HB: 59,
+    FB: 75,
+    WR1: 26,
+    WR2: 22,
+    TE: 130,
+    LT: 208,
+    LG: 95,
+    C: 143,
+    RG: 112,
+    RT: 306,
+    DE1: 68,
+    DE2: 149,
+    NT: 76,
+    OLB1: 214,
+    OLB2: 107,
+    ILB1: 248,
+    ILB2: 128,
+    CB1: 169,
+    CB2: 94,
+    S1: 18,
+    S2: 196,
+  };
+  it.each([
+    ["no legends used", ONE_LEFT],
+    // Mewtwo (150), Lugia (249), Rayquaza (384): the roll skips Legendaries
+    ["the legend cap used up", { ...ONE_LEFT, LT: 150, DE1: 249, CB1: 384 }],
+  ])("a simulated round drafts a Pokémon the game's roll offers, with %s", (_, lineup) => {
+    for (const variant of ["all", "retro"] as const) {
+      const start = run({ round: 21, lineup, variant });
+      const taken = new Set(Object.values(lineup));
+      const noLegends = [...taken].filter((id) => game.LEGENDARIES.has(id)).length >= 3;
+      for (let seed = 1; seed <= 40; seed++) {
+        const { QB: pick } = simulatedDraft(start, seeded(seed));
+        const gameSeed = Math.floor(seeded(seed)() * 4294967296) | 0;
+        const { gen, type } = game.DRAFT.roll(gameSeed, start.round, taken, noLegends, variant);
+        expect(game.POKEDATA[pick - 1]?.types, `#${pick}`).toContain(type);
+        const offered = game.DRAFT.available(gen, type, taken, noLegends).map((p) => p.id);
+        expect(offered).toContain(pick);
+      }
     }
   });
 
