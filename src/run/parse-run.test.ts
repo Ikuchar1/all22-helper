@@ -53,6 +53,14 @@ describe("parseRun", () => {
     expect(parseRun(JSON.stringify(finished))).toMatchObject({ roll: null, finished: true });
   });
 
+  it("a run saved before formations and Retro existed gets the game's defaults", () => {
+    const { scheme: _scheme, variant: _variant, ...older } = SIGNED_OUT;
+    expect(parseRun(JSON.stringify(older))).toMatchObject({
+      formation: { defense: "34", offense: "fb" },
+      variant: "all",
+    });
+  });
+
   it.each([
     ["no saved run", null],
     ["text that isn't JSON", "{not json"],

@@ -62,7 +62,11 @@ function readJson(json: string): unknown {
 /** The saved run, or null when there is none or it isn't a run the game would write. */
 export function parseRun(json: string | null): Run | null {
   if (json === null) return null;
-  const saved = readJson(json);
+  const parsed = readJson(json);
+  if (!isObject(parsed)) return null;
+  // The game's own defaults when loading a run: runs saved before formations existed played the
+  // 3-4 with a fullback, and before Retro every 17–0 run used all nine regions.
+  const saved = { scheme: { def: "34", off: "fb" }, variant: "all", ...parsed };
   if (!isSavedRun(saved)) return null;
   return {
     round: saved.round,
