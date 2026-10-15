@@ -123,4 +123,14 @@ describe("simulate", () => {
     expect(simulate(MID_RUN, 30, seeded(11))).toEqual(simulate(MID_RUN, 30, seeded(11)));
     expect(simulatedDraft(run(), seeded(12))).toEqual(simulatedDraft(run(), seeded(12)));
   });
+
+  it("a spot's ceiling drops when the legends that would have filled it are already used", () => {
+    // The same three spots filled, with Mewtwo (150), Lugia (249) and Rayquaza (384) in one
+    // lineup and Alakazam (65), Steelix (208) and Crobat (169) in the other.
+    const legendsUsed = run({ round: 3, lineup: { DE1: 150, LT: 249, CB1: 384 } });
+    const legendsLeft = run({ round: 3, lineup: { DE1: 65, LT: 208, CB1: 169 } });
+    const withoutLegends = simulate(legendsUsed, 200, seeded(21)).ceilings.QB ?? 0;
+    const withLegends = simulate(legendsLeft, 200, seeded(21)).ceilings.QB ?? 0;
+    expect(withoutLegends).toBeLessThan(withLegends - 2);
+  });
 });
