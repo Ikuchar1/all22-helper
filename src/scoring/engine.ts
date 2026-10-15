@@ -34,11 +34,14 @@ export function fit(dexId: number, spot: Spot, formation: Formation): number {
 }
 
 export type Variant = "all" | "retro";
+/** Spot → dex id, for a run in progress (some spots still empty). */
 export type Lineup = Partial<Record<Spot, number>>;
+/** Every spot filled. The game's team score throws on an empty spot. */
+export type FullLineup = Record<Spot, number>;
 export type TeamScore = { score: number; offense: number; defense: number };
 
 /** The game's Team Score (0–1000) of a lineup, with its offense and defense ratings. */
-export function teamScore(lineup: Lineup, formation: Formation, variant: Variant): TeamScore {
+export function teamScore(lineup: FullLineup, formation: Formation, variant: Variant): TeamScore {
   const { score, offense, defense } = DRAFT.teamScore(lineup, schemeOf(formation), variant);
   return { score, offense, defense };
 }

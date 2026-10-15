@@ -12,7 +12,7 @@ import {
   teamScore,
   typesOf,
   type Formation,
-  type Lineup,
+  type FullLineup,
 } from "./engine";
 
 // The oracle: the site's three scripts run as classic scripts in one global scope, the way the
@@ -78,7 +78,7 @@ describe("fit", () => {
 });
 
 // A full lineup, one Pokémon per spot.
-const LINEUP: Lineup = {
+const LINEUP: FullLineup = {
   QB: 65,
   HB: 59,
   FB: 75,
@@ -115,6 +115,13 @@ describe("team score", () => {
       expect(all.score).not.toBe(retro.score);
     },
   );
+
+  it("a lineup with an empty spot can't be scored, since the game throws on one", () => {
+    const { QB: _qb, ...missingQb } = LINEUP;
+    expect(() => game.DRAFT.teamScore(missingQb, { def: "34", off: "fb" }, "all")).toThrow();
+    // @ts-expect-error teamScore takes a full lineup only
+    expect(() => teamScore(missingQb, THREE_FOUR_FULLBACK, "all")).toThrow();
+  });
 });
 
 describe("spots", () => {
