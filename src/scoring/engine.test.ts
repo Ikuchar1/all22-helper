@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import vm from "node:vm";
 import { describe, expect, it } from "vitest";
-import { fit, teamScore, type Formation, type Lineup } from "./engine";
+import { fit, spotsOf, teamScore, type Formation, type Lineup } from "./engine";
 
 // The oracle: the site's three scripts run as classic scripts in one global scope, the way the
 // page loads them. Independent of our Vite wrapper, so a broken wrapper can't agree with itself.
@@ -14,6 +14,10 @@ type Game = {
       scheme: GameScheme,
       variant: string,
     ): { score: number; offense: number; defense: number };
+    SLOT_ROLE: Record<string, string>;
+    roleOf(slot: string, scheme: GameScheme): string;
+    OFFENSE_BY: Record<string, Record<string, number>>;
+    DEFENSE_BY: Record<string, Record<string, number>>;
   };
 };
 const game: Game = (() => {
@@ -59,7 +63,7 @@ describe("fit", () => {
 const LINEUP: Lineup = {
   QB: 65,
   HB: 59,
-  FB: 76,
+  FB: 75,
   WR1: 26,
   WR2: 22,
   TE: 130,
@@ -91,6 +95,29 @@ describe("team score", () => {
       expect(all).toEqual(game.DRAFT.teamScore(LINEUP, scheme, "all"));
       expect(retro).toEqual(game.DRAFT.teamScore(LINEUP, scheme, "retro"));
       expect(all.score).not.toBe(retro.score);
+    },
+  );
+});
+
+describe("spots", () => {
+  it.each([THREE_FOUR_FULLBACK, FOUR_THREE_SLOT])(
+    "every formation has 22 spots with the game's role and spot weight, each side summing to 1 (%o)",
+    (formation) => {
+      const scheme = { def: formation.defense, off: formation.offense };
+      const spots = spotsOf(formation);
+      expect(spots.map((s) => s.spot).sort()).toEqual(Object.keys(game.DRAFT.SLOT_ROLE).sort());
+      for (const { spot, role, side, weight } of spots) {
+        expect(role).toBe(game.DRAFT.roleOf(spot, scheme));
+        const weights =
+          side === "offense"
+            ? game.DRAFT.OFFENSE_BY[scheme.off]
+            : game.DRAFT.DEFENSE_BY[scheme.def];
+        expect(weight).toBe(weights?.[spot]);
+      }
+      for (const side of ["offense", "defense"] as const) {
+        const sum = spots.filter((s) => s.side === side).reduce((total, s) => total + s.weight, 0);
+        expect(sum).toBeCloseTo(1, 9);
+      }
     },
   );
 });

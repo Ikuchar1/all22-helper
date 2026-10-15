@@ -10,5 +10,8 @@ declare module "virtual:site-game" {
       scheme: GameScheme,
       variant: string,
     ): { score: number; offense: number; defense: number };
+    roleOf(slot: string, scheme: GameScheme): string;
+    OFFENSE_BY: Record<"fb" | "slot", Record<string, number>>;
+    DEFENSE_BY: Record<"34" | "43", Record<string, number>>;
   };
 }

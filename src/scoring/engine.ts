@@ -42,3 +42,21 @@ export function teamScore(lineup: Lineup, formation: Formation, variant: Variant
   const { score, offense, defense } = DRAFT.teamScore(lineup, schemeOf(formation), variant);
   return { score, offense, defense };
 }
+
+export type SpotInfo = { spot: Spot; role: string; side: "offense" | "defense"; weight: number };
+
+/** The 22 spots of a formation, each with its scoring role, side of the ball and spot weight. */
+export function spotsOf(formation: Formation): SpotInfo[] {
+  const scheme = schemeOf(formation);
+  const side = (name: SpotInfo["side"], weights: Record<string, number>) =>
+    Object.entries(weights).map(([spot, weight]) => ({
+      spot: spot as Spot,
+      role: DRAFT.roleOf(spot, scheme),
+      side: name,
+      weight,
+    }));
+  return [
+    ...side("offense", DRAFT.OFFENSE_BY[formation.offense]),
+    ...side("defense", DRAFT.DEFENSE_BY[formation.defense]),
+  ];
+}
