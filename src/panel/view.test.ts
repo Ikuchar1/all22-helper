@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { parseRun } from "../run/parse-run";
+import { game } from "../scoring/game-oracle";
 import { panelView } from "./view";
 
 // A run as the game saves it to localStorage, signed out, round 4 of 22.
@@ -43,5 +44,42 @@ describe("panel view", () => {
       roll: { type: "Water", region: "Sinnoh" },
       variant: "retro",
     });
+  });
+
+  it("the table has every candidate at every open spot with the game's fit, best fits flagged", () => {
+    const view = panelView(saved(), null);
+    if (view.kind !== "run") throw new Error("expected a run");
+    const { spots, rows } = view.table;
+
+    const filled = Object.keys(SAVED.lineup);
+    expect(spots).toHaveLength(19);
+    expect([...spots, ...filled].sort()).toEqual(Object.keys(game.DRAFT.SLOT_ROLE).sort());
+    // Charizard (6) is a Kanto Fire-type but already in the lineup.
+    const offered = game.DRAFT.available("1", "fire", new Set(Object.values(SAVED.lineup)));
+    expect(rows.map((r) => r.dexId)).toEqual(offered.map((p) => p.id));
+    expect(rows.map((r) => r.name)).toEqual(offered.map((p) => p.name));
+
+    for (const row of rows) {
+      expect(row.cells.map((c) => c.spot)).toEqual(spots);
+      for (const cell of row.cells) {
+        // The run plays a 4-3 with a slot receiver.
+        expect(cell.fit).toBe(
+          game.DRAFT.positionScore(row.dexId, cell.spot, { def: "43", off: "slot" }),
+        );
+      }
+      const best = Math.max(...row.cells.map((c) => c.fit));
+      for (const cell of row.cells) expect(cell.bestForCandidate).toBe(cell.fit === best);
+    }
+    spots.forEach((spot, i) => {
+      const column = rows.map((r) => r.cells[i]!);
+      const best = Math.max(...column.map((c) => c.fit));
+      for (const cell of column) {
+        expect(cell.spot).toBe(spot);
+        expect(cell.bestForSpot).toBe(cell.fit === best);
+      }
+    });
+    expect(rows.flatMap((r) => r.cells).some((c) => c.bestForCandidate && !c.bestForSpot)).toBe(
+      true,
+    );
   });
 });
