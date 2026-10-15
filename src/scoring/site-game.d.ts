@@ -16,6 +16,12 @@ declare module "virtual:site-game" {
     MAX_LEGENDS: number;
     ROUNDS: number;
     VARIANTS: Record<"all" | "retro", string[]>;
+    available(
+      gen: string,
+      type: string,
+      taken: Set<number>,
+      noLegends?: boolean,
+    ): { id: number; name: string; legendary: boolean }[];
     POOL: Record<string, { id: number; name: string; legendary: boolean }[]>;
   };
 

@@ -1,4 +1,5 @@
 import { DRAFT, LEGENDARIES, POKEDATA, POKEMON_NAMES } from "virtual:site-game";
+import type { Run } from "../run/parse-run";
 
 export type Formation = { defense: "34" | "43"; offense: "fb" | "slot" };
 
@@ -77,7 +78,7 @@ export const LEGEND_CAP: number = DRAFT.MAX_LEGENDS;
 export const regionsOf = (variant: Variant): Region[] => [...DRAFT.VARIANTS[variant]];
 /** Every Pokémon in a region's draft pool, Legendaries included. */
 export const poolOf = (region: Region): PoolEntry[] =>
-  (DRAFT.POOL[region] ?? []).map((p) => ({ dexId: p.id, name: p.name, legendary: p.legendary }));
+  (DRAFT.POOL[region] ?? []).map(toPoolEntry);
 
 /** A Pokémon's types, as the game's lowercase names ("fire", "water", …). */
 export const typesOf = (dexId: number): string[] => [...(POKEDATA[dexId - 1]?.types ?? [])];
@@ -85,3 +86,16 @@ export const typesOf = (dexId: number): string[] => [...(POKEDATA[dexId - 1]?.ty
 export const isLegendary = (dexId: number): boolean => LEGENDARIES.has(dexId);
 
 export const nameOf = (dexId: number): string => POKEMON_NAMES[dexId - 1] ?? "";
+
+const toPoolEntry = (p: { id: number; name: string; legendary: boolean }): PoolEntry => ({
+  dexId: p.id,
+  name: p.name,
+  legendary: p.legendary,
+});
+
+/** The Pokémon the game offers for the run's current roll: none once there is no roll. */
+export function candidatesFor(run: Run): PoolEntry[] {
+  if (!run.roll) return [];
+  const taken = new Set(Object.values(run.lineup));
+  return DRAFT.available(run.roll.region, run.roll.type, taken).map(toPoolEntry);
+}
