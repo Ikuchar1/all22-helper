@@ -85,11 +85,11 @@ export function parseRun(json: string | null): Run | null {
     seed: typeof saved.seed === "number" ? saved.seed : null,
     // Signed-in runs are the server's: the game drops the seed from what it saves.
     signedIn: typeof saved.seed !== "number",
-    // The game's own default for saves from before `started` existed.
+    // The game's own defaults for saves from before `started` existed: a missing `revealed` is true.
     started:
       typeof saved.started === "boolean"
         ? saved.started
-        : saved.round > 0 || Boolean(saved.revealed) || saved.pending !== null,
+        : saved.round > 0 || saved.revealed !== false || saved.pending !== null,
     // The game's own rule. Only signed-out runs clear the roll at the end; signed-in runs keep
     // whatever the server sent.
     finished: saved.round >= ROUNDS,

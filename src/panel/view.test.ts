@@ -41,6 +41,12 @@ describe("panel view", () => {
     });
   });
 
+  it("an older save with neither started nor revealed counts as started, as the game loads it", () => {
+    // The game defaults a missing `revealed` to true before working out `started`.
+    const older = parseRun(JSON.stringify({ ...SAVED, round: 0, lineup: {}, pending: null }));
+    expect(panelView(older, null)).toMatchObject({ kind: "run" });
+  });
+
   it("the header shows the round as the game does, the roll's type and region, variant and rerolls left", () => {
     const view = panelView(saved(), null);
     expect(view.kind === "run" && view.header).toEqual({
