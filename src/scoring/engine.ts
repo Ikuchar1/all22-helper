@@ -1,4 +1,4 @@
-import { DRAFT, LEGENDARIES, POKEDATA, POKEMON_NAMES } from "virtual:site-game";
+import { DRAFT, LEGENDARIES, POKEDATA, POKEMON_NAMES, TYPE_NAMES } from "virtual:site-game";
 
 export type Formation = { defense: "34" | "43"; offense: "fb" | "slot" };
 
@@ -79,25 +79,16 @@ export const regionsOf = (variant: Variant): Region[] => [...DRAFT.VARIANTS[vari
 export const poolOf = (region: Region): PoolEntry[] =>
   (DRAFT.POOL[region] ?? []).map((p) => ({ dexId: p.id, name: p.name, legendary: p.legendary }));
 
+/** Every type, in the game's order (the order its rolls pick a type from). */
+export const TYPES: readonly string[] = [...TYPE_NAMES];
+
 /** A Pokémon's types, as the game's lowercase names ("fire", "water", …). */
 export const typesOf = (dexId: number): string[] => [...(POKEDATA[dexId - 1]?.types ?? [])];
 
-export type Roll = { region: Region; type: string };
+/** The game's seeded random number (0 ≤ x < 1): the i-th draw for a seed. Rolls use it. */
+export const rand = (seed: number, i: number): number => DRAFT.rand(seed, i);
 
-/**
- * The roll the game deals for a seed and round: a region of the variant that still has a Pokémon
- * left, then a type that region still has. With `noLegends`, Legendaries don't count as left.
- */
-export function rollFor(
-  seed: number,
-  round: number,
-  taken: ReadonlySet<number>,
-  noLegends: boolean,
-  variant: Variant,
-): Roll {
-  const { gen, type } = DRAFT.roll(seed, round, taken, noLegends, variant);
-  return { region: gen, type };
-}
+export type Roll = { region: Region; type: string };
 
 /** Dex ids of the Pokémon a roll offers: not taken, and no Legendaries with `noLegends`. */
 export const available = (

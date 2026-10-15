@@ -4,14 +4,20 @@ import {
   fit,
   isLegendary,
   LEGEND_CAP,
-  rollFor,
+  poolOf,
+  rand,
+  regionsOf,
   spotsOf,
   teamScore,
+  TYPES,
+  typesOf,
   type Formation,
   type FullLineup,
   type Lineup,
+  type Roll,
   type Spot,
   type SpotInfo,
+  type Variant,
 } from "../scoring/engine";
 
 /** A source of random numbers, 0 ≤ x < 1. */
@@ -33,6 +39,76 @@ function fitsFor(formation: Formation): (dexId: number, spot: SpotInfo, index: n
   };
 }
 
+/** Each Pokémon a variant can roll: its region's index and its types' indexes in `TYPES`. */
+type PoolEntry = { region: number; types: number[]; legendary: boolean };
+const poolEntries = new Map<Variant, Map<number, PoolEntry>>();
+
+function poolEntriesOf(variant: Variant): Map<number, PoolEntry> {
+  let entries = poolEntries.get(variant);
+  if (entries) return entries;
+  entries = new Map();
+  regionsOf(variant).forEach((region, index) => {
+    for (const { dexId, legendary } of poolOf(region)) {
+      const types = typesOf(dexId)
+        .map((type) => TYPES.indexOf(type))
+        .filter((k) => k >= 0);
+      entries.set(dexId, { region: index, types, legendary });
+    }
+  });
+  poolEntries.set(variant, entries);
+  return entries;
+}
+
+export type RollIndex = {
+  /** The roll the game would deal for this seed and round, given everything taken so far. */
+  roll(seed: number, round: number, noLegends: boolean): Roll;
+  /** Marks a Pokémon taken, so later rolls skip a region or type it was the last of. */
+  take(dexId: number): void;
+};
+
+/**
+ * The game's roll (`DRAFT.roll`), kept fast for simulated drafts: instead of re-filtering every
+ * region × type pool on each roll, it keeps a count of what's left in each and updates it on each
+ * take. Same seeded draws and the same list order as the game's, so it deals the same rolls.
+ */
+export function rollIndex(variant: Variant, taken: Iterable<number>): RollIndex {
+  const regions = regionsOf(variant);
+  const entries = poolEntriesOf(variant);
+  const left = regions.map(() => TYPES.map(() => 0));
+  const regularLeft = regions.map(() => TYPES.map(() => 0));
+  for (const { region, types, legendary } of entries.values()) {
+    for (const k of types) {
+      left[region]![k]!++;
+      if (!legendary) regularLeft[region]![k]!++;
+    }
+  }
+  const takenIds = new Set<number>();
+  const take = (dexId: number) => {
+    const entry = entries.get(dexId);
+    if (!entry || takenIds.has(dexId)) return;
+    takenIds.add(dexId);
+    for (const k of entry.types) {
+      left[entry.region]![k]!--;
+      if (!entry.legendary) regularLeft[entry.region]![k]!--;
+    }
+  };
+  for (const dexId of taken) take(dexId);
+
+  const pick = <T>(list: T[], r: number): T => list[Math.floor(r * list.length)]!;
+  return {
+    take,
+    roll(seed, round, noLegends) {
+      const counts = noLegends ? regularLeft : left;
+      const open = regions
+        .map((_, index) => index)
+        .filter((index) => counts[index]!.some((count) => count > 0));
+      const region = pick(open, rand(seed, round * 2));
+      const types = TYPES.filter((_, k) => counts[region]![k]! > 0);
+      return { region: regions[region]!, type: pick(types, rand(seed, round * 2 + 1)) };
+    },
+  };
+}
+
 /** A seed for the game's roll, drawn from the random source. */
 const seedFrom = (random: Random): number => Math.floor(random() * 4294967296) | 0;
 
@@ -45,6 +121,7 @@ export function simulatedDraft(run: Run, random: Random): FullLineup {
   const fitOf = fitsFor(run.formation);
   const lineup: Lineup = { ...run.lineup };
   const taken = new Set(Object.values(lineup));
+  const rolls = rollIndex(run.variant, taken);
   let legends = [...taken].filter(isLegendary).length;
   const open = spots.map((_, i) => i).filter((i) => lineup[spots[i]!.spot] === undefined);
 
@@ -61,6 +138,7 @@ export function simulatedDraft(run: Run, random: Random): FullLineup {
     const [index] = open.splice(best.at, 1);
     lineup[spots[index!]!.spot] = best.dexId;
     taken.add(best.dexId);
+    rolls.take(best.dexId);
     if (isLegendary(best.dexId)) legends++;
   };
 
@@ -72,7 +150,7 @@ export function simulatedDraft(run: Run, random: Random): FullLineup {
   }
   for (; open.length > 0; round++) {
     const noLegends = legends >= LEGEND_CAP;
-    const roll = rollFor(seedFrom(random), round, taken, noLegends, run.variant);
+    const roll = rolls.roll(seedFrom(random), round, noLegends);
     place(available(roll.region, roll.type, taken, noLegends));
   }
   return lineup as FullLineup;

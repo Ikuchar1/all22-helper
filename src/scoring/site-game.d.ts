@@ -12,13 +12,6 @@ declare module "virtual:site-game" {
     ): { score: number; offense: number; defense: number };
     roleOf(slot: string, scheme: GameScheme): string;
     rand(seed: number, i: number): number;
-    roll(
-      seed: number,
-      i: number,
-      taken: ReadonlySet<number>,
-      noLegends: boolean,
-      variant: string,
-    ): { gen: string; type: string };
     available(
       gen: string,
       type: string,
@@ -35,5 +28,6 @@ declare module "virtual:site-game" {
 
   export const POKEDATA: { types: string[] }[];
   export const POKEMON_NAMES: string[];
+  export const TYPE_NAMES: string[];
   export const LEGENDARIES: Set<number>;
 }

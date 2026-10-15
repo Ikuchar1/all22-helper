@@ -2,13 +2,20 @@ import { readFileSync } from "node:fs";
 import vm from "node:vm";
 import { describe, expect, it } from "vitest";
 import type { Run } from "../run/parse-run";
-import { simulate, simulatedDraft, type Random } from "./simulate";
+import { rollIndex, simulate, simulatedDraft, type Random } from "./simulate";
 
 // The oracle: the site's three scripts run as classic scripts in one global scope, the way the
 // page loads them. Independent of our Vite wrapper, so a broken wrapper can't agree with itself.
 type Game = {
   DRAFT: {
     rand(seed: number, i: number): number;
+    roll(
+      seed: number,
+      i: number,
+      taken: Set<number>,
+      noLegends: boolean,
+      variant: string,
+    ): { gen: string; type: string };
     SLOT_ROLE: Record<string, string>;
     MAX_LEGENDS: number;
     VARIANTS: Record<string, string[]>;
@@ -49,6 +56,56 @@ const run = (overrides: Partial<Run> = {}): Run => ({
 
 // Alakazam (65), Steelix (208), Crobat (169), Machamp (68)
 const MID_RUN = run({ round: 4, lineup: { QB: 65, LT: 208, CB1: 169, DE1: 68 } });
+
+describe("indexed roll", () => {
+  const poolIds = (region: string) => (game.DRAFT.POOL[region] ?? []).map((p) => p.id);
+  const everyId = Object.keys(game.DRAFT.POOL).flatMap(poolIds);
+  const randomTaken = (seed: number, density: number) => {
+    const random = seeded(seed);
+    return new Set(everyId.filter(() => random() < density));
+  };
+  const hasType = (type: string) => (id: number) => game.POKEDATA[id - 1]?.types.includes(type);
+  const regular = (id: number) => !game.LEGENDARIES.has(id);
+  const TAKEN: [string, Set<number>][] = [
+    ["nothing", new Set()],
+    ...[0.05, 0.2, 0.5, 0.8, 0.95].map((d, i): [string, Set<number>] => [
+      `a random ${d * 100}%`,
+      randomTaken(100 + i, d),
+    ]),
+    ["all of Johto", new Set(poolIds("2"))],
+    ["every regular Kanto Pokémon", new Set(poolIds("1").filter(regular))],
+    [
+      "every Fire-type, and every regular Water-type",
+      new Set([
+        ...everyId.filter(hasType("fire")),
+        ...everyId.filter(hasType("water")).filter(regular),
+      ]),
+    ],
+  ];
+
+  it.each(
+    TAKEN.flatMap(([name, taken]) =>
+      (["all", "retro"] as const).map((v) => [name, v, taken] as const),
+    ),
+  )(
+    "deals the game's roll, the source of truth, with %s taken (%s variant)",
+    (_, variant, taken) => {
+      const fromSet = rollIndex(variant, taken);
+      const fromTakes = rollIndex(variant, []);
+      for (const id of taken) fromTakes.take(id);
+      for (const noLegends of [false, true]) {
+        for (let seed = 1; seed <= 40; seed++) {
+          const round = seed % 22;
+          const s = seed * 2654435761;
+          const { gen, type } = game.DRAFT.roll(s, round, taken, noLegends, variant);
+          const expected = { region: gen, type };
+          expect(fromSet.roll(s, round, noLegends)).toEqual(expected);
+          expect(fromTakes.roll(s, round, noLegends)).toEqual(expected);
+        }
+      }
+    },
+  );
+});
 
 describe("simulated draft", () => {
   it("fills every open spot, keeps the filled ones, and never drafts a taken Pokémon or one twice", () => {
