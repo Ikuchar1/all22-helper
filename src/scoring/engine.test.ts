@@ -20,6 +20,7 @@ const game: Game = (() => {
 })();
 
 const THREE_FOUR_FULLBACK: Formation = { defense: "34", offense: "fb" };
+const FOUR_THREE_SLOT: Formation = { defense: "43", offense: "slot" };
 
 // Alakazam (65), Steelix (208), Crobat (169), Machamp (68)
 const POKEMON = [65, 208, 169, 68];
@@ -32,4 +33,19 @@ describe("fit", () => {
       );
     }
   });
+
+  it.each(POKEMON)(
+    "Pokémon #%i in a 4-3/slot gets the game's fit, and a new one where the formation changes the role",
+    (id) => {
+      for (const spot of ["QB", "LG", "CB1", "NT", "ILB1", "ILB2", "FB"] as const) {
+        expect(fit(id, spot, FOUR_THREE_SLOT)).toBe(
+          game.DRAFT.positionScore(id, spot, { def: "43", off: "slot" }),
+        );
+      }
+      // NT→DT, ILB1→MLB, ILB2→DT, FB→SLOT
+      for (const spot of ["NT", "ILB1", "ILB2", "FB"] as const) {
+        expect(fit(id, spot, FOUR_THREE_SLOT)).not.toBe(fit(id, spot, THREE_FOUR_FULLBACK));
+      }
+    },
+  );
 });
