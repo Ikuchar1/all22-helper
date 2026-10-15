@@ -77,8 +77,7 @@ export const LEGEND_CAP: number = DRAFT.MAX_LEGENDS;
 /** The regions a variant's rolls draw from. */
 export const regionsOf = (variant: Variant): Region[] => [...DRAFT.VARIANTS[variant]];
 /** Every Pokémon in a region's draft pool, Legendaries included. */
-export const poolOf = (region: Region): PoolEntry[] =>
-  (DRAFT.POOL[region] ?? []).map(toPoolEntry);
+export const poolOf = (region: Region): PoolEntry[] => (DRAFT.POOL[region] ?? []).map(toPoolEntry);
 
 /** A Pokémon's types, as the game's lowercase names ("fire", "water", …). */
 export const typesOf = (dexId: number): string[] => [...(POKEDATA[dexId - 1]?.types ?? [])];
