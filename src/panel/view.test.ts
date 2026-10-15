@@ -24,4 +24,24 @@ describe("panel view", () => {
     expect(panelView(parseRun(JSON.stringify({ round: "three" })), 25)).toEqual({ kind: "empty" });
     expect(panelView(saved({ round: 22, roll: null }), null)).toEqual({ kind: "empty" });
   });
+
+  it("the header shows the round as the game does, the roll's type and region, variant and rerolls left", () => {
+    const view = panelView(saved(), null);
+    expect(view.kind === "run" && view.header).toEqual({
+      round: 4,
+      roll: { type: "Fire", region: "Kanto" },
+      variant: "all",
+      rerollsLeft: { type: 1, region: 0 },
+    });
+
+    const retro = panelView(
+      saved({ round: 0, variant: "retro", roll: { gen: "4", type: "water" }, lineup: {} }),
+      null,
+    );
+    expect(retro.kind === "run" && retro.header).toMatchObject({
+      round: 1,
+      roll: { type: "Water", region: "Sinnoh" },
+      variant: "retro",
+    });
+  });
 });
