@@ -93,9 +93,15 @@ const toPoolEntry = (p: { id: number; name: string; legendary: boolean }): PoolE
   legendary: p.legendary,
 });
 
-/** The Pokémon the game offers for the run's current roll: none once there is no roll. */
+/**
+ * The Pokémon the game offers for the run's current roll, minus the lineup, and minus Legendaries
+ * once the legend cap is reached. None when there is no roll.
+ */
 export function candidatesFor(run: Run): PoolEntry[] {
   if (!run.roll) return [];
-  const taken = new Set(Object.values(run.lineup));
-  return DRAFT.available(run.roll.region, run.roll.type, taken).map(toPoolEntry);
+  const lineup = Object.values(run.lineup);
+  const legendsCapped = lineup.filter(isLegendary).length >= LEGEND_CAP;
+  return DRAFT.available(run.roll.region, run.roll.type, new Set(lineup), legendsCapped).map(
+    toPoolEntry,
+  );
 }

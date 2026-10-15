@@ -218,4 +218,18 @@ describe("candidates", () => {
       asPool(game.DRAFT.available("2", "water", new Set([65, 208, 6]))),
     );
   });
+
+  it("once the lineup has 3 Legendaries, Legendaries are no longer candidates; with 2 they are", () => {
+    // Moltres (146) is Kanto's Legendary Fire-type. Articuno (144), Zapdos (145), Mewtwo (150).
+    const twoLegends = run({ lineup: { QB: 150, LT: 144 } });
+    expect(candidatesFor(twoLegends).map((c) => c.dexId)).toContain(146);
+
+    const threeLegends = run({ lineup: { QB: 150, LT: 144, CB1: 145 } });
+    const candidates = candidatesFor(threeLegends);
+    expect(candidates).toEqual(
+      asPool(game.DRAFT.available("1", "fire", new Set([150, 144, 145]), true)),
+    );
+    expect(candidates.map((c) => c.dexId)).not.toContain(146);
+    expect(candidates.length).toBeGreaterThan(0);
+  });
 });
