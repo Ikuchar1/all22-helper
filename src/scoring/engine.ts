@@ -1,4 +1,4 @@
-import { DRAFT } from "virtual:site-game";
+import { DRAFT, LEGENDARIES, POKEDATA, POKEMON_NAMES } from "virtual:site-game";
 
 export type Formation = { defense: "34" | "43"; offense: "fb" | "slot" };
 
@@ -60,3 +60,22 @@ export function spotsOf(formation: Formation): SpotInfo[] {
     ...side("defense", DRAFT.DEFENSE_BY[formation.defense]),
   ];
 }
+
+/** A region id as the game stores it: "1" (Kanto) to "9" (Paldea). */
+export type Region = string;
+export type PoolEntry = { dexId: number; name: string; legendary: boolean };
+
+/** A run may draft at most this many Legendaries. */
+export const LEGEND_CAP: number = DRAFT.MAX_LEGENDS;
+/** The regions a variant's rolls draw from. */
+export const regionsOf = (variant: Variant): Region[] => [...DRAFT.VARIANTS[variant]];
+/** Every Pokémon in a region's draft pool, Legendaries included. */
+export const poolOf = (region: Region): PoolEntry[] =>
+  (DRAFT.POOL[region] ?? []).map((p) => ({ dexId: p.id, name: p.name, legendary: p.legendary }));
+
+/** A Pokémon's types, as the game's lowercase names ("fire", "water", …). */
+export const typesOf = (dexId: number): string[] => [...(POKEDATA[dexId - 1]?.types ?? [])];
+
+export const isLegendary = (dexId: number): boolean => LEGENDARIES.has(dexId);
+
+export const nameOf = (dexId: number): string => POKEMON_NAMES[dexId - 1] ?? "";

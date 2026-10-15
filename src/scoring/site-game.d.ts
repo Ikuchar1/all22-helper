@@ -13,5 +13,12 @@ declare module "virtual:site-game" {
     roleOf(slot: string, scheme: GameScheme): string;
     OFFENSE_BY: Record<"fb" | "slot", Record<string, number>>;
     DEFENSE_BY: Record<"34" | "43", Record<string, number>>;
+    MAX_LEGENDS: number;
+    VARIANTS: Record<"all" | "retro", string[]>;
+    POOL: Record<string, { id: number; name: string; legendary: boolean }[]>;
   };
+
+  export const POKEDATA: { types: string[] }[];
+  export const POKEMON_NAMES: string[];
+  export const LEGENDARIES: Set<number>;
 }

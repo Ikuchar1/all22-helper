@@ -1,7 +1,19 @@
 import { readFileSync } from "node:fs";
 import vm from "node:vm";
 import { describe, expect, it } from "vitest";
-import { fit, spotsOf, teamScore, type Formation, type Lineup } from "./engine";
+import {
+  fit,
+  isLegendary,
+  LEGEND_CAP,
+  nameOf,
+  poolOf,
+  regionsOf,
+  spotsOf,
+  teamScore,
+  typesOf,
+  type Formation,
+  type Lineup,
+} from "./engine";
 
 // The oracle: the site's three scripts run as classic scripts in one global scope, the way the
 // page loads them. Independent of our Vite wrapper, so a broken wrapper can't agree with itself.
@@ -18,14 +30,20 @@ type Game = {
     roleOf(slot: string, scheme: GameScheme): string;
     OFFENSE_BY: Record<string, Record<string, number>>;
     DEFENSE_BY: Record<string, Record<string, number>>;
+    MAX_LEGENDS: number;
+    VARIANTS: Record<string, string[]>;
+    POOL: Record<string, { id: number; name: string; legendary: boolean }[]>;
   };
+  POKEDATA: { types: string[] }[];
+  POKEMON_NAMES: string[];
+  LEGENDARIES: Set<number>;
 };
 const game: Game = (() => {
   const context = vm.createContext({});
   for (const file of ["pokemon.js", "pokedata.js", "draft.js"]) {
     vm.runInContext(readFileSync(`vendor/${file}`, "utf8"), context, { filename: file });
   }
-  return vm.runInContext("({ DRAFT })", context) as Game;
+  return vm.runInContext("({ DRAFT, POKEDATA, POKEMON_NAMES, LEGENDARIES })", context) as Game;
 })();
 
 const THREE_FOUR_FULLBACK: Formation = { defense: "34", offense: "fb" };
@@ -120,4 +138,36 @@ describe("spots", () => {
       }
     },
   );
+});
+
+describe("game data", () => {
+  it("the retro variant rolls the game's regions", () => {
+    expect(regionsOf("retro")).toEqual([...(game.DRAFT.VARIANTS.retro ?? [])]);
+    expect(regionsOf("all")).toEqual([...(game.DRAFT.VARIANTS.all ?? [])]);
+  });
+
+  it("each region's pool lists the game's Pokémon with names and legendary flags", () => {
+    for (const region of regionsOf("all")) {
+      expect(poolOf(region)).toEqual(
+        (game.DRAFT.POOL[region] ?? []).map((p) => ({
+          dexId: p.id,
+          name: p.name,
+          legendary: p.legendary,
+        })),
+      );
+    }
+  });
+
+  it("types, names and legendary status match the game's data for every Pokémon", () => {
+    game.POKEMON_NAMES.forEach((name, i) => {
+      const dexId = i + 1;
+      expect(nameOf(dexId)).toBe(name);
+      expect(typesOf(dexId)).toEqual([...(game.POKEDATA[i]?.types ?? [])]);
+      expect(isLegendary(dexId)).toBe(game.LEGENDARIES.has(dexId));
+    });
+  });
+
+  it("the legend cap is the game's", () => {
+    expect(LEGEND_CAP).toBe(game.DRAFT.MAX_LEGENDS);
+  });
 });
