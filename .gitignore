@@ -5,3 +5,12 @@ dist/
 # The site creator's own code: kept locally for reference, not republished
 docs/research/*/wave-1/r1-bundle/
 docs/research/*/wave-1/r2-site/
+# Filled by `npm run sync`
+vendor/
+
+# drive-issue's local copy of the issue it's working on
+ISSUE.md
+
+# Claude Code: agents' worktrees and personal settings
+.claude/worktrees/
+.claude/settings.local.json
