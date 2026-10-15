@@ -95,4 +95,13 @@ describe("simulated draft", () => {
       expect(Math.max(...ids)).toBeLessThanOrEqual(493);
     }
   });
+
+  it("a pending Pokémon ends up in the lineup", () => {
+    // Charizard (6) picked but not yet placed
+    const pending = run({ ...MID_RUN, pending: 6 });
+    for (let seed = 1; seed <= 20; seed++) {
+      const ids = Object.values(simulatedDraft(pending, seeded(seed)));
+      expect(ids.filter((id) => id === 6)).toEqual([6]);
+    }
+  });
 });

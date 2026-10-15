@@ -62,7 +62,13 @@ export function simulatedDraft(run: Run, random: Random): FullLineup {
     if (isLegendary(best.dexId)) legends++;
   };
 
-  for (let round = run.round; open.length > 0; round++) {
+  // A picked but unplaced Pokémon is the current round's pick: the greedy drafter places it first.
+  let round = run.round;
+  if (run.pending !== null) {
+    place([run.pending]);
+    round++;
+  }
+  for (; open.length > 0; round++) {
     const noLegends = legends >= LEGEND_CAP;
     const roll = rollFor(seedFrom(random), round, taken, noLegends, run.variant);
     place(available(roll.region, roll.type, taken, noLegends));
