@@ -32,3 +32,13 @@ const schemeOf = (formation: Formation) => ({ def: formation.defense, off: forma
 export function fit(dexId: number, spot: Spot, formation: Formation): number {
   return DRAFT.positionScore(dexId, spot, schemeOf(formation));
 }
+
+export type Variant = "all" | "retro";
+export type Lineup = Partial<Record<Spot, number>>;
+export type TeamScore = { score: number; offense: number; defense: number };
+
+/** The game's Team Score (0–1000) of a lineup, with its offense and defense ratings. */
+export function teamScore(lineup: Lineup, formation: Formation, variant: Variant): TeamScore {
+  const { score, offense, defense } = DRAFT.teamScore(lineup, schemeOf(formation), variant);
+  return { score, offense, defense };
+}

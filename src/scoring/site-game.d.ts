@@ -5,5 +5,10 @@ declare module "virtual:site-game" {
 
   export const DRAFT: {
     positionScore(id: number, slot: string, scheme: GameScheme): number;
+    teamScore(
+      lineup: Partial<Record<string, number>>,
+      scheme: GameScheme,
+      variant: string,
+    ): { score: number; offense: number; defense: number };
   };
 }
