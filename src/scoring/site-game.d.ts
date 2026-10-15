@@ -1,0 +1,9 @@
+// The site's own game globals, served by the `virtual:site-game` Vite plugin (vite.config.ts).
+// Only the members we use are typed. The game calls a formation a "scheme" and a region a "gen".
+declare module "virtual:site-game" {
+  type GameScheme = { def: string; off: string };
+
+  export const DRAFT: {
+    positionScore(id: number, slot: string, scheme: GameScheme): number;
+  };
+}
