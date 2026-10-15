@@ -190,4 +190,14 @@ describe("simulate", () => {
     const withLegends = simulate(legendsLeft, 200, seeded(21)).ceilings.QB ?? 0;
     expect(withoutLegends).toBeLessThan(withLegends - 2);
   });
+
+  it("300 simulated drafts from round 1 finish fast enough to run on every pick", () => {
+    // A formation no other test uses, so its fits aren't cached yet: the slowest case.
+    const start = run({ formation: { defense: "43", offense: "slot" } });
+    const began = performance.now();
+    simulate(start, 300, seeded(31));
+    const elapsed = performance.now() - began;
+    console.log(`300 simulated drafts from round 1: ${elapsed.toFixed(0)} ms`);
+    expect(elapsed).toBeLessThan(500);
+  });
 });
