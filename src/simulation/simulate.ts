@@ -6,9 +6,11 @@ import {
   LEGEND_CAP,
   rollFor,
   spotsOf,
+  teamScore,
   type Formation,
   type FullLineup,
   type Lineup,
+  type Spot,
   type SpotInfo,
 } from "../scoring/engine";
 
@@ -74,4 +76,32 @@ export function simulatedDraft(run: Run, random: Random): FullLineup {
     place(available(roll.region, roll.type, taken, noLegends));
   }
   return lineup as FullLineup;
+}
+
+export type Simulation = {
+  /** Open spot → the mean fit it ends up with across the simulated drafts. */
+  ceilings: Partial<Record<Spot, number>>;
+  /** Mean final Team Score (0–1000) of the simulated drafts, on the run's variant. */
+  averageScore: number;
+};
+
+/** Ceilings for the run's open spots and the average final score, from `count` simulated drafts. */
+export function simulate(run: Run, count: number, random: Random = Math.random): Simulation {
+  const spots = spotsOf(run.formation);
+  const fitOf = fitsFor(run.formation);
+  const open = spots
+    .map((spot, index) => ({ spot, index }))
+    .filter(({ spot }) => run.lineup[spot.spot] === undefined);
+  const totals = open.map(() => 0);
+  let totalScore = 0;
+  for (let i = 0; i < count; i++) {
+    const lineup = simulatedDraft(run, random);
+    open.forEach(({ spot, index }, at) => {
+      totals[at]! += fitOf(lineup[spot.spot], spot, index);
+    });
+    totalScore += teamScore(lineup, run.formation, run.variant).score;
+  }
+  const ceilings: Partial<Record<Spot, number>> = {};
+  open.forEach(({ spot }, at) => (ceilings[spot.spot] = totals[at]! / count));
+  return { ceilings, averageScore: totalScore / count };
 }

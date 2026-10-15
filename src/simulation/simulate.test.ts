@@ -2,7 +2,7 @@ import { readFileSync } from "node:fs";
 import vm from "node:vm";
 import { describe, expect, it } from "vitest";
 import type { Run } from "../run/parse-run";
-import { simulatedDraft, type Random } from "./simulate";
+import { simulate, simulatedDraft, type Random } from "./simulate";
 
 // The oracle: the site's three scripts run as classic scripts in one global scope, the way the
 // page loads them. Independent of our Vite wrapper, so a broken wrapper can't agree with itself.
@@ -103,5 +103,19 @@ describe("simulated draft", () => {
       const ids = Object.values(simulatedDraft(pending, seeded(seed)));
       expect(ids.filter((id) => id === 6)).toEqual([6]);
     }
+  });
+});
+
+describe("simulate", () => {
+  it("returns a ceiling for exactly the open spots, each 0–100, and an average score 0–1000", () => {
+    const { ceilings, averageScore } = simulate(MID_RUN, 50, seeded(7));
+    const open = ALL_SPOTS.filter((spot) => !(spot in MID_RUN.lineup));
+    expect(Object.keys(ceilings).sort()).toEqual(open);
+    for (const ceiling of Object.values(ceilings)) {
+      expect(ceiling).toBeGreaterThanOrEqual(0);
+      expect(ceiling).toBeLessThanOrEqual(100);
+    }
+    expect(averageScore).toBeGreaterThan(0);
+    expect(averageScore).toBeLessThanOrEqual(1000);
   });
 });
