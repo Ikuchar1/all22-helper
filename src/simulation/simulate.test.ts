@@ -73,4 +73,26 @@ describe("simulated draft", () => {
       );
     }
   });
+
+  it.each(["all", "retro"] as const)(
+    "every drafted Pokémon comes from a region the %s variant rolls",
+    (variant) => {
+      const regions = game.DRAFT.VARIANTS[variant] ?? [];
+      const rollable = new Set(regions.flatMap((r) => (game.DRAFT.POOL[r] ?? []).map((p) => p.id)));
+      for (let seed = 1; seed <= 30; seed++) {
+        const lineup = simulatedDraft(run({ variant }), seeded(seed));
+        for (const id of Object.values(lineup)) {
+          expect(rollable.has(id), `#${id}`).toBe(true);
+        }
+      }
+    },
+  );
+
+  it("a retro run only drafts Gen 1–4 Pokémon", () => {
+    // Sinnoh ends at Arceus (493).
+    for (let seed = 1; seed <= 30; seed++) {
+      const ids = Object.values(simulatedDraft(run({ variant: "retro" }), seeded(seed)));
+      expect(Math.max(...ids)).toBeLessThanOrEqual(493);
+    }
+  });
 });
