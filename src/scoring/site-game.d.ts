@@ -11,6 +11,7 @@ declare module "virtual:site-game" {
       variant: string,
     ): { score: number; offense: number; defense: number };
     roleOf(slot: string, scheme: GameScheme): string;
+    rand(seed: number, i: number): number;
     OFFENSE_BY: Record<"fb" | "slot", Record<string, number>>;
     DEFENSE_BY: Record<"34" | "43", Record<string, number>>;
     MAX_LEGENDS: number;
@@ -20,7 +21,7 @@ declare module "virtual:site-game" {
     available(
       gen: string,
       type: string,
-      taken: Set<number>,
+      taken: ReadonlySet<number>,
       noLegends?: boolean,
     ): { id: number; name: string; legendary: boolean }[];
     POOL: Record<string, { id: number; name: string; legendary: boolean }[]>;
@@ -28,5 +29,6 @@ declare module "virtual:site-game" {
 
   export const POKEDATA: { types: string[] }[];
   export const POKEMON_NAMES: string[];
+  export const TYPE_NAMES: string[];
   export const LEGENDARIES: Set<number>;
 }

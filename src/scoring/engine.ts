@@ -1,4 +1,4 @@
-import { DRAFT, LEGENDARIES, POKEDATA, POKEMON_NAMES } from "virtual:site-game";
+import { DRAFT, LEGENDARIES, POKEDATA, POKEMON_NAMES, TYPE_NAMES } from "virtual:site-game";
 import type { Run } from "../run/parse-run";
 
 export type Formation = { defense: "34" | "43"; offense: "fb" | "slot" };
@@ -85,8 +85,24 @@ export const regionsOf = (variant: Variant): Region[] => [...DRAFT.VARIANTS[vari
 /** Every Pokémon in a region's draft pool, Legendaries included. */
 export const poolOf = (region: Region): PoolEntry[] => (DRAFT.POOL[region] ?? []).map(toPoolEntry);
 
+/** Every type, in the game's order (the order its rolls pick a type from). */
+export const TYPES: readonly string[] = [...TYPE_NAMES];
+
 /** A Pokémon's types, as the game's lowercase names ("fire", "water", …). */
 export const typesOf = (dexId: number): string[] => [...(POKEDATA[dexId - 1]?.types ?? [])];
+
+/** The game's seeded random number (0 ≤ x < 1): the i-th draw for a seed. Rolls use it. */
+export const rand = (seed: number, i: number): number => DRAFT.rand(seed, i);
+
+export type Roll = { region: Region; type: string };
+
+/** Dex ids of the Pokémon a roll offers: not taken, and no Legendaries with `noLegends`. */
+export const available = (
+  region: Region,
+  type: string,
+  taken: ReadonlySet<number>,
+  noLegends: boolean,
+): number[] => DRAFT.available(region, type, taken, noLegends).map((p) => p.id);
 
 export const isLegendary = (dexId: number): boolean => LEGENDARIES.has(dexId);
 
