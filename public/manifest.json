@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "All22 Helper",
+  "version": "0.0.0",
+  "description": "Advises picks and placements in the all22pokemon.com 17–0 draft challenge.",
+  "action": { "default_title": "All22 Helper" },
+  "background": { "service_worker": "service-worker.js", "type": "module" },
+  "side_panel": {},
+  "content_scripts": [
+    {
+      "matches": ["https://all22pokemon.com/*"],
+      "js": ["content-script.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": ["sidePanel", "tabs"],
+  "host_permissions": ["https://all22pokemon.com/*"]
+}

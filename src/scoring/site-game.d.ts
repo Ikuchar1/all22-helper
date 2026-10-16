@@ -12,17 +12,18 @@ declare module "virtual:site-game" {
     ): { score: number; offense: number; defense: number };
     roleOf(slot: string, scheme: GameScheme): string;
     rand(seed: number, i: number): number;
+    OFFENSE_BY: Record<"fb" | "slot", Record<string, number>>;
+    DEFENSE_BY: Record<"34" | "43", Record<string, number>>;
+    MAX_LEGENDS: number;
+    REGIONS: Record<string, string>;
+    ROUNDS: number;
+    VARIANTS: Record<"all" | "retro", string[]>;
     available(
       gen: string,
       type: string,
       taken: ReadonlySet<number>,
-      noLegends: boolean,
+      noLegends?: boolean,
     ): { id: number; name: string; legendary: boolean }[];
-    OFFENSE_BY: Record<"fb" | "slot", Record<string, number>>;
-    DEFENSE_BY: Record<"34" | "43", Record<string, number>>;
-    MAX_LEGENDS: number;
-    ROUNDS: number;
-    VARIANTS: Record<"all" | "retro", string[]>;
     POOL: Record<string, { id: number; name: string; legendary: boolean }[]>;
   };
 

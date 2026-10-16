@@ -42,6 +42,7 @@ const seeded = (seed: number): Random => {
 const ALL_SPOTS = Object.keys(game.DRAFT.SLOT_ROLE).sort();
 
 const run = (overrides: Partial<Run> = {}): Run => ({
+  started: true,
   round: 0,
   roll: null,
   lineup: {},

@@ -13,6 +13,8 @@ export type Run = {
   /** Only signed-out runs expose it; the server keeps it on signed-in runs. */
   seed: number | null;
   signedIn: boolean;
+  /** False for a new run still in setup: its roll isn't revealed and nothing is drafted. */
+  started: boolean;
   finished: boolean;
 };
 
@@ -27,6 +29,8 @@ type SavedRun = {
   // A finished signed-in run may leave it out.
   roll?: { gen: Region; type: string } | null;
   rerolls: { type: number; gen: number };
+  started?: unknown;
+  revealed?: unknown;
 };
 
 const isObject = (value: unknown): value is Record<string, unknown> =>
@@ -81,6 +85,11 @@ export function parseRun(json: string | null): Run | null {
     seed: typeof saved.seed === "number" ? saved.seed : null,
     // Signed-in runs are the server's: the game drops the seed from what it saves.
     signedIn: typeof saved.seed !== "number",
+    // The game's own defaults for saves from before `started` existed: a missing `revealed` is true.
+    started:
+      typeof saved.started === "boolean"
+        ? saved.started
+        : saved.round > 0 || saved.revealed !== false || saved.pending !== null,
     // The game's own rule. Only signed-out runs clear the roll at the end; signed-in runs keep
     // whatever the server sent.
     finished: saved.round >= ROUNDS,
