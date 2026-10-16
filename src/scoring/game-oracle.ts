@@ -21,6 +21,14 @@ export type Game = {
     DEFENSE_BY: Record<string, Record<string, number>>;
     MAX_LEGENDS: number;
     REGIONS: Record<string, string>;
+    rand(seed: number, i: number): number;
+    roll(
+      seed: number,
+      i: number,
+      taken: Set<number>,
+      noLegends: boolean,
+      variant: string,
+    ): { gen: string; type: string };
     available(gen: string, type: string, taken: Set<number>, noLegends?: boolean): PoolEntry[];
     VARIANTS: Record<string, string[]>;
     POOL: Record<string, PoolEntry[]>;

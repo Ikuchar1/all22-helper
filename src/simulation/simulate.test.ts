@@ -1,37 +1,7 @@
-import { readFileSync } from "node:fs";
-import vm from "node:vm";
 import { describe, expect, it } from "vitest";
 import type { Run } from "../run/parse-run";
+import { game } from "../scoring/game-oracle";
 import { rollIndex, simulate, simulatedDraft, type Random } from "./simulate";
-
-// The oracle: the site's three scripts run as classic scripts in one global scope, the way the
-// page loads them. Independent of our Vite wrapper, so a broken wrapper can't agree with itself.
-type Game = {
-  DRAFT: {
-    rand(seed: number, i: number): number;
-    roll(
-      seed: number,
-      i: number,
-      taken: Set<number>,
-      noLegends: boolean,
-      variant: string,
-    ): { gen: string; type: string };
-    available(gen: string, type: string, taken: Set<number>, noLegends: boolean): { id: number }[];
-    SLOT_ROLE: Record<string, string>;
-    MAX_LEGENDS: number;
-    VARIANTS: Record<string, string[]>;
-    POOL: Record<string, { id: number; name: string; legendary: boolean }[]>;
-  };
-  POKEDATA: { types: string[] }[];
-  LEGENDARIES: Set<number>;
-};
-const game: Game = (() => {
-  const context = vm.createContext({});
-  for (const file of ["pokemon.js", "pokedata.js", "draft.js"]) {
-    vm.runInContext(readFileSync(`vendor/${file}`, "utf8"), context, { filename: file });
-  }
-  return vm.runInContext("({ DRAFT, POKEDATA, LEGENDARIES })", context) as Game;
-})();
 
 /** A reproducible random source, from the game's own seeded generator. */
 const seeded = (seed: number): Random => {
