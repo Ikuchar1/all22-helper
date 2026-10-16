@@ -1,4 +1,5 @@
 import { DRAFT, LEGENDARIES, POKEDATA, POKEMON_NAMES } from "virtual:site-game";
+import type { Run } from "../run/parse-run";
 
 export type Formation = { defense: "34" | "43"; offense: "fb" | "slot" };
 
@@ -68,6 +69,12 @@ export function spotsOf(formation: Formation): SpotInfo[] {
 export type Region = string;
 export type PoolEntry = { dexId: number; name: string; legendary: boolean };
 
+const toPoolEntry = (p: { id: number; name: string; legendary: boolean }): PoolEntry => ({
+  dexId: p.id,
+  name: p.name,
+  legendary: p.legendary,
+});
+
 /** Rounds in a run: one Pokémon placed per round, so a run is done after this many. */
 export const ROUNDS: number = DRAFT.ROUNDS;
 
@@ -76,8 +83,7 @@ export const LEGEND_CAP: number = DRAFT.MAX_LEGENDS;
 /** The regions a variant's rolls draw from. */
 export const regionsOf = (variant: Variant): Region[] => [...DRAFT.VARIANTS[variant]];
 /** Every Pokémon in a region's draft pool, Legendaries included. */
-export const poolOf = (region: Region): PoolEntry[] =>
-  (DRAFT.POOL[region] ?? []).map((p) => ({ dexId: p.id, name: p.name, legendary: p.legendary }));
+export const poolOf = (region: Region): PoolEntry[] => (DRAFT.POOL[region] ?? []).map(toPoolEntry);
 
 /** A Pokémon's types, as the game's lowercase names ("fire", "water", …). */
 export const typesOf = (dexId: number): string[] => [...(POKEDATA[dexId - 1]?.types ?? [])];
@@ -85,3 +91,25 @@ export const typesOf = (dexId: number): string[] => [...(POKEDATA[dexId - 1]?.ty
 export const isLegendary = (dexId: number): boolean => LEGENDARIES.has(dexId);
 
 export const nameOf = (dexId: number): string => POKEMON_NAMES[dexId - 1] ?? "";
+
+/**
+ * The Pokémon the game offers for the run's current roll, minus the lineup, and minus Legendaries
+ * once the legend cap is reached. None when there is no roll.
+ */
+export function candidatesFor(run: Run): PoolEntry[] {
+  if (!run.roll) return [];
+  const lineup = Object.values(run.lineup);
+  const legendsCapped = lineup.filter(isLegendary).length >= LEGEND_CAP;
+  return DRAFT.available(run.roll.region, run.roll.type, new Set(lineup), legendsCapped).map(
+    toPoolEntry,
+  );
+}
+
+/** The formation's spots not yet filled, in the game's order. */
+export const openSpots = (run: Run): Spot[] =>
+  spotsOf(run.formation)
+    .map((s) => s.spot)
+    .filter((spot) => run.lineup[spot] === undefined);
+
+/** A region's name, as the game shows it ("1" → "Kanto"). */
+export const regionName = (region: Region): string => DRAFT.REGIONS[region] ?? region;

@@ -35,7 +35,17 @@ export default defineConfig({
   plugins: [siteGame()],
   build: {
     rollupOptions: {
-      input: { panel: "panel.html" },
+      // The manifest (public/manifest.json) names the service worker and content script, so they
+      // are emitted at fixed names. The panel keeps hashed asset names.
+      input: {
+        panel: "panel.html",
+        "service-worker": "src/background/service-worker.ts",
+        "content-script": "src/content/content-script.ts",
+      },
+      output: {
+        entryFileNames: (chunk) =>
+          chunk.name === "panel" ? "assets/[name]-[hash].js" : "[name].js",
+      },
     },
   },
 });

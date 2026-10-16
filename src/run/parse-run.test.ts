@@ -29,6 +29,7 @@ describe("parseRun", () => {
       rerollsLeft: { type: 1, region: 0 },
       seed: -1234567890,
       signedIn: false,
+      started: true,
       finished: false,
     });
   });

@@ -1,12 +1,14 @@
-import { readFileSync } from "node:fs";
-import vm from "node:vm";
 import { describe, expect, it } from "vitest";
+import type { Run } from "../run/parse-run";
 import {
+  candidatesFor,
   fit,
   isLegendary,
   LEGEND_CAP,
   nameOf,
+  openSpots,
   poolOf,
+  regionName,
   regionsOf,
   spotsOf,
   teamScore,
@@ -14,37 +16,7 @@ import {
   type Formation,
   type FullLineup,
 } from "./engine";
-
-// The oracle: the site's three scripts run as classic scripts in one global scope, the way the
-// page loads them. Independent of our Vite wrapper, so a broken wrapper can't agree with itself.
-type GameScheme = { def: string; off: string };
-type Game = {
-  DRAFT: {
-    positionScore(id: number, slot: string, scheme: GameScheme): number;
-    teamScore(
-      lineup: Record<string, number>,
-      scheme: GameScheme,
-      variant: string,
-    ): { score: number; offense: number; defense: number };
-    SLOT_ROLE: Record<string, string>;
-    roleOf(slot: string, scheme: GameScheme): string;
-    OFFENSE_BY: Record<string, Record<string, number>>;
-    DEFENSE_BY: Record<string, Record<string, number>>;
-    MAX_LEGENDS: number;
-    VARIANTS: Record<string, string[]>;
-    POOL: Record<string, { id: number; name: string; legendary: boolean }[]>;
-  };
-  POKEDATA: { types: string[] }[];
-  POKEMON_NAMES: string[];
-  LEGENDARIES: Set<number>;
-};
-const game: Game = (() => {
-  const context = vm.createContext({});
-  for (const file of ["pokemon.js", "pokedata.js", "draft.js"]) {
-    vm.runInContext(readFileSync(`vendor/${file}`, "utf8"), context, { filename: file });
-  }
-  return vm.runInContext("({ DRAFT, POKEDATA, POKEMON_NAMES, LEGENDARIES })", context) as Game;
-})();
+import { game } from "./game-oracle";
 
 const THREE_FOUR_FULLBACK: Formation = { defense: "34", offense: "fb" };
 const FOUR_THREE_SLOT: Formation = { defense: "43", offense: "slot" };
@@ -176,5 +148,72 @@ describe("game data", () => {
 
   it("the legend cap is the game's", () => {
     expect(LEGEND_CAP).toBe(game.DRAFT.MAX_LEGENDS);
+  });
+});
+
+// A run in progress, signed out, 3-4/fullback.
+const run = (overrides: Partial<Run> = {}): Run => ({
+  round: 3,
+  roll: { region: "1", type: "fire" },
+  lineup: { QB: 65, LT: 208, CB1: 6 },
+  pending: null,
+  formation: THREE_FOUR_FULLBACK,
+  variant: "all",
+  rerollsLeft: { type: 1, region: 1 },
+  seed: 42,
+  signedIn: false,
+  started: true,
+  finished: false,
+  ...overrides,
+});
+const asPool = (entries: { id: number; name: string; legendary: boolean }[]) =>
+  entries.map((p) => ({ dexId: p.id, name: p.name, legendary: p.legendary }));
+
+describe("candidates", () => {
+  it("the candidates for a roll are the region's Pokémon of that type the game offers, minus the lineup", () => {
+    // Charizard (6) is in the lineup and is a Kanto Fire-type.
+    const kantoFire = run();
+    const candidates = candidatesFor(kantoFire);
+    expect(candidates).toEqual(asPool(game.DRAFT.available("1", "fire", new Set([65, 208, 6]))));
+    expect(candidates.map((c) => c.dexId)).not.toContain(6);
+    expect(candidates.map((c) => c.dexId)).toContain(4);
+
+    const johtoWater = run({ roll: { region: "2", type: "water" } });
+    expect(candidatesFor(johtoWater)).toEqual(
+      asPool(game.DRAFT.available("2", "water", new Set([65, 208, 6]))),
+    );
+  });
+
+  it("once the lineup has 3 Legendaries, Legendaries are no longer candidates; with 2 they are", () => {
+    // Moltres (146) is Kanto's Legendary Fire-type. Articuno (144), Zapdos (145), Mewtwo (150).
+    const twoLegends = run({ lineup: { QB: 150, LT: 144 } });
+    expect(candidatesFor(twoLegends).map((c) => c.dexId)).toContain(146);
+
+    const threeLegends = run({ lineup: { QB: 150, LT: 144, CB1: 145 } });
+    const candidates = candidatesFor(threeLegends);
+    expect(candidates).toEqual(
+      asPool(game.DRAFT.available("1", "fire", new Set([150, 144, 145]), true)),
+    );
+    expect(candidates.map((c) => c.dexId)).not.toContain(146);
+    expect(candidates.length).toBeGreaterThan(0);
+  });
+});
+
+describe("open spots and regions", () => {
+  it("the open spots are the formation's 22 spots minus the filled ones", () => {
+    const spots = openSpots(run({ lineup: { QB: 65, LT: 208, CB1: 6 } }));
+    expect(spots).toHaveLength(19);
+    expect(spots).not.toContain("QB");
+    expect(spots).not.toContain("LT");
+    expect(spots).not.toContain("CB1");
+    expect([...spots, "QB", "LT", "CB1"].sort()).toEqual(Object.keys(game.DRAFT.SLOT_ROLE).sort());
+    expect(openSpots(run({ lineup: {} }))).toHaveLength(22);
+  });
+
+  it("a region id names the game's region", () => {
+    expect(regionName("1")).toBe("Kanto");
+    for (const [id, name] of Object.entries(game.DRAFT.REGIONS)) {
+      expect(regionName(id)).toBe(name);
+    }
   });
 });
